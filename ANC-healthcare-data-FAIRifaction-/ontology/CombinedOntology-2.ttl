@@ -1,0 +1,3083 @@
+@prefix : <https://w3id.org/dhs/ontology#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix map: <https://w3id.org/dhs/mapping#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fhir: <http://hl7.org/fhir/StructureDefinition/> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix loinc: <http://loinc.org/rdf/> .
+@prefix schema: <https://schema.org/> .
+@prefix snomed: <http://snomed.info/id/> .
+@base <https://w3id.org/dhs/ontology#> .
+
+<https://w3id.org/dhs/ontology> rdf:type owl:Ontology ;
+                                 dct:created "2026-05-15"^^xsd:date ;
+                                 dct:creator """Lina Dadić
+Arya Deshmukh""" ;
+                                 dct:description "Ontology supporting semantic interoperability and FAIRification of antenatal care electronic medical record systems across federated Kenyan healthcare institutions."@en ;
+                                 dct:language "en" ;
+                                 dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                 dct:title "Federated ANC EMR Ontology for Mutuini and Mathare Hospitals; KCEI community health centre and Pumwani hospital"@en ;
+                                 owl:versionInfo "1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/language
+dct:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/dhs/ontology#assignedToDepartment
+:assignedToDepartment rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasDepartment ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Consultation
+                                                  :Provider
+                                                  :Visit
+                                                )
+                                  ] ;
+                      rdfs:range :Department .
+
+
+###  https://w3id.org/dhs/ontology#belongsToDepartment
+:belongsToDepartment rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasDepartment ;
+                     owl:inverseOf :isDepartmentOf ;
+                     rdfs:range :Department .
+
+
+###  https://w3id.org/dhs/ontology#belongsToFacility
+:belongsToFacility rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasFacility ;
+                   owl:inverseOf :isFacilityOf ;
+                   rdfs:domain :Department ;
+                   rdfs:range :Facility .
+
+
+###  https://w3id.org/dhs/ontology#createsClinicalRecord
+:createsClinicalRecord rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :isProviderOf ;
+                       owl:inverseOf :isCreatedByProvider ;
+                       rdfs:domain :Provider ;
+                       rdfs:range :ClinicalRecord .
+
+
+###  https://w3id.org/dhs/ontology#dispensesMedication
+:dispensesMedication rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :isProviderOf ;
+                     owl:inverseOf :isDispensedByProvider ;
+                     rdfs:domain :Provider ;
+                     rdfs:range :MedicationDispense .
+
+
+###  https://w3id.org/dhs/ontology#fromDepartment
+:fromDepartment rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasDepartment ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :PatientFlow
+                                            :Referral
+                                            :Transfer
+                                          )
+                            ] ;
+                rdfs:range :Department .
+
+
+###  https://w3id.org/dhs/ontology#fromFacility
+:fromFacility rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasFacility ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Referral
+                                          :Transfer
+                                        )
+                          ] ;
+              rdfs:range :Facility .
+
+
+###  https://w3id.org/dhs/ontology#hasAdmission
+:hasAdmission rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasEncounter ;
+              owl:inverseOf :isAdmissionOf ;
+              rdfs:domain :Visit ;
+              rdfs:range :Admission .
+
+
+###  https://w3id.org/dhs/ontology#hasAllergenCode
+:hasAllergenCode rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Allergy ;
+                 rdfs:range :Allergen .
+
+
+###  https://w3id.org/dhs/ontology#hasAllergy
+:hasAllergy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasClinicalRecord ;
+            owl:inverseOf :isAllergyOf ;
+            rdfs:domain :Visit ;
+            rdfs:range :Allergy .
+
+
+###  https://w3id.org/dhs/ontology#hasBloodGroupCode
+:hasBloodGroupCode rdf:type owl:ObjectProperty ;
+                   rdfs:domain :MaternalProfile ;
+                   rdfs:range :BloodGroup .
+
+
+###  https://w3id.org/dhs/ontology#hasClient
+:hasClient rdf:type owl:ObjectProperty ;
+           rdfs:domain :HouseholdRegistration ;
+           rdfs:range :Client ;
+           rdfs:comment "Relates a household registration record to an individual registered as a member of that household." ;
+           rdfs:label "has client" .
+
+
+###  https://w3id.org/dhs/ontology#hasClientReferral
+:hasClientReferral rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Client ;
+                   rdfs:range :CHU_Referral ;
+                   rdfs:comment "Relates a client to a CHU referral record documenting a transfer or recommendation for healthcare services at another facility or provider."@en ;
+                   rdfs:label "has client referral"@en .
+
+
+###  https://w3id.org/dhs/ontology#hasClinicalAssessment
+:hasClinicalAssessment rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasEncounter ;
+                       owl:inverseOf :isClinicalAssessmentOf ;
+                       rdfs:domain :Visit ;
+                       rdfs:range :ClinicalAssessment .
+
+
+###  https://w3id.org/dhs/ontology#hasClinicalNote
+:hasClinicalNote rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasClinicalRecord ;
+                 owl:inverseOf :isClinicalNoteOf ;
+                 rdfs:domain :Visit ;
+                 rdfs:range :ClinicalNote .
+
+
+###  https://w3id.org/dhs/ontology#hasClinicalRecord
+:hasClinicalRecord rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasEncounter ;
+                   owl:inverseOf :isClinicalRecordOf ;
+                   rdfs:domain :Visit ;
+                   rdfs:range :ClinicalRecord .
+
+
+###  https://w3id.org/dhs/ontology#hasComplaintExam
+:hasComplaintExam rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasClinicalRecord ;
+                  owl:inverseOf :isComplaintExamOf ;
+                  rdfs:domain :Visit ;
+                  rdfs:range :ComplaintExam .
+
+
+###  https://w3id.org/dhs/ontology#hasConsultation
+:hasConsultation rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasEncounter ;
+                 owl:inverseOf :isConsultationOf ;
+                 rdfs:domain :Visit ;
+                 rdfs:range :Consultation .
+
+
+###  https://w3id.org/dhs/ontology#hasCorrespondingPatient
+:hasCorrespondingPatient rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Client ;
+                         rdfs:range :Patient ;
+                         rdfs:comment "Relates a CHU client record to the corresponding hospital patient record, resolved via name and date-of-birth matching in the absence of a shared identifier (see thesis Chapter 8)."@en ;
+                         rdfs:label "has corresponding patient"@en .
+
+
+###  https://w3id.org/dhs/ontology#hasCorrespondingPregnancy
+:hasCorrespondingPregnancy rdf:type owl:ObjectProperty ;
+                           rdfs:domain :MaternalChildHealth ;
+                           rdfs:range :MaternalProfile .
+
+
+###  https://w3id.org/dhs/ontology#hasCorrespondingReferral
+:hasCorrespondingReferral rdf:type owl:ObjectProperty ;
+                          rdfs:domain :CHU_Referral ;
+                          rdfs:range :Referral .
+
+
+###  https://w3id.org/dhs/ontology#hasCorrespondingSyphilisRecord
+:hasCorrespondingSyphilisRecord rdf:type owl:ObjectProperty ;
+                                rdfs:domain :HealthSurveillance ;
+                                rdfs:range :HIVCareRecord .
+
+
+###  https://w3id.org/dhs/ontology#hasDepartment
+:hasDepartment rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :relatesToDepartment .
+
+
+###  https://w3id.org/dhs/ontology#hasDepartmentTypeCode
+:hasDepartmentTypeCode rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Department ;
+                       rdfs:range :DepartmentType .
+
+
+###  https://w3id.org/dhs/ontology#hasDiagnosis
+:hasDiagnosis rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasClinicalRecord ;
+              owl:inverseOf :isDiagnosisOf ;
+              rdfs:domain :Visit ;
+              rdfs:range :Diagnosis .
+
+
+###  https://w3id.org/dhs/ontology#hasDiagnosisTypeCode
+:hasDiagnosisTypeCode rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Diagnosis ;
+                      rdfs:range :DiagnosisType .
+
+
+###  https://w3id.org/dhs/ontology#hasEncounter
+:hasEncounter rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasEnvironmentalWASH
+:hasEnvironmentalWASH rdf:type owl:ObjectProperty ;
+                      rdfs:domain :HouseholdRegistration ;
+                      rdfs:range :EnvironmentalWASH ;
+                      rdfs:comment "Relates a household registration record to an environmental, water, sanitation, hygiene, and waste management assessment." ;
+                      rdfs:label "has environmental and WASH assessment" .
+
+
+###  https://w3id.org/dhs/ontology#hasFacility
+:hasFacility rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :relatesToFacility .
+
+
+###  https://w3id.org/dhs/ontology#hasGenderCode
+:hasGenderCode rdf:type owl:ObjectProperty ;
+               rdfs:domain :Patient ;
+               rdfs:range :Gender .
+
+
+###  https://w3id.org/dhs/ontology#hasHIVCareRecord
+:hasHIVCareRecord rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasClinicalAssessment ;
+                  owl:inverseOf :isHIVCareRecordOf ;
+                  rdfs:domain :Visit ;
+                  rdfs:range :HIVCareRecord .
+
+
+###  https://w3id.org/dhs/ontology#hasHIVStatusCode
+:hasHIVStatusCode rdf:type owl:ObjectProperty ;
+                  rdfs:domain :HIVTestingRecord ;
+                  rdfs:range :HIVStatus .
+
+
+###  https://w3id.org/dhs/ontology#hasHIVTestingRecord
+:hasHIVTestingRecord rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasClinicalAssessment ;
+                     owl:inverseOf :isHIVTestingRecordOf ;
+                     rdfs:domain :Visit ;
+                     rdfs:range :HIVTestingRecord .
+
+
+###  https://w3id.org/dhs/ontology#hasHealthSurveillance
+:hasHealthSurveillance rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Client ;
+                       rdfs:range :HealthSurveillance ;
+                       rdfs:comment "Relates a client to a health surveillance record containing observed health conditions, symptoms, risk factors, or health status information." ;
+                       rdfs:label "has health surveillance" .
+
+
+###  https://w3id.org/dhs/ontology#hasHouseholdRegistration
+:hasHouseholdRegistration rdf:type owl:ObjectProperty ;
+                          rdfs:domain :CommunityHealthUnit ;
+                          rdfs:range :HouseholdRegistration ;
+                          rdfs:comment "Relates a Community Health Unit to a household registration record within its area of responsibility." ;
+                          rdfs:label "has household registration" .
+
+
+###  https://w3id.org/dhs/ontology#hasICDCodeCode
+:hasICDCodeCode rdf:type owl:ObjectProperty ;
+                rdfs:domain :Diagnosis ;
+                rdfs:range :ICDCode .
+
+
+###  https://w3id.org/dhs/ontology#hasLaboratoryResult
+:hasLaboratoryResult rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasClinicalAssessment ;
+                     owl:inverseOf :isLaboratoryResultOf ;
+                     rdfs:domain :Visit ;
+                     rdfs:range :LaboratoryResult .
+
+
+###  https://w3id.org/dhs/ontology#hasManagementPlan
+:hasManagementPlan rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasClinicalRecord ;
+                   owl:inverseOf :isManagementPlanOf ;
+                   rdfs:domain :Visit ;
+                   rdfs:range :ManagementPlan .
+
+
+###  https://w3id.org/dhs/ontology#hasMaternalChildHealth
+:hasMaternalChildHealth rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Client ;
+                        rdfs:range :MaternalChildHealth ;
+                        rdfs:comment "Relates a client to a maternal and child health record containing pregnancy, antenatal, delivery, postnatal, immunization, or growth monitoring information." ;
+                        rdfs:label "has maternal and child health record" .
+
+
+###  https://w3id.org/dhs/ontology#hasMaternalChildHealthRecord
+:hasMaternalChildHealthRecord rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :hasClinicalAssessment ;
+                              owl:inverseOf :isMaternalChildHealthRecordOf ;
+                              rdfs:domain :Visit ;
+                              rdfs:range :MaternalChildHealthRecord .
+
+
+###  https://w3id.org/dhs/ontology#hasMaternalProfile
+:hasMaternalProfile rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasClinicalRecord ;
+                    owl:inverseOf :isMaternalProfileOf ;
+                    rdfs:domain :Visit ;
+                    rdfs:range :MaternalProfile .
+
+
+###  https://w3id.org/dhs/ontology#hasMedication
+:hasMedication rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isMedicationOf ;
+               rdfs:domain :MedicationDispense ;
+               rdfs:range :Medication .
+
+
+###  https://w3id.org/dhs/ontology#hasMedicationDispense
+:hasMedicationDispense rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasEncounter ;
+                       owl:inverseOf :isMedicationDispenseOf ;
+                       rdfs:domain :Visit ;
+                       rdfs:range :MedicationDispense .
+
+
+###  https://w3id.org/dhs/ontology#hasMentalHealthAssessment
+:hasMentalHealthAssessment rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :hasClinicalAssessment ;
+                           owl:inverseOf :isMentalHealthAssessmentOf ;
+                           rdfs:domain :Visit ;
+                           rdfs:range :MentalHealthAssessment .
+
+
+###  https://w3id.org/dhs/ontology#hasNutritionAssessment
+:hasNutritionAssessment rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :hasClinicalAssessment ;
+                        owl:inverseOf :isNutritionAssessmentOf ;
+                        rdfs:domain :Visit ;
+                        rdfs:range :NutritionAssessment .
+
+
+###  https://w3id.org/dhs/ontology#hasPatient
+:hasPatient rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isPatientIn ;
+            rdfs:domain :Visit ;
+            rdfs:range :Patient .
+
+
+###  https://w3id.org/dhs/ontology#hasPatientFlow
+:hasPatientFlow rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasEncounter ;
+                owl:inverseOf :isPatientFlowOf ;
+                rdfs:domain :Visit ;
+                rdfs:range :PatientFlow .
+
+
+###  https://w3id.org/dhs/ontology#hasProvider
+:hasProvider rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isProviderOf ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :ClinicalAssessment
+                                         :ClinicalRecord
+                                         :Consultation
+                                         :MedicationDispense
+                                       )
+                         ] ;
+             rdfs:range :Provider .
+
+
+###  https://w3id.org/dhs/ontology#hasReferral
+:hasReferral rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasEncounter ;
+             owl:inverseOf :isReferralOf ;
+             rdfs:domain :Visit ;
+             rdfs:range :Referral .
+
+
+###  https://w3id.org/dhs/ontology#hasRehabilitationAssessment
+:hasRehabilitationAssessment rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :hasClinicalAssessment ;
+                             owl:inverseOf :isRehabilitationAssessmentOf ;
+                             rdfs:domain :Visit ;
+                             rdfs:range :RehabilitationAssessment .
+
+
+###  https://w3id.org/dhs/ontology#hasRhesusFactorCode
+:hasRhesusFactorCode rdf:type owl:ObjectProperty ;
+                     rdfs:domain :MaternalProfile ;
+                     rdfs:range :RhesusFactor .
+
+
+###  https://w3id.org/dhs/ontology#hasServiceDelivery
+:hasServiceDelivery rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Client ;
+                    rdfs:range :ServiceDelivery ;
+                    rdfs:comment "Relates a client to a healthcare service or intervention delivered within the community." ;
+                    rdfs:label "has service delivery" .
+
+
+###  https://w3id.org/dhs/ontology#hasTBScreening
+:hasTBScreening rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :hasClinicalRecord ;
+                owl:inverseOf :isTBScreeningOf ;
+                rdfs:domain :Visit ;
+                rdfs:range :TBScreening .
+
+
+###  https://w3id.org/dhs/ontology#hasTransfer
+:hasTransfer rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :hasEncounter ;
+             owl:inverseOf :isTransferOf ;
+             rdfs:domain :Visit ;
+             rdfs:range :Transfer .
+
+
+###  https://w3id.org/dhs/ontology#hasTriageAssessment
+:hasTriageAssessment rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasClinicalAssessment ;
+                     owl:inverseOf :isTriageAssessmentOf ;
+                     rdfs:domain :Visit ;
+                     rdfs:range :TriageAssessment .
+
+
+###  https://w3id.org/dhs/ontology#hasVisit
+:hasVisit rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isVisitOf ;
+          rdfs:domain :Patient ;
+          rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#hasVitalSignsRecord
+:hasVitalSignsRecord rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasClinicalAssessment ;
+                     owl:inverseOf :isVitalSignsRecordOf ;
+                     rdfs:domain :Visit ;
+                     rdfs:range :VitalSignsRecord .
+
+
+###  https://w3id.org/dhs/ontology#isAdmissionOf
+:isAdmissionOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :isEncounterOf ;
+               rdfs:domain :Admission ;
+               rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isAllergyOf
+:isAllergyOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :isClinicalRecordOf ;
+             rdfs:domain :Allergy ;
+             rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isClinicalAssessmentOf
+:isClinicalAssessmentOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :isEncounterOf .
+
+
+###  https://w3id.org/dhs/ontology#isClinicalNoteOf
+:isClinicalNoteOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :isClinicalRecordOf ;
+                  rdfs:domain :ClinicalNote ;
+                  rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isClinicalRecordOf
+:isClinicalRecordOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :isEncounterOf ;
+                    rdfs:domain :ClinicalRecord ;
+                    rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isComplaintExamOf
+:isComplaintExamOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :isClinicalRecordOf ;
+                   rdfs:domain :ComplaintExam ;
+                   rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isConsultationOf
+:isConsultationOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :isEncounterOf ;
+                  rdfs:domain :Consultation ;
+                  rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isCreatedByProvider
+:isCreatedByProvider rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasProvider ;
+                     rdfs:domain :ClinicalRecord ;
+                     rdfs:range :Provider .
+
+
+###  https://w3id.org/dhs/ontology#isDepartmentOf
+:isDepartmentOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :relatesToDepartment ;
+                rdfs:domain :Department .
+
+
+###  https://w3id.org/dhs/ontology#isDiagnosisOf
+:isDiagnosisOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :isClinicalRecordOf ;
+               rdfs:domain :Diagnosis ;
+               rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isDispensedByProvider
+:isDispensedByProvider rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasProvider ;
+                       rdfs:domain :MedicationDispense ;
+                       rdfs:range :Provider .
+
+
+###  https://w3id.org/dhs/ontology#isEncounterOf
+:isEncounterOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/dhs/ontology#isFacilityOf
+:isFacilityOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :relatesToFacility ;
+              rdfs:domain :Facility ;
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( :Department
+                                         :Provider
+                                         :Referral
+                                         :Transfer
+                                       )
+                         ] .
+
+
+###  https://w3id.org/dhs/ontology#isHIVCareRecordOf
+:isHIVCareRecordOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :isClinicalAssessmentOf ;
+                   rdfs:domain :HIVCareRecord ;
+                   rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isHIVTestingRecordOf
+:isHIVTestingRecordOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :isClinicalAssessmentOf ;
+                      rdfs:domain :HIVTestingRecord ;
+                      rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isLaboratoryResultOf
+:isLaboratoryResultOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :isClinicalAssessmentOf ;
+                      rdfs:domain :LaboratoryResult ;
+                      rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isManagementPlanOf
+:isManagementPlanOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :isClinicalRecordOf ;
+                    rdfs:domain :ManagementPlan ;
+                    rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isMaternalChildHealthRecordOf
+:isMaternalChildHealthRecordOf rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :isClinicalAssessmentOf ;
+                               rdfs:domain :MaternalChildHealthRecord ;
+                               rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isMaternalProfileOf
+:isMaternalProfileOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :isClinicalRecordOf ;
+                     rdfs:domain :MaternalProfile ;
+                     rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isMedicationDispenseOf
+:isMedicationDispenseOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :isEncounterOf ;
+                        rdfs:domain :MedicationDispense ;
+                        rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isMedicationOf
+:isMedicationOf rdf:type owl:ObjectProperty ;
+                rdfs:domain :Medication ;
+                rdfs:range :MedicationDispense .
+
+
+###  https://w3id.org/dhs/ontology#isMentalHealthAssessmentOf
+:isMentalHealthAssessmentOf rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :isClinicalAssessmentOf ;
+                            rdfs:domain :MentalHealthAssessment ;
+                            rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isNutritionAssessmentOf
+:isNutritionAssessmentOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :isClinicalAssessmentOf ;
+                         rdfs:domain :NutritionAssessment ;
+                         rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isPatientFlowOf
+:isPatientFlowOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :isEncounterOf ;
+                 rdfs:domain :PatientFlow ;
+                 rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isPatientIn
+:isPatientIn rdf:type owl:ObjectProperty ;
+             rdfs:domain :Patient ;
+             rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isPerformedByProvider
+:isPerformedByProvider rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasProvider ;
+                       owl:inverseOf :performsConsultation ;
+                       rdfs:domain :Consultation ;
+                       rdfs:range :Provider .
+
+
+###  https://w3id.org/dhs/ontology#isProviderOf
+:isProviderOf rdf:type owl:ObjectProperty ;
+              rdfs:domain :Provider ;
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( :ClinicalAssessment
+                                         :ClinicalRecord
+                                         :Consultation
+                                         :MedicationDispense
+                                       )
+                         ] .
+
+
+###  https://w3id.org/dhs/ontology#isRecordedByProvider
+:isRecordedByProvider rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasProvider ;
+                      owl:inverseOf :recordsObservation ;
+                      rdfs:domain :ClinicalAssessment ;
+                      rdfs:range :Provider .
+
+
+###  https://w3id.org/dhs/ontology#isReferralOf
+:isReferralOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :isEncounterOf ;
+              rdfs:domain :Referral ;
+              rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isRehabilitationAssessmentOf
+:isRehabilitationAssessmentOf rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :isClinicalAssessmentOf ;
+                              rdfs:domain :RehabilitationAssessment ;
+                              rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isTBScreeningOf
+:isTBScreeningOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :isClinicalRecordOf ;
+                 rdfs:domain :TBScreening ;
+                 rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isTransferOf
+:isTransferOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :isEncounterOf ;
+              rdfs:domain :Transfer ;
+              rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isTriageAssessmentOf
+:isTriageAssessmentOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :isClinicalAssessmentOf ;
+                      rdfs:domain :TriageAssessment ;
+                      rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#isVisitOf
+:isVisitOf rdf:type owl:ObjectProperty ;
+           rdfs:domain :Visit ;
+           rdfs:range :Patient .
+
+
+###  https://w3id.org/dhs/ontology#isVitalSignsRecordOf
+:isVitalSignsRecordOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :isClinicalAssessmentOf ;
+                      rdfs:domain :VitalSignsRecord ;
+                      rdfs:range :Visit .
+
+
+###  https://w3id.org/dhs/ontology#performsConsultation
+:performsConsultation rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :isProviderOf ;
+                      rdfs:domain :Provider ;
+                      rdfs:range :Consultation .
+
+
+###  https://w3id.org/dhs/ontology#recordsObservation
+:recordsObservation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :isProviderOf ;
+                    rdfs:domain :Provider ;
+                    rdfs:range :ClinicalAssessment .
+
+
+###  https://w3id.org/dhs/ontology#referredToFacility
+:referredToFacility rdf:type owl:ObjectProperty ;
+                    rdfs:domain :CHU_Referral ;
+                    rdfs:range :Facility .
+
+
+###  https://w3id.org/dhs/ontology#relatesToDepartment
+:relatesToDepartment rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/dhs/ontology#relatesToFacility
+:relatesToFacility rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/dhs/ontology#toDepartment
+:toDepartment rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasDepartment ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :PatientFlow
+                                          :Referral
+                                          :Transfer
+                                        )
+                          ] ;
+              rdfs:range :Department .
+
+
+###  https://w3id.org/dhs/ontology#toFacility
+:toFacility rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasFacility ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :Referral
+                                        :Transfer
+                                      )
+                        ] ;
+            rdfs:range :Facility .
+
+
+###  https://w3id.org/dhs/ontology#worksAtFacility
+:worksAtFacility rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasFacility ;
+                 rdfs:domain :Provider ;
+                 rdfs:range :Facility .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/dhs/ontology#hasANCNumber
+:hasANCNumber rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Patient ;
+              rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasANCVisits
+:hasANCVisits rdf:type owl:DatatypeProperty ;
+              rdfs:domain :MaternalChildHealth ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "Indicates the number of antenatal care visits recorded for a pregnancy." .
+
+
+###  https://w3id.org/dhs/ontology#hasAbortions
+:hasAbortions rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasMaternalProfileData ;
+              rdfs:domain :MaternalProfile ;
+              rdfs:range xsd:integer .
+
+
+###  https://w3id.org/dhs/ontology#hasAddressData
+:hasAddressData rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasAdmissionData
+:hasAdmissionData rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasAdmissionDate
+:hasAdmissionDate rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasAdmissionData ;
+                  rdfs:domain :Admission ;
+                  rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasAge
+:hasAge rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Client ;
+        rdfs:range xsd:integer ;
+        rdfs:comment "Indicates the age of a client." .
+
+
+###  https://w3id.org/dhs/ontology#hasAllergen
+:hasAllergen rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasAllergyData ;
+             rdfs:domain :Allergy ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasAllergyData
+:hasAllergyData rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasAlternativePhone
+:hasAlternativePhone rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasPersonData ;
+                     rdfs:domain :Patient ;
+                     rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasAssessmentNotes
+:hasAssessmentNotes rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasMentalHealthData ;
+                    rdfs:domain :MentalHealthAssessment ;
+                    rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasAuditData
+:hasAuditData rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasBMI
+:hasBMI rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :hasVitalSignsData ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :TriageAssessment
+                                    :VitalSignsRecord
+                                  )
+                    ] ;
+        rdfs:range xsd:decimal ;
+        skos:closeMatch <http://loinc.org/rdf/39156-5> .
+
+
+###  https://w3id.org/dhs/ontology#hasCHUCounty
+:hasCHUCounty rdf:type owl:DatatypeProperty ;
+              rdfs:domain :CommunityHealthUnit ,
+                          :Facility ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Relates a Community Health Unit to the county in which it operates." .
+
+
+###  https://w3id.org/dhs/ontology#hasCHUExpectedDeliveryDate
+:hasCHUExpectedDeliveryDate rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :MaternalChildHealth ;
+                            rdfs:range xsd:date ;
+                            rdfs:comment "Indicates the estimated date of delivery for a pregnancy." .
+
+
+###  https://w3id.org/dhs/ontology#hasCHUID
+:hasCHUID rdf:type owl:DatatypeProperty ;
+          rdfs:domain :CommunityHealthUnit ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Relates a Community Health Unit to its unique identifier." .
+
+
+###  https://w3id.org/dhs/ontology#hasCHUName
+:hasCHUName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :CommunityHealthUnit ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Relates a Community Health Unit to its official name." .
+
+
+###  https://w3id.org/dhs/ontology#hasCHUReferralDate
+:hasCHUReferralDate rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :CHU_Referral ;
+                    rdfs:range xsd:date ;
+                    rdfs:comment "Indicates the date on which a referral was issued." .
+
+
+###  https://w3id.org/dhs/ontology#hasCHUSubCounty
+:hasCHUSubCounty rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :CommunityHealthUnit ,
+                             :Facility ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Relates a Community Health Unit to the sub-county in which it operates." .
+
+
+###  https://w3id.org/dhs/ontology#hasCHUWard
+:hasCHUWard rdf:type owl:DatatypeProperty ;
+            rdfs:domain :CommunityHealthUnit ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Relates a Community Health Unit to the administrative ward in which it is located." .
+
+
+###  https://w3id.org/dhs/ontology#hasChestPainBreathlessness
+:hasChestPainBreathlessness rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf :hasTBScreeningData ;
+                            rdfs:domain :TBScreening ;
+                            rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#hasChildImmunizationStatus
+:hasChildImmunizationStatus rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :MaternalChildHealth ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Indicates the immunization status recorded for a child." .
+
+
+###  https://w3id.org/dhs/ontology#hasChronicCondition
+:hasChronicCondition rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :HealthSurveillance ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Indicates a chronic health condition recorded for an individual." .
+
+
+###  https://w3id.org/dhs/ontology#hasClientDateOfBirth
+:hasClientDateOfBirth rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Client ;
+                      rdfs:range xsd:date ;
+                      rdfs:comment "Indicates the date on which a client was born." .
+
+
+###  https://w3id.org/dhs/ontology#hasClientDisabilityStatus
+:hasClientDisabilityStatus rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :Client ;
+                           rdfs:range xsd:boolean ;
+                           rdfs:comment "Indicates whether a client has a recorded disability status." .
+
+
+###  https://w3id.org/dhs/ontology#hasClinicalNoteData
+:hasClinicalNoteData rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasComplaintExamData
+:hasComplaintExamData rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasComplications
+:hasComplications rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasAdmissionData ;
+                  rdfs:domain :Admission ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasConsultationData
+:hasConsultationData rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasConsultationEndTime
+:hasConsultationEndTime rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :hasConsultationData ;
+                        rdfs:domain :Consultation ;
+                        rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasConsultationId
+:hasConsultationId rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasIdentifier ;
+                   rdfs:domain :Consultation ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasConsultationNotes
+:hasConsultationNotes rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasConsultationData ;
+                      rdfs:domain :Consultation ;
+                      rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasConsultationStartTime
+:hasConsultationStartTime rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :hasConsultationData ;
+                          rdfs:domain :Consultation ;
+                          rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasConsultationStatus
+:hasConsultationStatus rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasConsultationData ;
+                       rdfs:domain :Consultation ;
+                       rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasConsultationTime
+:hasConsultationTime rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasConsultationData ;
+                     rdfs:domain :Consultation ;
+                     rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasContactWithTBPatient
+:hasContactWithTBPatient rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasTBScreeningData ;
+                         rdfs:domain :TBScreening ;
+                         rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#hasCough
+:hasCough rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :hasTBScreeningData ;
+          rdfs:domain :TBScreening ;
+          rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#hasCounselingDone
+:hasCounselingDone rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasHIVTestingData ;
+                   rdfs:domain :HIVTestingRecord ;
+                   rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#hasCounselling
+:hasCounselling rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasManagementPlanData ;
+                rdfs:domain :ManagementPlan ;
+                rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasCountry
+:hasCountry rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasAddressData ;
+            rdfs:domain :Patient ;
+            rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasCounty
+:hasCounty rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasAddressData ;
+           rdfs:domain :Patient ;
+           rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasCreatedAt
+:hasCreatedAt rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasAuditData ,
+                                 :hasClinicalNoteData ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :ClinicalNote
+                                          :Patient
+                                        )
+                          ] ;
+              rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasCreatedBy
+:hasCreatedBy rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasAuditData ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :ClinicalRecord
+                                          :Patient
+                                        )
+                          ] ;
+              rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasCurrentStatus
+:hasCurrentStatus rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasVisitData ;
+                  rdfs:domain :Visit ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasDangerSigns
+:hasDangerSigns rdf:type owl:DatatypeProperty ;
+                rdfs:domain :HealthSurveillance ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Indicates warning signs or clinical indicators requiring additional assessment or intervention." .
+
+
+###  https://w3id.org/dhs/ontology#hasDataProperty
+:hasDataProperty rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasDateOfBirth
+:hasDateOfBirth rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasPersonData ;
+                rdfs:domain :Patient ;
+                rdfs:range xsd:date .
+
+
+###  https://w3id.org/dhs/ontology#hasDateRecorded
+:hasDateRecorded rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :HealthSurveillance ;
+                 rdfs:range xsd:date ;
+                 rdfs:comment "Indicates the date on which a health surveillance record was created or recorded." .
+
+
+###  https://w3id.org/dhs/ontology#hasDateRegistered
+:hasDateRegistered rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :HouseholdRegistration ;
+                   rdfs:range xsd:date ;
+                   rdfs:comment "Indicates the date on which the household was registered." .
+
+
+###  https://w3id.org/dhs/ontology#hasDeliveryPlace
+:hasDeliveryPlace rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :MaternalChildHealth ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Indicates the planned or actual location of delivery." .
+
+
+###  https://w3id.org/dhs/ontology#hasDeliveryStatus
+:hasDeliveryStatus rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasAdmissionData ;
+                   rdfs:domain :Admission ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasDepartmentCode
+:hasDepartmentCode rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasIdentifier ;
+                   rdfs:domain :Department ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasDepartmentData
+:hasDepartmentData rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasDepartmentId
+:hasDepartmentId rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasIdentifier ;
+                 rdfs:domain :Department ;
+                 rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasDepartmentLocation
+:hasDepartmentLocation rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasDepartmentData ;
+                       rdfs:domain :Department ;
+                       rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasDepartmentName
+:hasDepartmentName rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasDepartmentData ;
+                   rdfs:domain :Department ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasDiagnosisData
+:hasDiagnosisData rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasDiagnosisDescription
+:hasDiagnosisDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasDiagnosisData ;
+                         rdfs:domain :Diagnosis ;
+                         rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasDiastolicBloodPressure
+:hasDiastolicBloodPressure rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf :hasVitalSignsData ;
+                           rdfs:domain :VitalSignsRecord ;
+                           rdfs:range xsd:integer ;
+                           skos:closeMatch <http://loinc.org/rdf/8462-4> .
+
+
+###  https://w3id.org/dhs/ontology#hasDisabilityStatus
+:hasDisabilityStatus rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasPersonData ;
+                     rdfs:domain :Patient ;
+                     rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#hasDispensedAt
+:hasDispensedAt rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasMedicationDispenseData ;
+                rdfs:domain :MedicationDispense ;
+                rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasDosage
+:hasDosage rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasMedicationDispenseData ;
+           rdfs:domain :MedicationDispense ;
+           rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasDrugName
+:hasDrugName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasMedicationDispenseData ;
+             rdfs:domain :MedicationDispense ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasDrugRefillStatus
+:hasDrugRefillStatus rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasHIVCareData ;
+                     rdfs:domain :HIVCareRecord ;
+                     rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#hasDuration
+:hasDuration rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasMedicationDispenseData ;
+             rdfs:domain :MedicationDispense ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasEducationLevel
+:hasEducationLevel rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasPersonData ;
+                   rdfs:domain :Patient ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasEnrolledAt
+:hasEnrolledAt rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasMaternalProfileData ;
+               rdfs:domain :MaternalProfile ;
+               rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasExpectedDeliveryDate
+:hasExpectedDeliveryDate rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasMaternalProfileData ;
+                         rdfs:domain :MaternalProfile ;
+                         rdfs:range xsd:date .
+
+
+###  https://w3id.org/dhs/ontology#hasFacilityName
+:hasFacilityName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Facility ;
+                 rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasFacilityReferredTo
+:hasFacilityReferredTo rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :CHU_Referral ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Indicates the healthcare facility to which an individual has been referred." .
+
+
+###  https://w3id.org/dhs/ontology#hasFever
+:hasFever rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :hasTBScreeningData ;
+          rdfs:domain :TBScreening ;
+          rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#hasFirstName
+:hasFirstName rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasPersonData ;
+              rdfs:domain :Patient ;
+              rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasFlowId
+:hasFlowId rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasIdentifier ;
+           rdfs:domain :PatientFlow ;
+           rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasFlowStatus
+:hasFlowStatus rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasPatientFlowData ;
+               rdfs:domain :PatientFlow ;
+               rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasFollowUpDate
+:hasFollowUpDate rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasManagementPlanData ;
+                 rdfs:domain :ManagementPlan ;
+                 rdfs:range xsd:date .
+
+
+###  https://w3id.org/dhs/ontology#hasFullName
+:hasFullName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Client ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Relates a client to their full name." .
+
+
+###  https://w3id.org/dhs/ontology#hasGPSLocation
+:hasGPSLocation rdf:type owl:DatatypeProperty ;
+                rdfs:domain :HouseholdRegistration ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Relates a household registration record to the geographic coordinates or location reference of the household." .
+
+
+###  https://w3id.org/dhs/ontology#hasGestationAgeWeeks
+:hasGestationAgeWeeks rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasMaternalProfileData ;
+                      rdfs:domain :MaternalProfile ;
+                      rdfs:range xsd:integer .
+
+
+###  https://w3id.org/dhs/ontology#hasGestationWeeks
+:hasGestationWeeks rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasMaternalChildHealthData ;
+                   rdfs:domain :MaternalChildHealthRecord ;
+                   rdfs:range xsd:integer .
+
+
+###  https://w3id.org/dhs/ontology#hasGravida
+:hasGravida rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasMaternalProfileData ;
+            rdfs:domain :MaternalProfile ;
+            rdfs:range xsd:integer .
+
+
+###  https://w3id.org/dhs/ontology#hasGrowthMonitoring
+:hasGrowthMonitoring rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :MaternalChildHealth ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Indicates growth monitoring information recorded for a child." .
+
+
+###  https://w3id.org/dhs/ontology#hasHIVCareData
+:hasHIVCareData rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasHIVCareNotes
+:hasHIVCareNotes rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasHIVCareData ;
+                 rdfs:domain :HIVCareRecord ;
+                 rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasHIVTestingData
+:hasHIVTestingData rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasHandwashingFacility
+:hasHandwashingFacility rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :EnvironmentalWASH ;
+                        rdfs:range xsd:boolean ;
+                        rdfs:comment "Indicates whether a household has a handwashing facility." .
+
+
+###  https://w3id.org/dhs/ontology#hasHeartRate
+:hasHeartRate rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasVitalSignsData ;
+              rdfs:domain :VitalSignsRecord ;
+              rdfs:range xsd:integer ;
+              skos:closeMatch <http://loinc.org/rdf/8867-4> .
+
+
+###  https://w3id.org/dhs/ontology#hasHeightCm
+:hasHeightCm rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasVitalSignsData ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :NutritionAssessment
+                                         :TriageAssessment
+                                         :VitalSignsRecord
+                                       )
+                         ] ;
+             rdfs:range xsd:decimal ;
+             skos:closeMatch <http://loinc.org/rdf/8302-2> .
+
+
+###  https://w3id.org/dhs/ontology#hasHouseholdHeadName
+:hasHouseholdHeadName rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :HouseholdRegistration ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Relates a household registration record to the name of the household head." .
+
+
+###  https://w3id.org/dhs/ontology#hasHouseholdID
+:hasHouseholdID rdf:type owl:DatatypeProperty ;
+                rdfs:domain :HouseholdRegistration ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Relates a household registration record to its unique household identifier." .
+
+
+###  https://w3id.org/dhs/ontology#hasHouseholdPhoneNumber
+:hasHouseholdPhoneNumber rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :HouseholdRegistration ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Relates a household registration record to a contact telephone number." .
+
+
+###  https://w3id.org/dhs/ontology#hasHouseholdVillage
+:hasHouseholdVillage rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :HouseholdRegistration ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Relates a household registration record to the village in which the household is located." .
+
+
+###  https://w3id.org/dhs/ontology#hasIdentifier
+:hasIdentifier rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasImmunizationStatus
+:hasImmunizationStatus rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :HealthSurveillance ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Indicates the immunization status recorded for an individual." .
+
+
+###  https://w3id.org/dhs/ontology#hasIndividualID
+:hasIndividualID rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Client ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Relates a client to their unique identifier." .
+
+
+###  https://w3id.org/dhs/ontology#hasInvestigations
+:hasInvestigations rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasManagementPlanData ;
+                   rdfs:domain :ManagementPlan ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasLMPDate
+:hasLMPDate rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasMaternalProfileData ;
+            rdfs:domain :MaternalProfile ;
+            rdfs:range xsd:date .
+
+
+###  https://w3id.org/dhs/ontology#hasLaboratoryData
+:hasLaboratoryData rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasLandmark
+:hasLandmark rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasAddressData ;
+             rdfs:domain :Patient ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasLastName
+:hasLastName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasPersonData ;
+             rdfs:domain :Patient ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasLastSeenBy
+:hasLastSeenBy rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasPatientFlowData ;
+               rdfs:domain :PatientFlow ;
+               rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasLastSeenDate
+:hasLastSeenDate rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasPatientFlowData ;
+                 rdfs:domain :PatientFlow ;
+                 rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasLatrineAvailable
+:hasLatrineAvailable rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :EnvironmentalWASH ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:comment "Indicates whether a household has access to a latrine." .
+
+
+###  https://w3id.org/dhs/ontology#hasLicenseNumber
+:hasLicenseNumber rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasProviderData ;
+                  rdfs:domain :Provider ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasLinkedFacility
+:hasLinkedFacility rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :CommunityHealthUnit ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Relates a Community Health Unit to the healthcare facility with which it is associated." .
+
+
+###  https://w3id.org/dhs/ontology#hasMCHID
+:hasMCHID rdf:type owl:DatatypeProperty ;
+          rdfs:domain :MaternalChildHealth ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Relates a maternal and child health record to its unique identifier." .
+
+
+###  https://w3id.org/dhs/ontology#hasMCHNotes
+:hasMCHNotes rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasMaternalChildHealthData ;
+             rdfs:domain :MaternalChildHealthRecord ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasMCHServiceType
+:hasMCHServiceType rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasMaternalChildHealthData ;
+                   rdfs:domain :MaternalChildHealthRecord ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasMFLCode
+:hasMFLCode rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Facility ;
+            rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasMUAC
+:hasMUAC rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :hasVitalSignsData ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :NutritionAssessment
+                                     :TriageAssessment
+                                   )
+                     ] ;
+         rdfs:range xsd:decimal ;
+         skos:closeMatch <http://loinc.org/rdf/56072-2> .
+
+
+###  https://w3id.org/dhs/ontology#hasMalnutritionSigns
+:hasMalnutritionSigns rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :hasNutritionData ;
+                      rdfs:domain :NutritionAssessment ;
+                      rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#hasManagementPlanData
+:hasManagementPlanData rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasMaritalStatus
+:hasMaritalStatus rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasPersonData ;
+                  rdfs:domain :Patient ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasMaternalChildHealthData
+:hasMaternalChildHealthData rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasMaternalProfileData
+:hasMaternalProfileData rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasMedicationDispenseData
+:hasMedicationDispenseData rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasMedications
+:hasMedications rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasManagementPlanData ;
+                rdfs:domain :ManagementPlan ;
+                rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasMentalHealthCondition
+:hasMentalHealthCondition rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :hasMentalHealthData ;
+                          rdfs:domain :MentalHealthAssessment ;
+                          rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasMentalHealthData
+:hasMentalHealthData rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasMiddleName
+:hasMiddleName rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasPersonData ;
+               rdfs:domain :Patient ;
+               rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasNationalID
+:hasNationalID rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Client ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Relates a client to a national identification number or alien card number." .
+
+
+###  https://w3id.org/dhs/ontology#hasNationalId
+:hasNationalId rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasIdentifier ;
+               rdfs:domain :Patient ;
+               rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasNewlyEnrolledStatus
+:hasNewlyEnrolledStatus rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :hasHIVCareData ;
+                        rdfs:domain :HIVCareRecord ;
+                        rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#hasNextOfKinName
+:hasNextOfKinName rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasPersonData ;
+                  rdfs:domain :Patient ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasNextOfKinPhone
+:hasNextOfKinPhone rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasPersonData ;
+                   rdfs:domain :Patient ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasNextOfKinRelationship
+:hasNextOfKinRelationship rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :hasPersonData ;
+                          rdfs:domain :Patient ;
+                          rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasNoteText
+:hasNoteText rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasClinicalNoteData ;
+             rdfs:domain :ClinicalNote ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasNumberOfMembers
+:hasNumberOfMembers rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :HouseholdRegistration ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Indicates the number of individuals registered within a household." .
+
+
+###  https://w3id.org/dhs/ontology#hasNutritionData
+:hasNutritionData rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasNutritionStatus
+:hasNutritionStatus rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasNutritionData ;
+                    rdfs:domain :NutritionAssessment ;
+                    rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasOccupation
+:hasOccupation rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasPersonData ;
+               rdfs:domain :Patient ;
+               rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasOnCareStatus
+:hasOnCareStatus rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasHIVCareData ;
+                 rdfs:domain :HIVCareRecord ;
+                 rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#hasOutcome
+:hasOutcome rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasAdmissionData ;
+            rdfs:domain :Admission ;
+            rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasPara
+:hasPara rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :hasMaternalProfileData ;
+         rdfs:domain :MaternalProfile ;
+         rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasParity
+:hasParity rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :hasMaternalChildHealthData ;
+           rdfs:domain :MaternalChildHealthRecord ;
+           rdfs:range xsd:integer .
+
+
+###  https://w3id.org/dhs/ontology#hasPatientFlowData
+:hasPatientFlowData rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasPatientId
+:hasPatientId rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasIdentifier ;
+              rdfs:domain :Patient ;
+              rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasPatientType
+:hasPatientType rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasVisitData ;
+                rdfs:domain :Visit ;
+                rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasPerformedAt
+:hasPerformedAt rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasLaboratoryData ;
+                rdfs:domain :LaboratoryResult ;
+                rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasPersonData
+:hasPersonData rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasPhoneNumber
+:hasPhoneNumber rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasPersonData ;
+                rdfs:domain :Patient ;
+                rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasPhysicalExamFindings
+:hasPhysicalExamFindings rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasComplaintExamData ;
+                         rdfs:domain :ComplaintExam ;
+                         rdfs:range xsd:string ;
+                         skos:closeMatch <http://loinc.org/rdf/29545-1> .
+
+
+###  https://w3id.org/dhs/ontology#hasPostnatalVisits
+:hasPostnatalVisits rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :MaternalChildHealth ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Indicates the number of postnatal care visits recorded after delivery." .
+
+
+###  https://w3id.org/dhs/ontology#hasPregnancyStatus
+:hasPregnancyStatus rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :HealthSurveillance ,
+                                :MaternalChildHealth ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:comment "Indicates whether an individual is recorded as pregnant." .
+
+
+###  https://w3id.org/dhs/ontology#hasPresentingComplaint
+:hasPresentingComplaint rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :hasComplaintExamData ;
+                        rdfs:domain :ComplaintExam ;
+                        rdfs:range xsd:string ;
+                        skos:closeMatch <http://loinc.org/rdf/10154-3> .
+
+
+###  https://w3id.org/dhs/ontology#hasPriorityStatus
+:hasPriorityStatus rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasVisitData ;
+                   rdfs:domain :Visit ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasProgramArea
+:hasProgramArea rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ServiceDelivery ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Indicates the healthcare program area associated with the service delivery activity." .
+
+
+###  https://w3id.org/dhs/ontology#hasProviderData
+:hasProviderData rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasProviderId
+:hasProviderId rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasIdentifier ;
+               rdfs:domain :Provider ;
+               rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasProviderName
+:hasProviderName rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasProviderData ;
+                 rdfs:domain :Provider ;
+                 rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasProviderType
+:hasProviderType rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasProviderData ;
+                 rdfs:domain :Provider ;
+                 rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasPulseRate
+:hasPulseRate rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasVitalSignsData ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :TriageAssessment
+                                          :VitalSignsRecord
+                                        )
+                          ] ;
+              rdfs:range xsd:integer .
+
+
+###  https://w3id.org/dhs/ontology#hasQuantity
+:hasQuantity rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasMedicationDispenseData ;
+             rdfs:domain :MedicationDispense ;
+             rdfs:range xsd:integer .
+
+
+###  https://w3id.org/dhs/ontology#hasQueueEntryId
+:hasQueueEntryId rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasIdentifier ;
+                 rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasQueueId
+:hasQueueId rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasIdentifier ;
+            rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasReaction
+:hasReaction rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasAllergyData ;
+             rdfs:domain :Allergy ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasReasonForReferral
+:hasReasonForReferral rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :CHU_Referral ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Indicates the clinical or administrative reason for issuing a referral." .
+
+
+###  https://w3id.org/dhs/ontology#hasRecordID
+:hasRecordID rdf:type owl:DatatypeProperty ;
+             rdfs:domain :HealthSurveillance ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Relates a health surveillance record to its unique identifier." .
+
+
+###  https://w3id.org/dhs/ontology#hasRecordId
+:hasRecordId rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasIdentifier ;
+             rdfs:domain :ClinicalRecord ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasRecordedAt
+:hasRecordedAt rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasAuditData ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Allergy
+                                           :ComplaintExam
+                                           :Diagnosis
+                                           :ManagementPlan
+                                         )
+                           ] ;
+               rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasRecordedTime
+:hasRecordedTime rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasVitalSignsData ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :TriageAssessment
+                                             :VitalSignsRecord
+                                           )
+                             ] ;
+                 rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasReferralData
+:hasReferralData rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasReferralDate
+:hasReferralDate rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasReferralData ;
+                 rdfs:domain :Referral ;
+                 rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasReferralID
+:hasReferralID rdf:type owl:DatatypeProperty ;
+               rdfs:domain :CHU_Referral ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Relates a referral record to its unique identifier." .
+
+
+###  https://w3id.org/dhs/ontology#hasReferralReason
+:hasReferralReason rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasReferralData ;
+                   rdfs:domain :Referral ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasReferralSource
+:hasReferralSource rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Referral ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasReferralStatus
+:hasReferralStatus rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasReferralData ;
+                   rdfs:domain :Referral ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasReferralType
+:hasReferralType rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :CHU_Referral ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Indicates the category or type of referral issued." .
+
+
+###  https://w3id.org/dhs/ontology#hasRegistrationDate
+:hasRegistrationDate rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasAuditData ;
+                     rdfs:domain :Patient ;
+                     rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasRehabilitationData
+:hasRehabilitationData rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasRehabilitationNotes
+:hasRehabilitationNotes rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf :hasRehabilitationData ;
+                        rdfs:domain :RehabilitationAssessment ;
+                        rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasRehabilitationServiceType
+:hasRehabilitationServiceType rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf :hasRehabilitationData ;
+                              rdfs:domain :RehabilitationAssessment ;
+                              rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasRelationshipToHead
+:hasRelationshipToHead rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :Client ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Indicates the relationship of a client to the head of the household." .
+
+
+###  https://w3id.org/dhs/ontology#hasReligion
+:hasReligion rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasPersonData ;
+             rdfs:domain :Patient ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasRemarks
+:hasRemarks rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasComplaintExamData ;
+            rdfs:domain :ComplaintExam ;
+            rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasResultStatus
+:hasResultStatus rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasLaboratoryData ;
+                 rdfs:domain :LaboratoryResult ;
+                 rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasRoomNumber
+:hasRoomNumber rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasConsultationData ;
+               rdfs:domain :Consultation ;
+               rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasSanitationType
+:hasSanitationType rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :EnvironmentalWASH ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Indicates the sanitation facilities available to a household." .
+
+
+###  https://w3id.org/dhs/ontology#hasScreenedAt
+:hasScreenedAt rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasTBScreeningData ;
+               rdfs:domain :TBScreening ;
+               rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasScreeningNotes
+:hasScreeningNotes rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasTBScreeningData ;
+                   rdfs:domain :TBScreening ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasServiceDeliveryDate
+:hasServiceDeliveryDate rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :ServiceDelivery ;
+                        rdfs:range xsd:date ;
+                        rdfs:comment "Indicates the date on which a community healthcare service was delivered." .
+
+
+###  https://w3id.org/dhs/ontology#hasServiceDeliveryOutcome
+:hasServiceDeliveryOutcome rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :ServiceDelivery ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Indicates the recorded outcome of a healthcare service delivery activity." .
+
+
+###  https://w3id.org/dhs/ontology#hasServiceDeliveryPoint
+:hasServiceDeliveryPoint rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Facility ;
+                         rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasServiceID
+:hasServiceID rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ServiceDelivery ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Relates a service delivery record to its unique identifier." .
+
+
+###  https://w3id.org/dhs/ontology#hasServiceType
+:hasServiceType rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ServiceDelivery ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Indicates the type of healthcare service delivered, such as health education, screening, treatment, or follow-up." .
+
+
+###  https://w3id.org/dhs/ontology#hasSeverity
+:hasSeverity rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasAllergyData ;
+             rdfs:domain :Allergy ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasSex
+:hasSex rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Client ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Indicates the biological sex recorded for a client." ,
+                     "Permitted values may include Male, Female, or other values defined by the source system." .
+
+
+###  https://w3id.org/dhs/ontology#hasSubCounty
+:hasSubCounty rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasAddressData ;
+              rdfs:domain :Patient ;
+              rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasSurveillanceDiagnosis
+:hasSurveillanceDiagnosis rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :HealthSurveillance ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Indicates a diagnosis recorded for an individual." .
+
+
+###  https://w3id.org/dhs/ontology#hasSurveillanceNutritionStatus
+:hasSurveillanceNutritionStatus rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :HealthSurveillance ;
+                                rdfs:range xsd:string ;
+                                rdfs:comment "Indicates the nutritional status recorded for an individual." .
+
+
+###  https://w3id.org/dhs/ontology#hasSymptom
+:hasSymptom rdf:type owl:DatatypeProperty ;
+            rdfs:domain :HealthSurveillance ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Indicates a symptom observed or reported for an individual." .
+
+
+###  https://w3id.org/dhs/ontology#hasSystolicBloodPressure
+:hasSystolicBloodPressure rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :hasVitalSignsData ;
+                          rdfs:domain :VitalSignsRecord ;
+                          rdfs:range xsd:integer ;
+                          skos:closeMatch <http://loinc.org/rdf/8480-6> .
+
+
+###  https://w3id.org/dhs/ontology#hasTBScreeningData
+:hasTBScreeningData rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasTemperature
+:hasTemperature rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :hasVitalSignsData ;
+                rdfs:domain :TriageAssessment ;
+                rdfs:range xsd:decimal ;
+                skos:closeMatch <http://loinc.org/rdf/8310-5> .
+
+
+###  https://w3id.org/dhs/ontology#hasTestName
+:hasTestName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasLaboratoryData ;
+             rdfs:domain :LaboratoryResult ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasTestResult
+:hasTestResult rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasLaboratoryData ;
+               rdfs:domain :LaboratoryResult ;
+               rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasTestType
+:hasTestType rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasHIVTestingData ;
+             rdfs:domain :HIVTestingRecord ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasTestedAt
+:hasTestedAt rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasHIVTestingData ;
+             rdfs:domain :HIVTestingRecord ;
+             rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasTransferData
+:hasTransferData rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasTransferInOut
+:hasTransferInOut rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasHIVCareData ;
+                  rdfs:domain :HIVCareRecord ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasTransferReason
+:hasTransferReason rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasTransferData ;
+                   rdfs:domain :Transfer ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasTransferStatus
+:hasTransferStatus rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasTransferData ;
+                   rdfs:domain :Transfer ;
+                   rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasTransferTime
+:hasTransferTime rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :hasTransferData ;
+                 rdfs:domain :Transfer ;
+                 rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasTreatmentPlan
+:hasTreatmentPlan rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasMentalHealthData ;
+                  rdfs:domain :MentalHealthAssessment ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasUPINumber
+:hasUPINumber rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasIdentifier ;
+              rdfs:domain :Patient ;
+              rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasUnintendedWeightLoss
+:hasUnintendedWeightLoss rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :hasTBScreeningData ;
+                         rdfs:domain :TBScreening ;
+                         rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#hasUpdatedAt
+:hasUpdatedAt rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasAuditData ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Department
+                                          :Patient
+                                          :Provider
+                                          :Visit
+                                        )
+                          ] ;
+              rdfs:range xsd:dateTime .
+
+
+###  https://w3id.org/dhs/ontology#hasVDRLResult
+:hasVDRLResult rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :hasHIVCareData ;
+               rdfs:domain :HIVCareRecord ;
+               rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasVillage
+:hasVillage rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasAddressData ;
+            rdfs:domain :Patient ;
+            rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasVisitData
+:hasVisitData rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasVisitDate
+:hasVisitDate rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasVisitData ;
+              rdfs:domain :Visit ;
+              rdfs:range xsd:date .
+
+
+###  https://w3id.org/dhs/ontology#hasVisitId
+:hasVisitId rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :hasIdentifier ;
+            rdfs:domain :Visit ;
+            rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasVisitTime
+:hasVisitTime rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasVisitData ;
+              rdfs:domain :Visit ;
+              rdfs:range xsd:time .
+
+
+###  https://w3id.org/dhs/ontology#hasVisitType
+:hasVisitType rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :hasVisitData ;
+              rdfs:domain :Visit ;
+              rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasVitalSignsData
+:hasVitalSignsData rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :hasDataProperty .
+
+
+###  https://w3id.org/dhs/ontology#hasWard
+:hasWard rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :hasAddressData ;
+         rdfs:domain :Patient ;
+         rdfs:range xsd:string .
+
+
+###  https://w3id.org/dhs/ontology#hasWasteDisposalMethod
+:hasWasteDisposalMethod rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :EnvironmentalWASH ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Indicates the method used for household waste disposal." .
+
+
+###  https://w3id.org/dhs/ontology#hasWaterSource
+:hasWaterSource rdf:type owl:DatatypeProperty ;
+                rdfs:domain :EnvironmentalWASH ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Indicates the primary source of water available to a household." .
+
+
+###  https://w3id.org/dhs/ontology#hasWeightKg
+:hasWeightKg rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :hasVitalSignsData ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :NutritionAssessment
+                                         :TriageAssessment
+                                         :VitalSignsRecord
+                                       )
+                         ] ;
+             rdfs:range xsd:decimal ;
+             skos:closeMatch <http://loinc.org/rdf/29463-7> .
+
+
+###  https://w3id.org/dhs/ontology#isActive
+:isActive rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :hasVisitData ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Department
+                                      :Provider
+                                      :Visit
+                                    )
+                      ] ;
+          rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/dhs/ontology#requiresFollowUp
+:requiresFollowUp rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ServiceDelivery ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "Indicates whether additional follow-up care or monitoring is required after a service delivery activity." .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://hl7.org/fhir/StructureDefinition/AllergyIntolerance
+fhir:AllergyIntolerance rdf:type owl:Class .
+
+
+###  http://hl7.org/fhir/StructureDefinition/CarePlan
+fhir:CarePlan rdf:type owl:Class .
+
+
+###  http://hl7.org/fhir/StructureDefinition/ClinicalImpression
+fhir:ClinicalImpression rdf:type owl:Class .
+
+
+###  http://hl7.org/fhir/StructureDefinition/CodeableConcept
+fhir:CodeableConcept rdf:type owl:Class .
+
+
+###  http://hl7.org/fhir/StructureDefinition/Composition
+fhir:Composition rdf:type owl:Class .
+
+
+###  http://hl7.org/fhir/StructureDefinition/Condition
+fhir:Condition rdf:type owl:Class ;
+               owl:equivalentClass :Diagnosis .
+
+
+###  http://hl7.org/fhir/StructureDefinition/DocumentReference
+fhir:DocumentReference rdf:type owl:Class .
+
+
+###  http://hl7.org/fhir/StructureDefinition/Encounter
+fhir:Encounter rdf:type owl:Class ;
+               owl:equivalentClass :HealthcareEncounter .
+
+
+###  http://hl7.org/fhir/StructureDefinition/Medication
+fhir:Medication rdf:type owl:Class ;
+                owl:equivalentClass :Medication .
+
+
+###  http://hl7.org/fhir/StructureDefinition/MedicationDispense
+fhir:MedicationDispense rdf:type owl:Class ;
+                        owl:equivalentClass :MedicationDispense .
+
+
+###  http://hl7.org/fhir/StructureDefinition/Observation
+fhir:Observation rdf:type owl:Class .
+
+
+###  http://hl7.org/fhir/StructureDefinition/Organization
+fhir:Organization rdf:type owl:Class .
+
+
+###  http://hl7.org/fhir/StructureDefinition/Patient
+fhir:Patient rdf:type owl:Class ;
+             owl:equivalentClass :Patient .
+
+
+###  http://hl7.org/fhir/StructureDefinition/Person
+fhir:Person rdf:type owl:Class ;
+            owl:equivalentClass :Person .
+
+
+###  http://hl7.org/fhir/StructureDefinition/Practitioner
+fhir:Practitioner rdf:type owl:Class ;
+                  owl:equivalentClass :Provider .
+
+
+###  http://hl7.org/fhir/StructureDefinition/ServiceRequest
+fhir:ServiceRequest rdf:type owl:Class .
+
+
+###  http://hl7.org/fhir/StructureDefinition/vitalsigns
+fhir:vitalsigns rdf:type owl:Class ;
+                owl:equivalentClass :VitalSignsRecord .
+
+
+###  https://w3id.org/dhs/ontology#AdministrativeWorkflow
+:AdministrativeWorkflow rdf:type owl:Class ;
+                        rdfs:comment "Administrative process related to patient management and healthcare operations"@en ;
+                        rdfs:label "Administrative workflow"@en ;
+                        skos:closeMatch "http://snomed.info/id/14734007"@en .
+
+
+###  https://w3id.org/dhs/ontology#Admission
+:Admission rdf:type owl:Class ;
+           rdfs:subClassOf fhir:Encounter ,
+                           :HealthcareEncounter ;
+           rdfs:comment "Healthcare event representing an ANC patient admission into a healthcare facility."@en ;
+           rdfs:label "Maternity admission"@en ;
+           skos:closeMatch "http://snomed.info/id/32485007"@en .
+
+
+###  https://w3id.org/dhs/ontology#Allergen
+:Allergen rdf:type owl:Class ;
+          rdfs:subClassOf fhir:AllergyIntolerance ,
+                          :ReferenceTerminology ;
+          rdfs:comment "Represents a substance that the immune system recognizes as foreign, triggering an IgE-mediated hypersensitivity reaction in sensitive individuals."@en ;
+          rdfs:label "Allergen"@en ;
+          skos:exactMatch "http://snomed.info/id/277054007"@en .
+
+
+###  https://w3id.org/dhs/ontology#Allergy
+:Allergy rdf:type owl:Class ;
+         rdfs:subClassOf fhir:AllergyIntolerance ,
+                         :ClinicalRecord ;
+         rdfs:comment "Represents an allergy a person receiving healthcare services sufferes from."@en ;
+         rdfs:label "Allergy"@en ;
+         skos:exactMatch "http://snomed.info/id/722446000"@en .
+
+
+###  https://w3id.org/dhs/ontology#BloodGroup
+:BloodGroup rdf:type owl:Class ;
+            rdfs:subClassOf fhir:Observation ,
+                            :ReferenceTerminology ;
+            rdfs:comment "Represents a blood type - A/B/AB/O."@en ;
+            rdfs:label "Blood group"@en ;
+            skos:closeMatch <http://loinc.org/rdf/883-9> ;
+            skos:exactMatch "http://snomed.info/id/365636006"@en .
+
+
+###  https://w3id.org/dhs/ontology#CHU_Referral
+:CHU_Referral rdf:type owl:Class ;
+              rdfs:comment "A documented request or transfer of an individual from a community healthcare provider to a healthcare facility or healthcare service for further assessment, diagnosis, treatment, or management."@en ;
+              rdfs:label "CHU Referral"@en .
+
+
+###  https://w3id.org/dhs/ontology#Client
+:Client rdf:type owl:Class ;
+        rdfs:comment "An individual registered within a household and receiving, eligible for, or participating in community healthcare services." ;
+        rdfs:label "Client" .
+
+
+###  https://w3id.org/dhs/ontology#ClinicalAssessment
+:ClinicalAssessment rdf:type owl:Class ;
+                    rdfs:subClassOf fhir:ClinicalImpression ,
+                                    :ClinicalRecord ;
+                    rdfs:comment "Assessment entity representing clinical observations and evaluations performed during healthcare delivery."@en ;
+                    rdfs:label "Clinical Assessment"@en ;
+                    skos:closeMatch "http://snomed.info/id/386637004"@en .
+
+
+###  https://w3id.org/dhs/ontology#ClinicalNote
+:ClinicalNote rdf:type owl:Class ;
+              rdfs:subClassOf fhir:DocumentReference ,
+                              :ClinicalRecord ;
+              rdfs:comment "Clinical documentation containing notes recorded during patient care."@en ;
+              rdfs:label "Clinical note"@en .
+
+
+###  https://w3id.org/dhs/ontology#ClinicalRecord
+:ClinicalRecord rdf:type owl:Class ;
+                rdfs:subClassOf fhir:Composition ;
+                rdfs:comment "Clinical information entity containing medical findings, diagnoses, assessments, and care documentation"@en ;
+                rdfs:label "Clinical record"@en ;
+                skos:exactMatch "http://snomed.info/id/371530004"@en .
+
+
+###  https://w3id.org/dhs/ontology#CommunityHealthUnit
+:CommunityHealthUnit rdf:type owl:Class ;
+                     rdfs:comment "A geographically defined community-based health service unit responsible for coordinating and delivering primary healthcare services to households within a designated population." ;
+                     rdfs:label "Community Health Unit" .
+
+
+###  https://w3id.org/dhs/ontology#ComplaintExam
+:ComplaintExam rdf:type owl:Class ;
+               rdfs:subClassOf :ClinicalRecord ;
+               rdfs:comment "Clinical record containing presenting complaints, physical examination findings, and remarks."@en ;
+               rdfs:label "Complaint Exam"@en ;
+               skos:closeMatch "http://snomed.info/id/185349003"@en ,
+                               "http://snomed.info/id/302199004"@en .
+
+
+###  https://w3id.org/dhs/ontology#Consultation
+:Consultation rdf:type owl:Class ;
+              rdfs:subClassOf fhir:Encounter ,
+                              :HealthcareEncounter ;
+              rdfs:comment "Healthcare event representing an interaction between a patient and healthcare provider for clinical consultation."@en ;
+              rdfs:label "Consultation"@en ;
+              skos:exactMatch "http://snomed.info/id/11429006"@en .
+
+
+###  https://w3id.org/dhs/ontology#Department
+:Department rdf:type owl:Class ;
+            rdfs:subClassOf fhir:Organization ,
+                            :HealthcareEntity ;
+            rdfs:comment "Organizational unit within a healthcare facility responsible for providing specific healthcare services." ;
+            rdfs:label "Department"@en ;
+            skos:exactMatch "http://snomed.info/id/309912009"@en .
+
+
+###  https://w3id.org/dhs/ontology#DepartmentType
+:DepartmentType rdf:type owl:Class ;
+                rdfs:subClassOf fhir:Organization ,
+                                :ReferenceTerminology ;
+                rdfs:comment "Type of organizational unit within a healthcare facility responsible for providing specific healthcare services." ;
+                rdfs:label "Department Type"@en .
+
+
+###  https://w3id.org/dhs/ontology#Diagnosis
+:Diagnosis rdf:type owl:Class ;
+           rdfs:subClassOf :ClinicalRecord ;
+           rdfs:comment "Represents a working or a final diagnosis of a patient."@en ;
+           rdfs:label "Diagnosis"@en ;
+           skos:exactMatch "http://snomed.info/id/439401001"@en .
+
+
+###  https://w3id.org/dhs/ontology#DiagnosisType
+:DiagnosisType rdf:type owl:Class ;
+               rdfs:comment "Represents the category or type of a diagnosis."@en ;
+               rdfs:label "Diagnosis Type"@en ;
+               skos:exactMatch "http://snomed.info/id/106229004"@en .
+
+
+###  https://w3id.org/dhs/ontology#EnvironmentalWASH
+:EnvironmentalWASH rdf:type owl:Class ;
+                   rdfs:comment "A record describing environmental, water, sanitation, hygiene, and waste management conditions associated with a household and relevant to community health." ;
+                   rdfs:label "Environmental and WASH Assessment" .
+
+
+###  https://w3id.org/dhs/ontology#Facility
+:Facility rdf:type owl:Class ;
+          rdfs:subClassOf fhir:Organization ,
+                          :HealthcareEntity ;
+          rdfs:comment "Healthcare institution where healthcare services are delivered."@en ;
+          rdfs:label "Facility"@en ;
+          skos:exactMatch "http://snomed.info/id/257622000"@en .
+
+
+###  https://w3id.org/dhs/ontology#Gender
+:Gender rdf:type owl:Class ;
+        rdfs:subClassOf :ReferenceTerminology ;
+        rdfs:label "Gender"@en .
+
+
+###  https://w3id.org/dhs/ontology#HIVCareRecord
+:HIVCareRecord rdf:type owl:Class ;
+               rdfs:subClassOf fhir:Condition ,
+                               :ClinicalAssessment ;
+               rdfs:comment "Observation record related to HIV care, treatment status, and follow-up information."@en ;
+               rdfs:label "HIV Care Record"@en ;
+               skos:closeMatch "http://snomed.info/id/24091000087107"@en .
+
+
+###  https://w3id.org/dhs/ontology#HIVStatus
+:HIVStatus rdf:type owl:Class ;
+           rdfs:subClassOf fhir:Observation ,
+                           :ReferenceTerminology ;
+           rdfs:comment "Observation record documenting HIV status assessment."@en ;
+           rdfs:label "HIV Status"@en ;
+           skos:closeMatch <http://loinc.org/rdf/55277-8> ;
+           skos:exactMatch "http://snomed.info/id/278977008"@en .
+
+
+###  https://w3id.org/dhs/ontology#HIVTestingRecord
+:HIVTestingRecord rdf:type owl:Class ;
+                  rdfs:subClassOf fhir:Observation ,
+                                  :ClinicalAssessment ;
+                  rdfs:comment "Observation record documenting HIV testing procedures and results."@en ;
+                  rdfs:label "HIV Testing Record"@en ;
+                  skos:exactMatch "http://snomed.info/id/171121004"@en .
+
+
+###  https://w3id.org/dhs/ontology#HealthSurveillance
+:HealthSurveillance rdf:type owl:Class ;
+                    rdfs:comment "A record of observed health conditions, symptoms, risk factors, health status indicators, or disease-related information collected for monitoring the health of an individual." ;
+                    rdfs:label "Health Surveillance" .
+
+
+###  https://w3id.org/dhs/ontology#HealthcareEncounter
+:HealthcareEncounter rdf:type owl:Class ;
+                     rdfs:comment "Event occurring during healthcare delivery or patient care processes."@en ;
+                     rdfs:label "Healthcare encounter"@en ;
+                     skos:exactMatch "http://snomed.info/id/308335008"@en .
+
+
+###  https://w3id.org/dhs/ontology#HealthcareEntity
+:HealthcareEntity rdf:type owl:Class ;
+                  rdfs:subClassOf fhir:Organization ;
+                  rdfs:comment "General entity representing organizational or structural healthcare resources."@en ;
+                  rdfs:label "Healthcare entity"@en .
+
+
+###  https://w3id.org/dhs/ontology#HouseholdRegistration
+:HouseholdRegistration rdf:type owl:Class ;
+                       rdfs:comment "A record documenting the registration of a household within a Community Health Unit, including household location, membership, and administrative information." ;
+                       rdfs:label "Household Registration" .
+
+
+###  https://w3id.org/dhs/ontology#ICDCode
+:ICDCode rdf:type owl:Class ;
+         rdfs:subClassOf fhir:CodeableConcept ;
+         rdfs:comment "Represents a code from the International Classification of Diseases (ICD)."@en ;
+         rdfs:label "ICD Code"@en .
+
+
+###  https://w3id.org/dhs/ontology#LaboratoryResult
+:LaboratoryResult rdf:type owl:Class ;
+                  rdfs:subClassOf fhir:Observation ,
+                                  :ClinicalAssessment ;
+                  rdfs:comment "Observation representing laboratory tests and their results."@en ;
+                  rdfs:label "Laboratory result"@en ;
+                  skos:exactMatch "http://snomed.info/id/275924004"@en .
+
+
+###  https://w3id.org/dhs/ontology#ManagementPlan
+:ManagementPlan rdf:type owl:Class ;
+                rdfs:subClassOf fhir:CarePlan ,
+                                :ClinicalRecord ;
+                rdfs:comment "Clinical record describing planned investigations, medications, counselling, and follow-up care."@en ;
+                rdfs:label "Management plan"@en ;
+                skos:closeMatch <http://loinc.org/rdf/18776-5> ;
+                skos:exactMatch "http://snomed.info/id/734163000"@en .
+
+
+###  https://w3id.org/dhs/ontology#MaternalChildHealth
+:MaternalChildHealth rdf:type owl:Class ;
+                     rdfs:comment "A record containing information related to maternal and child health, including pregnancy status, antenatal care, delivery, postnatal care, child immunization, and growth monitoring." ;
+                     rdfs:label "Maternal and Child Health" .
+
+
+###  https://w3id.org/dhs/ontology#MaternalChildHealthRecord
+:MaternalChildHealthRecord rdf:type owl:Class ;
+                           rdfs:subClassOf fhir:Composition ,
+                                           :ClinicalAssessment ;
+                           rdfs:comment "Observation record related to maternal and child healthcare services."@en ;
+                           rdfs:label "Maternal and child health record"@en ;
+                           skos:closeMatch <http://loinc.org/rdf/57073-9> ,
+                                           "http://snomed.info/id/406199001"@en .
+
+
+###  https://w3id.org/dhs/ontology#MaternalProfile
+:MaternalProfile rdf:type owl:Class ;
+                 rdfs:subClassOf fhir:Patient ,
+                                 :ClinicalRecord ;
+                 rdfs:comment "Clinical record containing maternal health and pregnancy-related information."@en ;
+                 rdfs:label "Maternal profile"@en ;
+                 skos:closeMatch "https://profiles.ihe.net/PCC/mAPS/StructureDefinition-IHE.PregnancyHistory.html"@en ;
+                 skos:exactMatch "http://snomed.info/id/246104002"@en .
+
+
+###  https://w3id.org/dhs/ontology#Medication
+:Medication rdf:type owl:Class ;
+            rdfs:comment "Entity representing medication prescribed or dispensed to a patient."@en ;
+            rdfs:label "Medication"@en ;
+            skos:closeMatch "http://snomed.info/id/182833002"@en .
+
+
+###  https://w3id.org/dhs/ontology#MedicationDispense
+:MedicationDispense rdf:type owl:Class ;
+                    rdfs:subClassOf :HealthcareEncounter ;
+                    rdfs:comment "Record representing the dispensing of medication to a patient."@en ;
+                    rdfs:label "Medication dispense"@en ;
+                    skos:closeMatch "http://snomed.info/id/373784005"@en .
+
+
+###  https://w3id.org/dhs/ontology#MentalHealthAssessment
+:MentalHealthAssessment rdf:type owl:Class ;
+                        rdfs:subClassOf :ClinicalAssessment ;
+                        rdfs:comment "Observation representing mental health evaluation, assessment notes, and treatment planning."@en ;
+                        rdfs:label "Mental health assessment"@en ;
+                        skos:exactMatch "http://snomed.info/id/401061005"@en .
+
+
+###  https://w3id.org/dhs/ontology#NutritionAssessment
+:NutritionAssessment rdf:type owl:Class ;
+                     rdfs:subClassOf :ClinicalAssessment ;
+                     rdfs:comment "Observation related to nutritional status and malnutrition assessment."@en ;
+                     rdfs:label "Nutrition assessment"@en ;
+                     skos:exactMatch "http://snomed.info/id/1759002"@en .
+
+
+###  https://w3id.org/dhs/ontology#Patient
+:Patient rdf:type owl:Class ;
+         rdfs:subClassOf :Person ;
+         rdfs:comment "Represents a person receiving healthcare services."@en ;
+         rdfs:label "Patient"@en ;
+         skos:exactMatch "http://snomed.info/id/116154003"@en .
+
+
+###  https://w3id.org/dhs/ontology#PatientFlow
+:PatientFlow rdf:type owl:Class ;
+             rdfs:subClassOf :AdministrativeWorkflow ;
+             rdfs:comment "Administrative workflow following patient movement through healthcare services or departments."@en ;
+             rdfs:label "Patient flow"@en .
+
+
+###  https://w3id.org/dhs/ontology#Person
+:Person rdf:type owl:Class ;
+        rdfs:comment "Human individual"@en ;
+        rdfs:label "Person"@en .
+
+
+###  https://w3id.org/dhs/ontology#Provider
+:Provider rdf:type owl:Class ;
+          rdfs:subClassOf :Person ;
+          rdfs:comment "Represents a person providing healthcare services."@en ;
+          rdfs:label "Healthcare provider"@en ;
+          skos:exactMatch "http://snomed.info/id/223366009"@en .
+
+
+###  https://w3id.org/dhs/ontology#ReferenceTerminology
+:ReferenceTerminology rdf:type owl:Class ;
+                      rdfs:comment "A standardized terminology or coding system used to represent 				clinical concepts in healthcare."@en ;
+                      rdfs:label "Reference Terminology"@en .
+
+
+###  https://w3id.org/dhs/ontology#Referral
+:Referral rdf:type owl:Class ;
+          rdfs:subClassOf fhir:ServiceRequest ,
+                          :HealthcareEncounter ;
+          rdfs:comment "Healthcare event representing referral of a patient between providers, departments, or facilities."@en ;
+          rdfs:label "Referral"@en ;
+          skos:exactMatch "http://snomed.info/id/3457005"@en .
+
+
+###  https://w3id.org/dhs/ontology#RehabilitationAssessment
+:RehabilitationAssessment rdf:type owl:Class ;
+                          rdfs:subClassOf :ClinicalAssessment ;
+                          rdfs:comment "Observation related to rehabilitation services, assessments, and rehabilitation planning."@en ;
+                          rdfs:label "Rehabilitation assessments"@en ;
+                          skos:closeMatch "http://snomed.info/id/52052004"@en ;
+                          skos:exactMatch "http://snomed.info/id/410081009"@en .
+
+
+###  https://w3id.org/dhs/ontology#RhesusFactor
+:RhesusFactor rdf:type owl:Class ;
+              rdfs:subClassOf fhir:Observation ,
+                              :ReferenceTerminology ;
+              rdfs:comment "Observation record documenting Rhesus Factor assessment."@en ;
+              rdfs:label "Rhesus Factor"@en ;
+              skos:closeMatch <http://loinc.org/rdf/10331-7> ;
+              skos:exactMatch "http://snomed.info/id/278155008"@en .
+
+
+###  https://w3id.org/dhs/ontology#ServiceDelivery
+:ServiceDelivery rdf:type owl:Class ;
+                 rdfs:comment "A healthcare service or intervention delivered by a Community Health Practitioner to an individual within a community setting, including health education, screening, treatment, and follow-up activities." ;
+                 rdfs:label "Service Delivery" .
+
+
+###  https://w3id.org/dhs/ontology#TBScreening
+:TBScreening rdf:type owl:Class ;
+             rdfs:subClassOf fhir:Observation ,
+                             :ClinicalRecord ;
+             rdfs:comment "Clinical record documenting tuberculosis screening findings and symptoms."@en ;
+             rdfs:label "Tuberculosis Screening"@en ;
+             skos:exactMatch "http://snomed.info/id/171126009"@en .
+
+
+###  https://w3id.org/dhs/ontology#Transfer
+:Transfer rdf:type owl:Class ;
+          rdfs:subClassOf fhir:Encounter ,
+                          :HealthcareEncounter ;
+          rdfs:comment "Healthcare event representing transfer of a patient between healthcare facilities or departments"@en ;
+          rdfs:label "Transfer"@en ;
+          skos:exactMatch "http://snomed.info/id/107724000"@en .
+
+
+###  https://w3id.org/dhs/ontology#TriageAssessment
+:TriageAssessment rdf:type owl:Class ;
+                  rdfs:subClassOf fhir:Observation ,
+                                  :ClinicalAssessment ;
+                  rdfs:comment "Observation representing initial patient assessment and vital sign measurements during triage."@en ;
+                  rdfs:label "Triage assessment"@en ;
+                  skos:closeMatch "http://snomed.info/id/225390008"@en .
+
+
+###  https://w3id.org/dhs/ontology#Visit
+:Visit rdf:type owl:Class ;
+       rdfs:subClassOf fhir:Encounter ,
+                       :HealthcareEncounter ;
+       rdfs:comment "Healthcare event representing a patient's encounter with a healthcare facility."@en ;
+       rdfs:label "Visit"@en ;
+       skos:closeMatch "http://snomed.info/id/302199004"@en .
+
+
+###  https://w3id.org/dhs/ontology#VitalSignsRecord
+:VitalSignsRecord rdf:type owl:Class ;
+                  rdfs:subClassOf :ClinicalAssessment ;
+                  rdfs:comment "Observation record containing patient vital sign measurements such as blood pressure, temperature, pulse,..."@en ;
+                  rdfs:label "Vital signs record"@en ;
+                  skos:closeMatch <http://loinc.org/rdf/85353-1> ;
+                  skos:exactMatch "http://snomed.info/id/118227000"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/dhs/ontology#AnteNatal
+:AnteNatal rdf:type owl:NamedIndividual ,
+                    :DepartmentType ;
+           skos:exactMatch <http://snomed.info/id/394574007> .
+
+
+###  https://w3id.org/dhs/ontology#BeeVenomAllergen
+:BeeVenomAllergen rdf:type owl:NamedIndividual ,
+                           :Allergen ;
+                  skos:exactMatch <http://snomed.info/id/411802009> .
+
+
+###  https://w3id.org/dhs/ontology#BloodGroupA
+:BloodGroupA rdf:type owl:NamedIndividual ,
+                      :BloodGroup ;
+             skos:exactMatch "http://snomed.info/id/112144000"@en .
+
+
+###  https://w3id.org/dhs/ontology#BloodGroupAB
+:BloodGroupAB rdf:type owl:NamedIndividual ,
+                       :BloodGroup ;
+              skos:exactMatch "http://snomed.info/id/165743006"@en .
+
+
+###  https://w3id.org/dhs/ontology#BloodGroupB
+:BloodGroupB rdf:type owl:NamedIndividual ,
+                      :BloodGroup ;
+             skos:exactMatch "http://snomed.info/id/112149005"@en .
+
+
+###  https://w3id.org/dhs/ontology#BloodGroupO
+:BloodGroupO rdf:type owl:NamedIndividual ,
+                      :BloodGroup ;
+             skos:exactMatch "http://snomed.info/id/58460004"@en .
+
+
+###  https://w3id.org/dhs/ontology#Female
+:Female rdf:type owl:NamedIndividual ,
+                 :Gender ;
+        skos:exactMatch "http://snomed.info/id/1086007"@en .
+
+
+###  https://w3id.org/dhs/ontology#FinalDiagnosis
+:FinalDiagnosis rdf:type owl:NamedIndividual ,
+                         :DiagnosisType ;
+                skos:exactMatch <http://snomed.info/id/89100005> .
+
+
+###  https://w3id.org/dhs/ontology#GlutenAllergen
+:GlutenAllergen rdf:type owl:NamedIndividual ,
+                         :Allergen ;
+                skos:exactMatch <http://snomed.info/id/411695004> .
+
+
+###  https://w3id.org/dhs/ontology#HIVNegative
+:HIVNegative rdf:type owl:NamedIndividual ,
+                      :HIVStatus ;
+             skos:exactMatch <http://snomed.info/id/165815009> .
+
+
+###  https://w3id.org/dhs/ontology#HIVPositive
+:HIVPositive rdf:type owl:NamedIndividual ,
+                      :HIVStatus ;
+             skos:exactMatch <http://snomed.info/id/165816005> .
+
+
+###  https://w3id.org/dhs/ontology#Male
+:Male rdf:type owl:NamedIndividual ,
+               :Gender ;
+      skos:exactMatch "http://snomed.info/id/248153007"@en .
+
+
+###  https://w3id.org/dhs/ontology#MilkAllergen
+:MilkAllergen rdf:type owl:NamedIndividual ,
+                       :Allergen ;
+              skos:exactMatch <http://snomed.info/id/411726001> .
+
+
+###  https://w3id.org/dhs/ontology#O10
+:O10 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Pre-existing hypertension complicating pregnancy"@en ;
+     skos:closeMatch "http://snomed.info/id/65402008"@en .
+
+
+###  https://w3id.org/dhs/ontology#O13
+:O13 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Gestational hypertension without significant proteinuria"@en ;
+     skos:exactMatch "http://snomed.info/id/307632004"@en .
+
+
+###  https://w3id.org/dhs/ontology#O14
+:O14 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Pre-eclampsia"@en ;
+     skos:exactMatch "http://snomed.info/id/398254007"@en .
+
+
+###  https://w3id.org/dhs/ontology#O15
+:O15 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Eclampsia"@en ;
+     skos:exactMatch "http://snomed.info/id/15938005"@en .
+
+
+###  https://w3id.org/dhs/ontology#O24
+:O24 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Diabetes mellitus in pregnancy"@en ;
+     skos:closeMatch "http://snomed.info/id/11687002"@en .
+
+
+###  https://w3id.org/dhs/ontology#O26
+:O26 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Maternal care for other conditions predominantly related to pregnancy"@en .
+
+
+###  https://w3id.org/dhs/ontology#O42
+:O42 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Premature rupture of membranes"@en ;
+     skos:exactMatch "http://snomed.info/id/44223004"@en .
+
+
+###  https://w3id.org/dhs/ontology#O44
+:O44 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Placenta praevia"@en ;
+     skos:closeMatch "http://snomed.info/id/36813001"@en .
+
+
+###  https://w3id.org/dhs/ontology#O45
+:O45 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Premature separation of placenta (placental abruption)"@en ;
+     skos:closeMatch "http://snomed.info/id/415105001"@en .
+
+
+###  https://w3id.org/dhs/ontology#O48
+:O48 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Prolonged pregnancy"@en ;
+     skos:closeMatch "http://snomed.info/id/90968009"@en .
+
+
+###  https://w3id.org/dhs/ontology#O60
+:O60 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Preterm labour"@en ;
+     skos:closeMatch "http://snomed.info/id/6383007"@en .
+
+
+###  https://w3id.org/dhs/ontology#O80
+:O80 rdf:type owl:NamedIndividual ,
+              :ICDCode ;
+     rdfs:label "Single spontaneous delivery"@en ;
+     skos:closeMatch "http://snomed.info/id/48782003"@en .
+
+
+###  https://w3id.org/dhs/ontology#Other
+:Other rdf:type owl:NamedIndividual ,
+                :Gender ;
+       skos:exactMatch "http://snomed.info/id/394743007"@en .
+
+
+###  https://w3id.org/dhs/ontology#PeanutAllergen
+:PeanutAllergen rdf:type owl:NamedIndividual ,
+                         :Allergen ;
+                skos:exactMatch <http://snomed.info/id/411626009> .
+
+
+###  https://w3id.org/dhs/ontology#PenicillinAllergen
+:PenicillinAllergen rdf:type owl:NamedIndividual ,
+                             :Allergen ;
+                    skos:exactMatch <http://snomed.info/id/411828007> .
+
+
+###  https://w3id.org/dhs/ontology#PollenAllergen
+:PollenAllergen rdf:type owl:NamedIndividual ,
+                         :Allergen ;
+                skos:exactMatch <http://snomed.info/id/710928009> .
+
+
+###  https://w3id.org/dhs/ontology#PostNatal
+:PostNatal rdf:type owl:NamedIndividual ,
+                    :DepartmentType ;
+           skos:exactMatch <http://snomed.info/id/394575008> .
+
+
+###  https://w3id.org/dhs/ontology#RhesusNegative
+:RhesusNegative rdf:type owl:NamedIndividual ,
+                         :RhesusFactor ;
+                skos:exactMatch <http://snomed.info/id/165746003> .
+
+
+###  https://w3id.org/dhs/ontology#RhesusPositive
+:RhesusPositive rdf:type owl:NamedIndividual ,
+                         :RhesusFactor ;
+                skos:exactMatch <http://snomed.info/id/165747007> .
+
+
+###  https://w3id.org/dhs/ontology#SoyAllergen
+:SoyAllergen rdf:type owl:NamedIndividual ,
+                      :Allergen ;
+             skos:exactMatch <http://snomed.info/id/411696003> .
+
+
+###  https://w3id.org/dhs/ontology#WorkingDiagnosis
+:WorkingDiagnosis rdf:type owl:NamedIndividual ,
+                           :DiagnosisType ;
+                  skos:exactMatch <http://snomed.info/id/5558000> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+rdfs:seeAlso owl:backwardCompatibleWith "" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

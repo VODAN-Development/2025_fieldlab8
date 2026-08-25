@@ -1,0 +1,148 @@
+[PrefixDeclaration]
+:		https://w3id.org/dhs/ontology#
+dct:		http://purl.org/dc/terms/
+map:		https://w3id.org/dhs/mapping#
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+fhir:		http://hl7.org/fhir/StructureDefinition/
+obda:		https://w3id.org/obda/vocabulary#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+skos:		http://www.w3.org/2004/02/skos/core#
+loinc:		http://loinc.org/rdf/
+schema:		https://schema.org/
+snomed:		http://snomed.info/id/
+
+[MappingDeclaration] @collection [[
+mappingId	ClientMapping
+target		:Client_{INDIVIDUAL_ID} a :Client ; :hasIndividualID {INDIVIDUAL_ID} ; :hasFullName {FULL_NAME} ; :hasSex {SEX} ; :hasClientDateOfBirth {DATE_OF_BIRTH} ; :hasAge {AGE} ; :hasClientDisabilityStatus {DISABILITY_STATUS} ; :hasNationalID {NATIONAL_ID} ; :hasRelationshipToHead {RELATIONSHIP_TO_HEAD} . :HouseholdRegistration_{HOUSEHOLD_ID} :hasClient :Client_{INDIVIDUAL_ID} . 
+source		SELECT INDIVIDUAL_ID, FULL_NAME, SEX, DATE_OF_BIRTH, AGE, DISABILITY_STATUS,
+			NATIONAL_ID, RELATIONSHIP_TO_HEAD, HOUSEHOLD_ID
+			FROM CLIENT
+
+mappingId	CommunityHealthUnitMapping
+target		:CommunityHealthUnit_{CHU_ID} a :CommunityHealthUnit ; :hasCHUID {CHU_ID} ; :hasCHUName {CHU_NAME} ; :hasLinkedFacility {LINKED_FACILITY} ; :hasCHUWard {WARD} ; :hasCHUSubCounty {SUB_COUNTY} ; :hasCHUCounty {COUNTY} . 
+source		SELECT CHU_ID, CHU_NAME, LINKED_FACILITY, WARD, SUB_COUNTY, COUNTY
+			FROM COMMUNITY_HEALTH_UNIT
+
+mappingId	HouseholdRegistrationMapping
+target		:HouseholdRegistration_{HOUSEHOLD_ID} a :HouseholdRegistration ; :hasHouseholdID {HOUSEHOLD_ID} ; :hasHouseholdHeadName {HOUSEHOLD_HEAD_NAME} ; :hasHouseholdPhoneNumber {PHONE_NUMBER} ; :hasGPSLocation {GPS_LOCATION} ; :hasNumberOfMembers {NUMBER_OF_MEMBERS} ; :hasDateRegistered {DATE_REGISTERED} ; :hasHouseholdVillage {VILLAGE} . :CommunityHealthUnit_{CHU_ID} :hasHouseholdRegistration :HouseholdRegistration_{HOUSEHOLD_ID} . 
+source		SELECT HOUSEHOLD_ID, CHU_ID, HOUSEHOLD_HEAD_NAME, PHONE_NUMBER, GPS_LOCATION,
+			NUMBER_OF_MEMBERS, DATE_REGISTERED, VILLAGE
+			FROM HOUSEHOLD_REGISTRATION
+
+mappingId	HealthSurveillanceMapping
+target		:HealthSurveillance_{RECORD_ID} a :HealthSurveillance ; :hasRecordID {RECORD_ID} ; :hasSymptom {SYMPTOM} ; :hasSurveillanceDiagnosis {DIAGNOSIS} ; :hasChronicCondition {CHRONIC_CONDITION} ; :hasPregnancyStatus {PREGNANCY_STATUS} ; :hasImmunizationStatus {IMMUNIZATION_STATUS} ; :hasSurveillanceNutritionStatus {NUTRITION_STATUS} ; :hasDangerSigns {DANGER_SIGNS} ; :hasDateRecorded {DATE_RECORDED} . :Client_{INDIVIDUAL_ID} :hasHealthSurveillance :HealthSurveillance_{RECORD_ID} . 
+source		SELECT RECORD_ID, INDIVIDUAL_ID, SYMPTOM, DIAGNOSIS, CHRONIC_CONDITION, PREGNANCY_STATUS,
+			IMMUNIZATION_STATUS, NUTRITION_STATUS, DANGER_SIGNS, DATE_RECORDED
+			FROM HEALTH_SURVEILLANCE
+
+mappingId	RReferralMapping — carries the referral tracking goal
+target		:CHU_Referral_{REFERRAL_ID} a :CHU_Referral ; :hasReferralID {REFERRAL_ID} ; :hasCHUReferralDate {REFERRAL_DATE} ; :hasReasonForReferral {REASON_FOR_REFERRAL} ; :hasFacilityReferredTo {FACILITY_REFERRED_TO} ; :hasReferralType {REFERRAL_TYPE} . :Client_{INDIVIDUAL_ID} :hasClientReferral :CHU_Referral_{REFERRAL_ID} . 
+source		SELECT REFERRAL_ID, INDIVIDUAL_ID, REFERRAL_DATE, REASON_FOR_REFERRAL,
+			FACILITY_REFERRED_TO, REFERRAL_TYPE
+			FROM REFERRAL
+
+mappingId	MaternalChildHealthMapping
+target		:MaternalChildHealth_{MCH_ID} a :MaternalChildHealth ; :hasMCHID {MCH_ID} ; :hasPregnancyStatus {PREGNANCY_STATUS} ; :hasANCVisits {ANC_VISITS} ; :hasCHUExpectedDeliveryDate {EXPECTED_DELIVERY_DATE} ; :hasDeliveryPlace {DELIVERY_PLACE} ; :hasPostnatalVisits {POSTNATAL_VISITS} ; :hasChildImmunizationStatus {CHILD_IMMUNIZATION_STATUS} ; :hasGrowthMonitoring {GROWTH_MONITORING} . :Client_{INDIVIDUAL_ID} :hasMaternalChildHealth :MaternalChildHealth_{MCH_ID} . 
+source		SELECT MCH_ID, INDIVIDUAL_ID, PREGNANCY_STATUS, ANC_VISITS, EXPECTED_DELIVERY_DATE,
+			DELIVERY_PLACE, POSTNATAL_VISITS, CHILD_IMMUNIZATION_STATUS, GROWTH_MONITORING
+			FROM MATERNAL_CHILD_HEALTH
+
+mappingId	ServiceDeliveryMapping
+target		:ServiceDelivery_{SERVICE_ID} a :ServiceDelivery ; :hasServiceID {SERVICE_ID} ; :hasServiceType {SERVICE_TYPE} ; :hasProgramArea {PROGRAM_AREA} ; :hasServiceDeliveryOutcome {OUTCOME} ; :requiresFollowUp {FOLLOW_UP_REQUIRED} ; :hasServiceDeliveryDate {VISIT_DATE} . :Client_{INDIVIDUAL_ID} :hasServiceDelivery :ServiceDelivery_{SERVICE_ID} . 
+source		SELECT SERVICE_ID, INDIVIDUAL_ID, VISIT_DATE, SERVICE_TYPE, PROGRAM_AREA, OUTCOME,
+			FOLLOW_UP_REQUIRED
+			FROM SERVICE_DELIVERY
+
+mappingId	EnvironmentalWashMapping
+target		:EnvironmentalWASH_{WASH_ID} a :EnvironmentalWASH ; :hasWaterSource {WATER_SOURCE} ; :hasSanitationType {SANITATION_TYPE} ; :hasLatrineAvailable {LATRINE_AVAILABLE} ; :hasHandwashingFacility {HANDWASHING_FACILITY} ; :hasWasteDisposalMethod {WASTE_DISPOSAL_METHOD} . :HouseholdRegistration_{HOUSEHOLD_ID} :hasEnvironmentalWASH :EnvironmentalWASH_{WASH_ID} . 
+source		SELECT WASH_ID, HOUSEHOLD_ID, WATER_SOURCE, SANITATION_TYPE, LATRINE_AVAILABLE,
+			HANDWASHING_FACILITY, WASTE_DISPOSAL_METHOD
+			FROM ENVIRONMENTAL_WASH
+
+mappingId	FacilityRegisterMapping
+target		:Facility_{MFL_CODE} a :Facility ; :hasMFLCode {MFL_CODE} ; :hasFacilityName {HEALTH_FACILITY} ; :hasServiceDeliveryPoint {SERVICE_DELIVERY_POINT} ; :hasCHUCounty {COUNTY} ; :hasCHUSubCounty {SUB_COUNTY} . 
+source		SELECT MFL_CODE, HEALTH_FACILITY, SERVICE_DELIVERY_POINT, COUNTY, SUB_COUNTY
+			FROM FACILITY_REGISTER
+
+mappingId	ANC_ClientMapping
+target		:Patient_{NUPI} a :Patient ; :hasUPINumber {NUPI} ; :hasANCNumber {ANC_NUMBER} ; :hasFirstName {FIRST_NAME} ; :hasLastName {LAST_NAME} ; :hasDateOfBirth {DATE_OF_BIRTH} ; :hasPhoneNumber {PHONE_NUMBER} ; :hasMaritalStatus {MARITAL_STATUS} . 
+source		SELECT NUPI, ANC_NUMBER,
+			CASE WHEN LOCATE(' ', FULL_NAME) = 0 THEN FULL_NAME
+			ELSE SUBSTRING(FULL_NAME, 1, LOCATE(' ', FULL_NAME) - 1) END AS FIRST_NAME,
+			CASE WHEN LOCATE(' ', FULL_NAME) = 0 THEN ''
+			ELSE SUBSTRING(FULL_NAME, LOCATE(' ', FULL_NAME) + 1) END AS LAST_NAME,
+			DATE_OF_BIRTH, PHONE_NUMBER, MARITAL_STATUS
+			FROM ANC_CLIENT
+
+mappingId	PregnancyDetailsMapping
+target		:MaternalProfile_{ANC_NUMBER} a :MaternalProfile ; :hasPara {PARITY} ; :hasGravida {GRAVIDAE} ; :hasLMPDate {LMP} ; :hasExpectedDeliveryDate {EDD} ; :hasGestationAgeWeeks {GESTATION_WEEKS} . :Visit_{VISIT_ID} :hasMaternalProfile :MaternalProfile_{ANC_NUMBER} . 
+source		SELECT
+			pd.ANC_NUMBER,
+			pd.PARITY,
+			pd.GRAVIDAE,
+			pd.LMP,
+			pd.EDD,
+			pd.GESTATION_WEEKS,
+			av.VISIT_ID
+			FROM PREGNANCY_DETAILS pd
+			JOIN ANC_VISIT av
+			ON pd.ANC_NUMBER = av.ANC_NUMBER
+
+mappingId	SyphilisResultMapping
+target		:HIVCareRecord_{ANC_NUMBER} a :HIVCareRecord ; :hasVDRLResult {RPR_VDRL_DUO_TEST_RESULT} . :Visit_{VISIT_ID} :hasHIVCareRecord :HIVCareRecord_{ANC_NUMBER} . 
+source		SELECT lr.ANC_NUMBER, RPR_VDRL_DUO_TEST_RESULT, av.VISIT_ID
+			FROM LABORATORY_RESULTS lr JOIN ANC_VISIT av ON lr.ANC_NUMBER = av.ANC_NUMBER
+
+mappingId	HospitalReferralMapping
+target		:Referral_{ANC_NUMBER} a :Referral ; :hasReferralReason {REASON_FOR_REFERRAL} ; :hasReferralSource {REFERRAL_FROM} . :Visit_{VISIT_ID} :hasReferral :Referral_{ANC_NUMBER} . 
+source		SELECT hr.ANC_NUMBER, REASON_FOR_REFERRAL, REFERRAL_FROM, av.VISIT_ID
+			FROM HOSPITAL_REFERRAL hr JOIN ANC_VISIT av ON hr.ANC_NUMBER = av.ANC_NUMBER
+
+mappingId	VISIT
+target		:Visit_{VISIT_ID} a :Visit ; :hasVisitId {VISIT_ID} ; :hasVisitDate {DATE_OF_VISIT} . :Patient_{NUPI} :hasVisit :Visit_{VISIT_ID} . 
+source		SELECT VISIT_ID, NUPI, DATE_OF_VISIT
+			FROM ANC_VISIT
+
+mappingId	LinkingMapping
+target		:Client_{INDIVIDUAL_ID} :hasCorrespondingPatient :Patient_{NUPI} . 
+source		SELECT c.INDIVIDUAL_ID, ac.NUPI
+			FROM CLIENT c
+			JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH
+
+mappingId	PregnancyLinkMapping
+target		:MaternalChildHealth_{MCH_ID} :hasCorrespondingPregnancy :MaternalProfile_{ANC_NUMBER} . 
+source		SELECT mch.MCH_ID, pd.ANC_NUMBER
+			FROM MATERNAL_CHILD_HEALTH mch
+			JOIN CLIENT c ON mch.INDIVIDUAL_ID = c.INDIVIDUAL_ID
+			JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH
+			JOIN ANC_VISIT av ON av.NUPI = ac.NUPI
+			JOIN PREGNANCY_DETAILS pd ON pd.ANC_NUMBER = av.ANC_NUMBER
+			WHERE ABS(DATEDIFF('DAY', pd.EDD, mch.EXPECTED_DELIVERY_DATE)) <= 14
+
+mappingId	ReferralLinkMapping
+target		:CHU_Referral_{REFERRAL_ID} :hasCorrespondingReferral :Referral_{ANC_NUMBER} . 
+source		SELECT r.REFERRAL_ID, hr.ANC_NUMBER
+			FROM REFERRAL r
+			JOIN CLIENT c ON r.INDIVIDUAL_ID = c.INDIVIDUAL_ID
+			JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH
+			JOIN ANC_VISIT av ON av.NUPI = ac.NUPI
+			JOIN HOSPITAL_REFERRAL hr ON hr.ANC_NUMBER = av.ANC_NUMBER
+			WHERE ABS(DATEDIFF('DAY', av.DATE_OF_VISIT, r.REFERRAL_DATE)) <= 7
+
+mappingId	SyphilisLinkMapping
+target		:HealthSurveillance_{RECORD_ID} :hasCorrespondingSyphilisRecord :HIVCareRecord_{ANC_NUMBER} . 
+source		SELECT hs.RECORD_ID, lr.ANC_NUMBER
+			FROM HEALTH_SURVEILLANCE hs
+			JOIN CLIENT c ON hs.INDIVIDUAL_ID = c.INDIVIDUAL_ID
+			JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH
+			JOIN ANC_VISIT av ON av.NUPI = ac.NUPI
+			JOIN LABORATORY_RESULTS lr ON lr.ANC_NUMBER = av.ANC_NUMBER
+			WHERE (LOWER(hs.SYMPTOM) LIKE '%syphilis%' OR LOWER(hs.DIAGNOSIS) LIKE '%syphilis%'
+			OR LOWER(hs.DANGER_SIGNS) LIKE '%syphilis%' OR LOWER(hs.DANGER_SIGNS) LIKE '%sexual%'
+			OR LOWER(hs.DANGER_SIGNS) LIKE '%assault%' OR LOWER(hs.DANGER_SIGNS) LIKE '%gbv%')
+			AND LOWER(lr.RPR_VDRL_DUO_TEST_RESULT) = 'positive'
+]]
+

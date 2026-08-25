@@ -1,0 +1,404 @@
+@prefix : <https://w3id.org/dhs/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:FacilityRegisterMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT MFL_CODE, HEALTH_FACILITY, SERVICE_DELIVERY_POINT, COUNTY, SUB_COUNTY
+FROM FACILITY_REGISTER"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "MFL_CODE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasMFLCode
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "HEALTH_FACILITY";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasFacilityName
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "SERVICE_DELIVERY_POINT";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasServiceDeliveryPoint
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "COUNTY";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasCHUCounty
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "SUB_COUNTY";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasCHUSubCounty
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Facility;
+      rr:template "https://w3id.org/dhs/ontology#Facility_{MFL_CODE}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:ANC_ClientMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT NUPI, ANC_NUMBER,
+CASE WHEN LOCATE(' ', FULL_NAME) = 0 THEN FULL_NAME
+ELSE SUBSTRING(FULL_NAME, 1, LOCATE(' ', FULL_NAME) - 1) END AS FIRST_NAME,
+CASE WHEN LOCATE(' ', FULL_NAME) = 0 THEN ''
+ELSE SUBSTRING(FULL_NAME, LOCATE(' ', FULL_NAME) + 1) END AS LAST_NAME,
+DATE_OF_BIRTH, PHONE_NUMBER, MARITAL_STATUS
+FROM ANC_CLIENT"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "NUPI";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasUPINumber
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "ANC_NUMBER";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasANCNumber
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "FIRST_NAME";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasFirstName
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "LAST_NAME";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasLastName
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "DATE_OF_BIRTH";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasDateOfBirth
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "PHONE_NUMBER";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasPhoneNumber
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "MARITAL_STATUS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasMaritalStatus
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Patient;
+      rr:template "https://w3id.org/dhs/ontology#Patient_{NUPI}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:PregnancyDetailsMapping-197bc269-fdd3-4476-8157-a5e3a0ee7143> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT
+pd.ANC_NUMBER,
+pd.PARITY,
+pd.GRAVIDAE,
+pd.LMP,
+pd.EDD,
+pd.GESTATION_WEEKS,
+av.VISIT_ID
+FROM PREGNANCY_DETAILS pd
+JOIN ANC_VISIT av
+ON pd.ANC_NUMBER = av.ANC_NUMBER"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "PARITY";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasPara
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "GRAVIDAE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasGravida
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "LMP";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasLMPDate
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "EDD";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasExpectedDeliveryDate
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "GESTATION_WEEKS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasGestationAgeWeeks
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :MaternalProfile;
+      rr:template "https://w3id.org/dhs/ontology#MaternalProfile_{ANC_NUMBER}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:PregnancyDetailsMapping-a6a92a0a-ce88-41ed-91ad-2f34b4ae93a8> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT
+pd.ANC_NUMBER,
+pd.PARITY,
+pd.GRAVIDAE,
+pd.LMP,
+pd.EDD,
+pd.GESTATION_WEEKS,
+av.VISIT_ID
+FROM PREGNANCY_DETAILS pd
+JOIN ANC_VISIT av
+ON pd.ANC_NUMBER = av.ANC_NUMBER"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#MaternalProfile_{ANC_NUMBER}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasMaternalProfile
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#Visit_{VISIT_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:SyphilisResultMapping-08417573-c3df-4e66-b5b1-7f13dca8dc6c> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT lr.ANC_NUMBER, RPR_VDRL_DUO_TEST_RESULT, av.VISIT_ID
+FROM LABORATORY_RESULTS lr JOIN ANC_VISIT av ON lr.ANC_NUMBER = av.ANC_NUMBER"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "RPR_VDRL_DUO_TEST_RESULT";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasVDRLResult
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :HIVCareRecord;
+      rr:template "https://w3id.org/dhs/ontology#HIVCareRecord_{ANC_NUMBER}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:SyphilisResultMapping-c804758c-04d7-49d6-93b1-e1c64d245739> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT lr.ANC_NUMBER, RPR_VDRL_DUO_TEST_RESULT, av.VISIT_ID
+FROM LABORATORY_RESULTS lr JOIN ANC_VISIT av ON lr.ANC_NUMBER = av.ANC_NUMBER"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#HIVCareRecord_{ANC_NUMBER}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasHIVCareRecord
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#Visit_{VISIT_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:HospitalReferralMapping-f691024d-1794-45a4-ad22-9f35afe4d406> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT hr.ANC_NUMBER, REASON_FOR_REFERRAL, REFERRAL_FROM, av.VISIT_ID
+FROM HOSPITAL_REFERRAL hr JOIN ANC_VISIT av ON hr.ANC_NUMBER = av.ANC_NUMBER"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "REASON_FOR_REFERRAL";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasReferralReason
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "REFERRAL_FROM";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasReferralSource
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Referral;
+      rr:template "https://w3id.org/dhs/ontology#Referral_{ANC_NUMBER}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:HospitalReferralMapping-1e3eac04-f566-4658-ae3a-856f4644a1ab> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT hr.ANC_NUMBER, REASON_FOR_REFERRAL, REFERRAL_FROM, av.VISIT_ID
+FROM HOSPITAL_REFERRAL hr JOIN ANC_VISIT av ON hr.ANC_NUMBER = av.ANC_NUMBER"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#Referral_{ANC_NUMBER}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasReferral
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#Visit_{VISIT_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:VISIT-af6890f2-7f50-435e-8535-d60a99eb7342> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT VISIT_ID, NUPI, DATE_OF_VISIT
+FROM ANC_VISIT"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "VISIT_ID";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasVisitId
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "DATE_OF_VISIT";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasVisitDate
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Visit;
+      rr:template "https://w3id.org/dhs/ontology#Visit_{VISIT_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:VISIT-bfb84c72-03eb-44f2-b860-9eaec074a043> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT VISIT_ID, NUPI, DATE_OF_VISIT
+FROM ANC_VISIT"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#Visit_{VISIT_ID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasVisit
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#Patient_{NUPI}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:LinkingMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT c.INDIVIDUAL_ID, ac.NUPI
+FROM CLIENT c
+JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#Patient_{NUPI}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasCorrespondingPatient
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#Client_{INDIVIDUAL_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:PregnancyLinkMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT mch.MCH_ID, pd.ANC_NUMBER
+FROM MATERNAL_CHILD_HEALTH mch
+JOIN CLIENT c ON mch.INDIVIDUAL_ID = c.INDIVIDUAL_ID
+JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH
+JOIN ANC_VISIT av ON av.NUPI = ac.NUPI
+JOIN PREGNANCY_DETAILS pd ON pd.ANC_NUMBER = av.ANC_NUMBER
+WHERE ABS(DATEDIFF('DAY', pd.EDD, mch.EXPECTED_DELIVERY_DATE)) <= 14"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#MaternalProfile_{ANC_NUMBER}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasCorrespondingPregnancy
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#MaternalChildHealth_{MCH_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:ReferralLinkMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT r.REFERRAL_ID, hr.ANC_NUMBER
+FROM REFERRAL r
+JOIN CLIENT c ON r.INDIVIDUAL_ID = c.INDIVIDUAL_ID
+JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH
+JOIN ANC_VISIT av ON av.NUPI = ac.NUPI
+JOIN HOSPITAL_REFERRAL hr ON hr.ANC_NUMBER = av.ANC_NUMBER
+WHERE ABS(DATEDIFF('DAY', av.DATE_OF_VISIT, r.REFERRAL_DATE)) <= 7"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#Referral_{ANC_NUMBER}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasCorrespondingReferral
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#CHU_Referral_{REFERRAL_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:SyphilisLinkMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT hs.RECORD_ID, lr.ANC_NUMBER
+FROM HEALTH_SURVEILLANCE hs
+JOIN CLIENT c ON hs.INDIVIDUAL_ID = c.INDIVIDUAL_ID
+JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH
+JOIN ANC_VISIT av ON av.NUPI = ac.NUPI
+JOIN LABORATORY_RESULTS lr ON lr.ANC_NUMBER = av.ANC_NUMBER
+WHERE (LOWER(hs.SYMPTOM) LIKE '%syphilis%' OR LOWER(hs.DIAGNOSIS) LIKE '%syphilis%'
+    OR LOWER(hs.DANGER_SIGNS) LIKE '%syphilis%' OR LOWER(hs.DANGER_SIGNS) LIKE '%sexual%'
+    OR LOWER(hs.DANGER_SIGNS) LIKE '%assault%' OR LOWER(hs.DANGER_SIGNS) LIKE '%gbv%')
+AND LOWER(lr.RPR_VDRL_DUO_TEST_RESULT) = 'positive'"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#HIVCareRecord_{ANC_NUMBER}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasCorrespondingSyphilisRecord
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#HealthSurveillance_{RECORD_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:ReferredFacilityLinkMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT r.REFERRAL_ID, fr.MFL_CODE
+FROM REFERRAL r
+JOIN FACILITY_REGISTER fr ON r.FACILITY_REFERRED_TO = fr.HEALTH_FACILITY"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#Facility_{MFL_CODE}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :referredToFacility
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#CHU_Referral_{REFERRAL_ID}";
+      rr:termType rr:IRI
+    ] .

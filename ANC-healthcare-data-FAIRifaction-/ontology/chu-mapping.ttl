@@ -1,0 +1,664 @@
+@prefix : <https://w3id.org/dhs/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:ClientMapping-2fb3e10c-bac7-4155-9e3c-694831eacc51> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT INDIVIDUAL_ID, FULL_NAME, SEX, DATE_OF_BIRTH, AGE, DISABILITY_STATUS,
+NATIONAL_ID, RELATIONSHIP_TO_HEAD, HOUSEHOLD_ID
+FROM CLIENT"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "FULL_NAME";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasFullName
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "SEX";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasSex
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "DATE_OF_BIRTH";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasClientDateOfBirth
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "AGE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasAge
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "DISABILITY_STATUS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasClientDisabilityStatus
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "NATIONAL_ID";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasNationalID
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "RELATIONSHIP_TO_HEAD";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasRelationshipToHead
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "INDIVIDUAL_ID";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasIndividualID
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Client;
+      rr:template "https://w3id.org/dhs/ontology#Client_{INDIVIDUAL_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:ClientMapping-b3d22dea-76f5-465a-87b4-930165d3d8fa> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT INDIVIDUAL_ID, FULL_NAME, SEX, DATE_OF_BIRTH, AGE, DISABILITY_STATUS,
+NATIONAL_ID, RELATIONSHIP_TO_HEAD, HOUSEHOLD_ID
+FROM CLIENT"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#Client_{INDIVIDUAL_ID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasClient
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#HouseholdRegistration_{HOUSEHOLD_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:CommunityHealthUnitMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT CHU_ID, CHU_NAME, LINKED_FACILITY, WARD, SUB_COUNTY, COUNTY
+FROM COMMUNITY_HEALTH_UNIT"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "CHU_ID";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasCHUID
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "CHU_NAME";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasCHUName
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "LINKED_FACILITY";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasLinkedFacility
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "WARD";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasCHUWard
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "SUB_COUNTY";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasCHUSubCounty
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "COUNTY";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasCHUCounty
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :CommunityHealthUnit;
+      rr:template "https://w3id.org/dhs/ontology#CommunityHealthUnit_{CHU_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:HouseholdRegistrationMapping-fd0e733b-fcc6-4ac4-a94a-0cfc46682207> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT HOUSEHOLD_ID, CHU_ID, HOUSEHOLD_HEAD_NAME, PHONE_NUMBER, GPS_LOCATION,
+NUMBER_OF_MEMBERS, DATE_REGISTERED, VILLAGE
+FROM HOUSEHOLD_REGISTRATION"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "HOUSEHOLD_ID";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasHouseholdID
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "HOUSEHOLD_HEAD_NAME";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasHouseholdHeadName
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "PHONE_NUMBER";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasHouseholdPhoneNumber
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "GPS_LOCATION";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasGPSLocation
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "NUMBER_OF_MEMBERS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasNumberOfMembers
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "DATE_REGISTERED";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasDateRegistered
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "VILLAGE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasHouseholdVillage
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :HouseholdRegistration;
+      rr:template "https://w3id.org/dhs/ontology#HouseholdRegistration_{HOUSEHOLD_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:HouseholdRegistrationMapping-5f6c56d9-564f-478e-aae7-f9bac4c4d0a0> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT HOUSEHOLD_ID, CHU_ID, HOUSEHOLD_HEAD_NAME, PHONE_NUMBER, GPS_LOCATION,
+NUMBER_OF_MEMBERS, DATE_REGISTERED, VILLAGE
+FROM HOUSEHOLD_REGISTRATION"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#HouseholdRegistration_{HOUSEHOLD_ID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasHouseholdRegistration
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#CommunityHealthUnit_{CHU_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:HealthSurveillanceMapping-1b5b76cd-f344-4195-b3d9-f3340726da80> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT RECORD_ID, INDIVIDUAL_ID, SYMPTOM, DIAGNOSIS, CHRONIC_CONDITION, PREGNANCY_STATUS,
+IMMUNIZATION_STATUS, NUTRITION_STATUS, DANGER_SIGNS, DATE_RECORDED
+FROM HEALTH_SURVEILLANCE"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "RECORD_ID";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasRecordID
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "SYMPTOM";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasSymptom
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "DIAGNOSIS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasSurveillanceDiagnosis
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "CHRONIC_CONDITION";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasChronicCondition
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "PREGNANCY_STATUS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasPregnancyStatus
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "IMMUNIZATION_STATUS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasImmunizationStatus
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "NUTRITION_STATUS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasSurveillanceNutritionStatus
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "DANGER_SIGNS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasDangerSigns
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "DATE_RECORDED";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasDateRecorded
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :HealthSurveillance;
+      rr:template "https://w3id.org/dhs/ontology#HealthSurveillance_{RECORD_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:HealthSurveillanceMapping-2f739499-d4e8-4894-8fcb-4a38e73dbff2> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT RECORD_ID, INDIVIDUAL_ID, SYMPTOM, DIAGNOSIS, CHRONIC_CONDITION, PREGNANCY_STATUS,
+IMMUNIZATION_STATUS, NUTRITION_STATUS, DANGER_SIGNS, DATE_RECORDED
+FROM HEALTH_SURVEILLANCE"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#HealthSurveillance_{RECORD_ID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasHealthSurveillance
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#Client_{INDIVIDUAL_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:RReferralMapping%20—%20carries%20the%20referral%20tracking%20goal-a9a10d44-1541-4351-8bc5-feffc063836c>
+  a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT REFERRAL_ID, INDIVIDUAL_ID, REFERRAL_DATE, REASON_FOR_REFERRAL,
+FACILITY_REFERRED_TO, REFERRAL_TYPE
+FROM REFERRAL"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "REFERRAL_ID";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasReferralID
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "REFERRAL_DATE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasCHUReferralDate
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "REASON_FOR_REFERRAL";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasReasonForReferral
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "FACILITY_REFERRED_TO";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasFacilityReferredTo
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "REFERRAL_TYPE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasReferralType
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :CHU_Referral;
+      rr:template "https://w3id.org/dhs/ontology#CHU_Referral_{REFERRAL_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:RReferralMapping%20—%20carries%20the%20referral%20tracking%20goal-93bc097e-9bd2-4949-b43a-46871ea3e67e>
+  a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT REFERRAL_ID, INDIVIDUAL_ID, REFERRAL_DATE, REASON_FOR_REFERRAL,
+FACILITY_REFERRED_TO, REFERRAL_TYPE
+FROM REFERRAL"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#CHU_Referral_{REFERRAL_ID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasClientReferral
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#Client_{INDIVIDUAL_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:MaternalChildHealthMapping-50550130-751d-4a31-94ed-352ab0742fab> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT MCH_ID, INDIVIDUAL_ID, PREGNANCY_STATUS, ANC_VISITS, EXPECTED_DELIVERY_DATE,
+DELIVERY_PLACE, POSTNATAL_VISITS, CHILD_IMMUNIZATION_STATUS, GROWTH_MONITORING
+FROM MATERNAL_CHILD_HEALTH"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "MCH_ID";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasMCHID
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "PREGNANCY_STATUS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasPregnancyStatus
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "ANC_VISITS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasANCVisits
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "EXPECTED_DELIVERY_DATE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasCHUExpectedDeliveryDate
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "DELIVERY_PLACE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasDeliveryPlace
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "POSTNATAL_VISITS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasPostnatalVisits
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "CHILD_IMMUNIZATION_STATUS";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasChildImmunizationStatus
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "GROWTH_MONITORING";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasGrowthMonitoring
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :MaternalChildHealth;
+      rr:template "https://w3id.org/dhs/ontology#MaternalChildHealth_{MCH_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:MaternalChildHealthMapping-97ce8a25-3da2-4043-8227-610771d739c1> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT MCH_ID, INDIVIDUAL_ID, PREGNANCY_STATUS, ANC_VISITS, EXPECTED_DELIVERY_DATE,
+DELIVERY_PLACE, POSTNATAL_VISITS, CHILD_IMMUNIZATION_STATUS, GROWTH_MONITORING
+FROM MATERNAL_CHILD_HEALTH"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#MaternalChildHealth_{MCH_ID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasMaternalChildHealth
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#Client_{INDIVIDUAL_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:ServiceDeliveryMapping-921c815e-346c-4979-9e52-280ad1c5ced0> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT SERVICE_ID, INDIVIDUAL_ID, VISIT_DATE, SERVICE_TYPE, PROGRAM_AREA, OUTCOME,
+FOLLOW_UP_REQUIRED
+FROM SERVICE_DELIVERY"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "SERVICE_ID";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasServiceID
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "SERVICE_TYPE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasServiceType
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "PROGRAM_AREA";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasProgramArea
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "OUTCOME";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasServiceDeliveryOutcome
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "FOLLOW_UP_REQUIRED";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :requiresFollowUp
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "VISIT_DATE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasServiceDeliveryDate
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :ServiceDelivery;
+      rr:template "https://w3id.org/dhs/ontology#ServiceDelivery_{SERVICE_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:ServiceDeliveryMapping-f616ab6f-1355-45ba-a57c-f90f6f4f8a2c> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT SERVICE_ID, INDIVIDUAL_ID, VISIT_DATE, SERVICE_TYPE, PROGRAM_AREA, OUTCOME,
+FOLLOW_UP_REQUIRED
+FROM SERVICE_DELIVERY"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#ServiceDelivery_{SERVICE_ID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasServiceDelivery
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#Client_{INDIVIDUAL_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:EnvironmentalWashMapping-059f9f3d-397a-493c-be22-396ca16f1808> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT WASH_ID, HOUSEHOLD_ID, WATER_SOURCE, SANITATION_TYPE, LATRINE_AVAILABLE,
+HANDWASHING_FACILITY, WASTE_DISPOSAL_METHOD
+FROM ENVIRONMENTAL_WASH"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "WATER_SOURCE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasWaterSource
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "SANITATION_TYPE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasSanitationType
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "LATRINE_AVAILABLE";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasLatrineAvailable
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "HANDWASHING_FACILITY";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasHandwashingFacility
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "WASTE_DISPOSAL_METHOD";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasWasteDisposalMethod
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :EnvironmentalWASH;
+      rr:template "https://w3id.org/dhs/ontology#EnvironmentalWASH_{WASH_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:EnvironmentalWashMapping-e39f6daa-b960-4d9a-9165-40779dbe543d> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT WASH_ID, HOUSEHOLD_ID, WATER_SOURCE, SANITATION_TYPE, LATRINE_AVAILABLE,
+HANDWASHING_FACILITY, WASTE_DISPOSAL_METHOD
+FROM ENVIRONMENTAL_WASH"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#EnvironmentalWASH_{WASH_ID}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasEnvironmentalWASH
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#HouseholdRegistration_{HOUSEHOLD_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:LinkingMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT c.INDIVIDUAL_ID, ac.NUPI
+FROM CLIENT c
+JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#Patient_{NUPI}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasCorrespondingPatient
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#Client_{INDIVIDUAL_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:PregnancyLinkMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT mch.MCH_ID, pd.ANC_NUMBER
+FROM MATERNAL_CHILD_HEALTH mch
+JOIN CLIENT c ON mch.INDIVIDUAL_ID = c.INDIVIDUAL_ID
+JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH
+JOIN ANC_VISIT av ON av.NUPI = ac.NUPI
+JOIN PREGNANCY_DETAILS pd ON pd.ANC_NUMBER = av.ANC_NUMBER
+WHERE ABS(DATEDIFF('DAY', pd.EDD, mch.EXPECTED_DELIVERY_DATE)) <= 14"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#MaternalProfile_{ANC_NUMBER}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasCorrespondingPregnancy
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#MaternalChildHealth_{MCH_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:ReferralLinkMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT r.REFERRAL_ID, hr.ANC_NUMBER
+FROM REFERRAL r
+JOIN CLIENT c ON r.INDIVIDUAL_ID = c.INDIVIDUAL_ID
+JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH
+JOIN ANC_VISIT av ON av.NUPI = ac.NUPI
+JOIN HOSPITAL_REFERRAL hr ON hr.ANC_NUMBER = av.ANC_NUMBER
+WHERE ABS(DATEDIFF('DAY', av.DATE_OF_VISIT, r.REFERRAL_DATE)) <= 7"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#Referral_{ANC_NUMBER}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasCorrespondingReferral
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#CHU_Referral_{REFERRAL_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:SyphilisLinkMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT hs.RECORD_ID, lr.ANC_NUMBER
+FROM HEALTH_SURVEILLANCE hs
+JOIN CLIENT c ON hs.INDIVIDUAL_ID = c.INDIVIDUAL_ID
+JOIN ANC_CLIENT ac ON c.FULL_NAME = ac.FULL_NAME AND c.DATE_OF_BIRTH = ac.DATE_OF_BIRTH
+JOIN ANC_VISIT av ON av.NUPI = ac.NUPI
+JOIN LABORATORY_RESULTS lr ON lr.ANC_NUMBER = av.ANC_NUMBER
+WHERE (LOWER(hs.SYMPTOM) LIKE '%syphilis%' OR LOWER(hs.DIAGNOSIS) LIKE '%syphilis%'
+    OR LOWER(hs.DANGER_SIGNS) LIKE '%syphilis%' OR LOWER(hs.DANGER_SIGNS) LIKE '%sexual%'
+    OR LOWER(hs.DANGER_SIGNS) LIKE '%assault%' OR LOWER(hs.DANGER_SIGNS) LIKE '%gbv%')
+AND LOWER(lr.RPR_VDRL_DUO_TEST_RESULT) = 'positive'"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#HIVCareRecord_{ANC_NUMBER}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :hasCorrespondingSyphilisRecord
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#HealthSurveillance_{RECORD_ID}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:ReferredFacilityLinkMapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery """SELECT r.REFERRAL_ID, fr.MFL_CODE
+FROM REFERRAL r
+JOIN FACILITY_REGISTER fr ON r.FACILITY_REFERRED_TO = fr.HEALTH_FACILITY"""
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "https://w3id.org/dhs/ontology#Facility_{MFL_CODE}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :referredToFacility
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "https://w3id.org/dhs/ontology#CHU_Referral_{REFERRAL_ID}";
+      rr:termType rr:IRI
+    ] .
