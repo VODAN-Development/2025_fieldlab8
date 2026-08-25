@@ -1,0 +1,2579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns="https://w3id.org/dhs/ontology#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0009">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Negative</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0016"/>
+    <hasVDRLResult>Negative</hasVDRLResult>
+    <hasDataProperty>Negative</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0016"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0016"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0005">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-06</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-06</hasVisitDate>
+    <hasVisitId>V0005</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0002"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0002"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-06</hasDataProperty>
+    <hasDataProperty>V0005</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500002"/>
+    <hasIdentifier>V0005</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500011">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0018"/>
+    <hasUPINumber>NP-500011</hasUPINumber>
+    <hasPhoneNumber>0720000010</hasPhoneNumber>
+    <hasFirstName>Caroline</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000010</hasPersonData>
+    <hasPersonData>Caroline</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData>Wanjiru</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-10-02</hasPersonData>
+    <hasANCNumber>2026-02-0011</hasANCNumber>
+    <hasLastName>Wanjiru</hasLastName>
+    <hasDataProperty>0720000010</hasDataProperty>
+    <hasDataProperty>Caroline</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500011</hasDataProperty>
+    <hasDataProperty>Wanjiru</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-10-02</hasDataProperty>
+    <hasIdentifier>NP-500011</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-10-02</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0012">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-14</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-20</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-20</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0019"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-14</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-20</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-14</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0019"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0019"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-22</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-29</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-29</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0001"/>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0002"/>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0003"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-22</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-29</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-22</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0001"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0002"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0003"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0001"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0002"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0003"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0005">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-30</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-06</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-06</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0010"/>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0011"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-30</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-06</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-30</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0010"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0011"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0010"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0011"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500007">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0013"/>
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0014"/>
+    <hasUPINumber>NP-500007</hasUPINumber>
+    <hasPhoneNumber>0720000006</hasPhoneNumber>
+    <hasFirstName>Agnes</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000006</hasPersonData>
+    <hasPersonData>Agnes</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData>Nyambura</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-04-02</hasPersonData>
+    <hasANCNumber>2026-02-0007</hasANCNumber>
+    <hasLastName>Nyambura</hasLastName>
+    <hasDataProperty>0720000006</hasDataProperty>
+    <hasDataProperty>Agnes</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500007</hasDataProperty>
+    <hasDataProperty>Nyambura</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-04-02</hasDataProperty>
+    <hasIdentifier>NP-500007</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-04-02</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasServiceDelivery">
+    <rdfs:comment>Relates a client to a healthcare service or intervention delivered within the community.</rdfs:comment>
+    <rdfs:label>has service delivery</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500003">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0007"/>
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0008"/>
+    <hasUPINumber>NP-500003</hasUPINumber>
+    <hasPhoneNumber>0720000002</hasPhoneNumber>
+    <hasFirstName>Faith</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000002</hasPersonData>
+    <hasPersonData>Faith</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData>Njeri</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-10-02</hasPersonData>
+    <hasANCNumber>2026-02-0003</hasANCNumber>
+    <hasLastName>Njeri</hasLastName>
+    <hasDataProperty>0720000002</hasDataProperty>
+    <hasDataProperty>Faith</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500003</hasDataProperty>
+    <hasDataProperty>Njeri</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-10-02</hasDataProperty>
+    <hasIdentifier>NP-500003</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-10-02</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0016">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-22</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-07</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-07</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0023"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-22</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-07</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-22</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0023"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0023"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0017">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-24</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-09</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-09</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0024"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-24</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-09</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-24</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0024"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0024"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS001">
+    <hasCorrespondingSyphilisRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O15">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/15938005</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <rdfs:label xml:lang="en">Eclampsia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Referral_2026-02-0001">
+    <hasReferralReason>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasReferralReason>
+    <hasReferralSource>Community Unit</hasReferralSource>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Referral"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasDataProperty>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasDataProperty>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0001"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0002"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0003"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0001"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0002"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0003"/>
+    <hasReferralData>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasReferralData>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL010">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500010"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Referral_2026-02-0002">
+    <hasReferralReason>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasReferralReason>
+    <hasReferralSource>Community Unit</hasReferralSource>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Referral"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasDataProperty>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasDataProperty>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0004"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0005"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0006"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0004"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0005"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0006"/>
+    <hasReferralData>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasReferralData>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0013">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-16</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-22</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-22</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0020"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-16</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-22</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-16</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0020"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0020"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0014">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-21</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0007"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-21</hasVisitDate>
+    <hasVisitId>V0014</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0007"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0007"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0007"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0007"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0007"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-21</hasDataProperty>
+    <hasDataProperty>V0014</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500007"/>
+    <hasIdentifier>V0014</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0007"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0007"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500004">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0009"/>
+    <hasUPINumber>NP-500004</hasUPINumber>
+    <hasPhoneNumber>0720000003</hasPhoneNumber>
+    <hasFirstName>Joyce</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000003</hasPersonData>
+    <hasPersonData>Auma</hasPersonData>
+    <hasPersonData>Joyce</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-02-16</hasPersonData>
+    <hasANCNumber>2026-02-0004</hasANCNumber>
+    <hasLastName>Auma</hasLastName>
+    <hasDataProperty>0720000003</hasDataProperty>
+    <hasDataProperty>Auma</hasDataProperty>
+    <hasDataProperty>Joyce</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500004</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-02-16</hasDataProperty>
+    <hasIdentifier>NP-500004</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-02-16</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0003">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Positive</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0007"/>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0008"/>
+    <hasVDRLResult>Positive</hasVDRLResult>
+    <hasDataProperty>Positive</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0007"/>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0008"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0007"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0008"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#TriageAssessment">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/225390008</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Observation representing initial patient assessment and vital sign measurements during triage.</rdfs:comment>
+    <rdfs:label xml:lang="en">Triage assessment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0009">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-19</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0004"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-19</hasVisitDate>
+    <hasVisitId>V0009</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0004"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0004"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0004"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0004"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0004"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-19</hasDataProperty>
+    <hasDataProperty>V0009</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500004"/>
+    <hasIdentifier>V0009</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0004"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0011">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-15</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0005"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-15</hasVisitDate>
+    <hasVisitId>V0011</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0005"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0005"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0005"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-15</hasDataProperty>
+    <hasDataProperty>V0011</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500005"/>
+    <hasIdentifier>V0011</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0005"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0005"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500009">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0016"/>
+    <hasUPINumber>NP-500009</hasUPINumber>
+    <hasPhoneNumber>0720000008</hasPhoneNumber>
+    <hasFirstName>Alice</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000008</hasPersonData>
+    <hasPersonData>Alice</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData>Muthoni</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-01-01</hasPersonData>
+    <hasANCNumber>2026-02-0009</hasANCNumber>
+    <hasLastName>Muthoni</hasLastName>
+    <hasDataProperty>0720000008</hasDataProperty>
+    <hasDataProperty>Alice</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>Muthoni</hasDataProperty>
+    <hasDataProperty>NP-500009</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-01-01</hasDataProperty>
+    <hasIdentifier>NP-500009</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-01-01</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500013">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0020"/>
+    <hasUPINumber>NP-500013</hasUPINumber>
+    <hasPhoneNumber>0720000012</hasPhoneNumber>
+    <hasFirstName>Eunice</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000012</hasPersonData>
+    <hasPersonData>Eunice</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData>Njeri</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-03</hasPersonData>
+    <hasANCNumber>2026-02-0013</hasANCNumber>
+    <hasLastName>Njeri</hasLastName>
+    <hasDataProperty>0720000012</hasDataProperty>
+    <hasDataProperty>Eunice</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500013</hasDataProperty>
+    <hasDataProperty>Njeri</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-03</hasDataProperty>
+    <hasIdentifier>NP-500013</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-03</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500006">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0012"/>
+    <hasUPINumber>NP-500006</hasUPINumber>
+    <hasPhoneNumber>0720000005</hasPhoneNumber>
+    <hasFirstName>Esther</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000005</hasPersonData>
+    <hasPersonData>Adhiambo</hasPersonData>
+    <hasPersonData>Esther</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-11-16</hasPersonData>
+    <hasANCNumber>2026-02-0006</hasANCNumber>
+    <hasLastName>Adhiambo</hasLastName>
+    <hasDataProperty>0720000005</hasDataProperty>
+    <hasDataProperty>Adhiambo</hasDataProperty>
+    <hasDataProperty>Esther</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500006</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-11-16</hasDataProperty>
+    <hasIdentifier>NP-500006</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-11-16</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0006">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-02</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-08</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-08</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0012"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-02</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-08</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-02</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0012"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0012"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500005">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0010"/>
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0011"/>
+    <hasUPINumber>NP-500005</hasUPINumber>
+    <hasPhoneNumber>0720000004</hasPhoneNumber>
+    <hasFirstName>Nancy</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000004</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData>Nancy</hasPersonData>
+    <hasPersonData>Wambui</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-07-02</hasPersonData>
+    <hasANCNumber>2026-02-0005</hasANCNumber>
+    <hasLastName>Wambui</hasLastName>
+    <hasDataProperty>0720000004</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500005</hasDataProperty>
+    <hasDataProperty>Nancy</hasDataProperty>
+    <hasDataProperty>Wambui</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-07-02</hasDataProperty>
+    <hasIdentifier>NP-500005</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-07-02</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0004">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Positive</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0009"/>
+    <hasVDRLResult>Positive</hasVDRLResult>
+    <hasDataProperty>Positive</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0009"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0009"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#NutritionAssessment">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/1759002</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation related to nutritional status and malnutrition assessment.</rdfs:comment>
+    <rdfs:label xml:lang="en">Nutrition assessment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Referral_2026-02-0003">
+    <hasReferralReason>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasReferralReason>
+    <hasReferralSource>Community Unit</hasReferralSource>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Referral"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasDataProperty>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasDataProperty>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0007"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0008"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0007"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0008"/>
+    <hasReferralData>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasReferralData>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasRelationshipToHead">
+    <rdfs:comment>Indicates the relationship of a client to the head of the household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500017">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0024"/>
+    <hasUPINumber>NP-500017</hasUPINumber>
+    <hasPhoneNumber>0720000016</hasPhoneNumber>
+    <hasFirstName>Irene</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000016</hasPersonData>
+    <hasPersonData>Irene</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData>Nyambura</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-01-01</hasPersonData>
+    <hasANCNumber>2026-02-0017</hasANCNumber>
+    <hasLastName>Nyambura</hasLastName>
+    <hasDataProperty>0720000016</hasDataProperty>
+    <hasDataProperty>Irene</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500017</hasDataProperty>
+    <hasDataProperty>Nyambura</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-01-01</hasDataProperty>
+    <hasIdentifier>NP-500017</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-01-01</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHealthSurveillance">
+    <rdfs:comment>Relates a client to a health surveillance record containing observed health conditions, symptoms, risk factors, or health status information.</rdfs:comment>
+    <rdfs:label>has health surveillance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0010">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-10</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-16</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-16</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0017"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-10</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-16</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-10</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0017"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0017"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0013">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-28</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0007"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-28</hasVisitDate>
+    <hasVisitId>V0013</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0007"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0007"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0007"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0007"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0007"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-28</hasDataProperty>
+    <hasDataProperty>V0013</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500007"/>
+    <hasIdentifier>V0013</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0007"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0007"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0006">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Positive</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0012"/>
+    <hasVDRLResult>Positive</hasVDRLResult>
+    <hasDataProperty>Positive</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0012"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0012"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0004">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-28</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-04</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-04</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0009"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-28</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-04</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-28</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0009"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0009"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MilkAllergen">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411726001"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500015">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0022"/>
+    <hasUPINumber>NP-500015</hasUPINumber>
+    <hasPhoneNumber>0720000014</hasPhoneNumber>
+    <hasFirstName>Gladys</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000014</hasPersonData>
+    <hasPersonData>Gladys</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData>Wambui</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-04-02</hasPersonData>
+    <hasANCNumber>2026-02-0015</hasANCNumber>
+    <hasLastName>Wambui</hasLastName>
+    <hasDataProperty>0720000014</hasDataProperty>
+    <hasDataProperty>Gladys</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500015</hasDataProperty>
+    <hasDataProperty>Wambui</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-04-02</hasDataProperty>
+    <hasIdentifier>NP-500015</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-04-02</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasServiceDeliveryOutcome">
+    <rdfs:comment>Indicates the recorded outcome of a healthcare service delivery activity.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500002">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0004"/>
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0005"/>
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0006"/>
+    <hasUPINumber>NP-500002</hasUPINumber>
+    <hasPhoneNumber>0720000001</hasPhoneNumber>
+    <hasFirstName>Grace</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000001</hasPersonData>
+    <hasPersonData>Achieng</hasPersonData>
+    <hasPersonData>Grace</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-05-18</hasPersonData>
+    <hasANCNumber>2026-02-0002</hasANCNumber>
+    <hasLastName>Achieng</hasLastName>
+    <hasDataProperty>0720000001</hasDataProperty>
+    <hasDataProperty>Achieng</hasDataProperty>
+    <hasDataProperty>Grace</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500002</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-05-18</hasDataProperty>
+    <hasIdentifier>NP-500002</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-05-18</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500014">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0021"/>
+    <hasUPINumber>NP-500014</hasUPINumber>
+    <hasPhoneNumber>0720000013</hasPhoneNumber>
+    <hasFirstName>Florence</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000013</hasPersonData>
+    <hasPersonData>Auma</hasPersonData>
+    <hasPersonData>Florence</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-11-17</hasPersonData>
+    <hasANCNumber>2026-02-0014</hasANCNumber>
+    <hasLastName>Auma</hasLastName>
+    <hasDataProperty>0720000013</hasDataProperty>
+    <hasDataProperty>Auma</hasDataProperty>
+    <hasDataProperty>Florence</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500014</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-11-17</hasDataProperty>
+    <hasIdentifier>NP-500014</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-11-17</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0007">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Negative</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0013"/>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0014"/>
+    <hasVDRLResult>Negative</hasVDRLResult>
+    <hasDataProperty>Negative</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0013"/>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0014"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0013"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0014"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0014">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Negative</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0021"/>
+    <hasVDRLResult>Negative</hasVDRLResult>
+    <hasDataProperty>Negative</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0021"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0021"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0012">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Negative</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0019"/>
+    <hasVDRLResult>Negative</hasVDRLResult>
+    <hasDataProperty>Negative</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0019"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0019"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Facility_13877">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#CommunityHealthUnit"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEntity"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Facility"/>
+    <hasServiceDeliveryPoint>ANC Clinic</hasServiceDeliveryPoint>
+    <hasCHUSubCounty>Kamukunji</hasCHUSubCounty>
+    <hasCHUCounty>Nairobi</hasCHUCounty>
+    <hasMFLCode>13877</hasMFLCode>
+    <hasFacilityName>Kamukunji Health Centre</hasFacilityName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Transfer">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/107724000</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Healthcare event representing transfer of a patient between healthcare facilities or departments</rdfs:comment>
+    <rdfs:label xml:lang="en">Transfer</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Positive</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0004"/>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0005"/>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0006"/>
+    <hasVDRLResult>Positive</hasVDRLResult>
+    <hasDataProperty>Positive</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0004"/>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0005"/>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0006"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0004"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0005"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0006"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0008">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-06</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-12</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-12</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0015"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-06</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-12</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-06</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0015"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0015"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-24</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-31</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-31</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0004"/>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0005"/>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0006"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-24</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-31</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-24</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0004"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0005"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0006"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0004"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0005"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0006"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500016">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0023"/>
+    <hasUPINumber>NP-500016</hasUPINumber>
+    <hasPhoneNumber>0720000015</hasPhoneNumber>
+    <hasFirstName>Hellen</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000015</hasPersonData>
+    <hasPersonData>Adhiambo</hasPersonData>
+    <hasPersonData>Hellen</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-08-17</hasPersonData>
+    <hasANCNumber>2026-02-0016</hasANCNumber>
+    <hasLastName>Adhiambo</hasLastName>
+    <hasDataProperty>0720000015</hasDataProperty>
+    <hasDataProperty>Adhiambo</hasDataProperty>
+    <hasDataProperty>Hellen</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500016</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-08-17</hasDataProperty>
+    <hasIdentifier>NP-500016</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-08-17</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500001">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0001"/>
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0002"/>
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0003"/>
+    <hasUPINumber>NP-500001</hasUPINumber>
+    <hasPhoneNumber>0720000000</hasPhoneNumber>
+    <hasFirstName>Mary</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000000</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData>Mary</hasPersonData>
+    <hasPersonData>Wanjiru</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-01-01</hasPersonData>
+    <hasANCNumber>2026-02-0001</hasANCNumber>
+    <hasLastName>Wanjiru</hasLastName>
+    <hasDataProperty>0720000000</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>Mary</hasDataProperty>
+    <hasDataProperty>NP-500001</hasDataProperty>
+    <hasDataProperty>Wanjiru</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-01-01</hasDataProperty>
+    <hasIdentifier>NP-500001</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-01-01</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Person">
+    <rdfs:comment xml:lang="en">Human individual</rdfs:comment>
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL006">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500006"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BloodGroup">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/365636006</skos:exactMatch>
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/883-9"/>
+    <rdfs:comment xml:lang="en">Represents a blood type - A/B/AB/O.</rdfs:comment>
+    <rdfs:label xml:lang="en">Blood group</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0007">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-16</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0003"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-16</hasVisitDate>
+    <hasVisitId>V0007</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0003"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0003"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0003"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0003"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0003"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-16</hasDataProperty>
+    <hasDataProperty>V0007</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500003"/>
+    <hasIdentifier>V0007</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0003"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/246104002</skos:exactMatch>
+    <skos:closeMatch xml:lang="en">https://profiles.ihe.net/PCC/mAPS/StructureDefinition-IHE.PregnancyHistory.html</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Clinical record containing maternal health and pregnancy-related information.</rdfs:comment>
+    <rdfs:label xml:lang="en">Maternal profile</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0013">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Negative</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0020"/>
+    <hasVDRLResult>Negative</hasVDRLResult>
+    <hasDataProperty>Negative</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0020"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0020"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0012">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-25</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0006"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-25</hasVisitDate>
+    <hasVisitId>V0012</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0006"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0006"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0006"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-25</hasDataProperty>
+    <hasDataProperty>V0012</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500006"/>
+    <hasIdentifier>V0012</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0006"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0006"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0015">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-03</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0008"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-03</hasVisitDate>
+    <hasVisitId>V0015</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0008"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0008"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0008"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0008"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0008"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-03</hasDataProperty>
+    <hasDataProperty>V0015</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500008"/>
+    <hasIdentifier>V0015</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0008"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0008"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O45">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/415105001</skos:closeMatch>
+    <rdfs:label xml:lang="en">Premature separation of placenta (placental abruption)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#PatientFlow">
+    <rdfs:comment xml:lang="en">Administrative workflow following patient movement through healthcare services or departments.</rdfs:comment>
+    <rdfs:label xml:lang="en">Patient flow</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0017">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-09</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0010"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-09</hasVisitDate>
+    <hasVisitId>V0017</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0010"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0010"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0010"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-09</hasDataProperty>
+    <hasDataProperty>V0017</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500010"/>
+    <hasIdentifier>V0017</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0010"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0010"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0020">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-18</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0013"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-18</hasVisitDate>
+    <hasVisitId>V0020</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0013"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0013"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0013"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-18</hasDataProperty>
+    <hasDataProperty>V0020</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500013"/>
+    <hasIdentifier>V0020</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0013"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0013"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0003">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-24</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-24</hasVisitDate>
+    <hasVisitId>V0003</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0001"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0001"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-24</hasDataProperty>
+    <hasDataProperty>V0003</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500001"/>
+    <hasIdentifier>V0003</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0022">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-24</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0015"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-24</hasVisitDate>
+    <hasVisitId>V0022</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0015"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0015"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0015"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-24</hasDataProperty>
+    <hasDataProperty>V0022</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500015"/>
+    <hasIdentifier>V0022</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0015"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0015"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0011">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-12</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-18</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-18</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0018"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-12</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-18</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-12</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0018"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0018"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH015">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0015"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500012">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0019"/>
+    <hasUPINumber>NP-500012</hasUPINumber>
+    <hasPhoneNumber>0720000011</hasPhoneNumber>
+    <hasFirstName>Diana</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000011</hasPersonData>
+    <hasPersonData>Achieng</hasPersonData>
+    <hasPersonData>Diana</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-02-16</hasPersonData>
+    <hasANCNumber>2026-02-0012</hasANCNumber>
+    <hasLastName>Achieng</hasLastName>
+    <hasDataProperty>0720000011</hasDataProperty>
+    <hasDataProperty>Achieng</hasDataProperty>
+    <hasDataProperty>Diana</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500012</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-02-16</hasDataProperty>
+    <hasIdentifier>NP-500012</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-02-16</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O42">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/44223004</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <rdfs:label xml:lang="en">Premature rupture of membranes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500008">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0015"/>
+    <hasUPINumber>NP-500008</hasUPINumber>
+    <hasPhoneNumber>0720000007</hasPhoneNumber>
+    <hasFirstName>Rose</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000007</hasPersonData>
+    <hasPersonData>Akinyi</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData>Rose</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-08-17</hasPersonData>
+    <hasANCNumber>2026-02-0008</hasANCNumber>
+    <hasLastName>Akinyi</hasLastName>
+    <hasDataProperty>0720000007</hasDataProperty>
+    <hasDataProperty>Akinyi</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500008</hasDataProperty>
+    <hasDataProperty>Rose</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-08-17</hasDataProperty>
+    <hasIdentifier>NP-500008</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-08-17</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0003">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-26</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-02</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-02</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0007"/>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0008"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-26</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-02</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-26</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0007"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0008"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0007"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0008"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0014">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-18</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-24</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-24</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0021"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-18</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-24</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-18</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0021"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0021"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0004">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-13</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-13</hasVisitDate>
+    <hasVisitId>V0004</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0002"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0002"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-13</hasDataProperty>
+    <hasDataProperty>V0004</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500002"/>
+    <hasIdentifier>V0004</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0021">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-21</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0014"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-21</hasVisitDate>
+    <hasVisitId>V0021</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0014"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0014"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0014"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-21</hasDataProperty>
+    <hasDataProperty>V0021</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500014"/>
+    <hasIdentifier>V0021</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0014"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0014"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0007">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-04</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-10</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-10</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0013"/>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0014"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-04</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-10</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-04</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0013"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0014"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0013"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0014"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0002">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-03</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-03</hasVisitDate>
+    <hasVisitId>V0002</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0001"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0001"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-03</hasDataProperty>
+    <hasDataProperty>V0002</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500001"/>
+    <hasIdentifier>V0002</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0008">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Negative</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0015"/>
+    <hasVDRLResult>Negative</hasVDRLResult>
+    <hasDataProperty>Negative</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0015"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0015"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0015">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-20</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-26</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-26</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0022"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-20</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-26</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-20</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0022"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0022"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#PollenAllergen">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/710928009"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasPhysicalExamFindings">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/29545-1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF003">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSex">
+    <rdfs:comment>Indicates the biological sex recorded for a client.</rdfs:comment>
+    <rdfs:comment>Permitted values may include Male, Female, or other values defined by the source system.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasClientReferral">
+    <rdfs:comment xml:lang="en">Relates a client to a CHU referral record documenting a transfer or recommendation for healthcare services at another facility or provider.</rdfs:comment>
+    <rdfs:label xml:lang="en">has client referral</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0015">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Negative</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0022"/>
+    <hasVDRLResult>Negative</hasVDRLResult>
+    <hasDataProperty>Negative</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0022"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0022"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#GlutenAllergen">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411695004"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0016">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-06</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0009"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-06</hasVisitDate>
+    <hasVisitId>V0016</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0009"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0009"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0009"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-06</hasDataProperty>
+    <hasDataProperty>V0016</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500009"/>
+    <hasIdentifier>V0016</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0009"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0009"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasWaterSource">
+    <rdfs:comment>Indicates the primary source of water available to a household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasDateRecorded">
+    <rdfs:comment>Indicates the date on which a health surveillance record was created or recorded.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCorrespondingPatient">
+    <rdfs:comment xml:lang="en">Relates a CHU client record to the corresponding hospital patient record, resolved via name and date-of-birth matching in the absence of a shared identifier (see thesis Chapter 8).</rdfs:comment>
+    <rdfs:label xml:lang="en">has corresponding patient</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0009">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-08</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-14</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasMaternalProfileData>
+    <hasMaternalProfileData rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasMaternalProfileData>
+    <hasMaternalProfileData>1+0</hasMaternalProfileData>
+    <hasGravida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasGravida>
+    <hasExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-14</hasExpectedDeliveryDate>
+    <isMaternalProfileOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0016"/>
+    <hasGestationAgeWeeks rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasGestationAgeWeeks>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-08</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-14</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasDataProperty>
+    <hasDataProperty>1+0</hasDataProperty>
+    <hasLMPDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-08</hasLMPDate>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0016"/>
+    <isClinicalRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0016"/>
+    <hasPara>1+0</hasPara>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O13">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/307632004</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <rdfs:label xml:lang="en">Gestational hypertension without significant proteinuria</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0005">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Positive</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0010"/>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0011"/>
+    <hasVDRLResult>Positive</hasVDRLResult>
+    <hasDataProperty>Positive</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0010"/>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0011"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0010"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0011"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0016">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Negative</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0023"/>
+    <hasVDRLResult>Negative</hasVDRLResult>
+    <hasDataProperty>Negative</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0023"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0023"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0011">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Negative</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0018"/>
+    <hasVDRLResult>Negative</hasVDRLResult>
+    <hasDataProperty>Negative</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0018"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0018"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ClinicalRecord">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/371530004</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Clinical information entity containing medical findings, diagnoses, assessments, and care documentation</rdfs:comment>
+    <rdfs:label xml:lang="en">Clinical record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Referral_2026-02-0007">
+    <hasReferralReason>Referred from community unit for further assessment</hasReferralReason>
+    <hasReferralSource>Community Unit</hasReferralSource>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Referral"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasDataProperty>Referred from community unit for further assessment</hasDataProperty>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0013"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0014"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0013"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0014"/>
+    <hasReferralData>Referred from community unit for further assessment</hasReferralData>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Referral_2026-02-0008">
+    <hasReferralReason>Referred from community unit for further assessment</hasReferralReason>
+    <hasReferralSource>Community Unit</hasReferralSource>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Referral"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasDataProperty>Referred from community unit for further assessment</hasDataProperty>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0015"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0015"/>
+    <hasReferralData>Referred from community unit for further assessment</hasReferralData>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O44">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/36813001</skos:closeMatch>
+    <rdfs:label xml:lang="en">Placenta praevia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Positive</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0001"/>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0002"/>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0003"/>
+    <hasVDRLResult>Positive</hasVDRLResult>
+    <hasDataProperty>Positive</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0001"/>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0002"/>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0003"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0001"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0002"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0024">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-30</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0017"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-30</hasVisitDate>
+    <hasVisitId>V0024</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0017"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0017"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0017"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-30</hasDataProperty>
+    <hasDataProperty>V0024</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500017"/>
+    <hasIdentifier>V0024</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0017"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0017"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasClient">
+    <rdfs:comment>Relates a household registration record to an individual registered as a member of that household.</rdfs:comment>
+    <rdfs:label>has client</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0010">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Negative</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0017"/>
+    <hasVDRLResult>Negative</hasVDRLResult>
+    <hasDataProperty>Negative</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0017"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0017"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ClinicalNote">
+    <rdfs:comment xml:lang="en">Clinical documentation containing notes recorded during patient care.</rdfs:comment>
+    <rdfs:label xml:lang="en">Clinical note</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVTestingRecord">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/171121004</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation record documenting HIV testing procedures and results.</rdfs:comment>
+    <rdfs:label xml:lang="en">HIV Testing Record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVPositive">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/165816005"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0023">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-27</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0016"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-27</hasVisitDate>
+    <hasVisitId>V0023</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0016"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0016"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0016"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-27</hasDataProperty>
+    <hasDataProperty>V0023</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500016"/>
+    <hasIdentifier>V0023</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0016"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0016"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH014">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0014"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUExpectedDeliveryDate">
+    <rdfs:comment>Indicates the estimated date of delivery for a pregnancy.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#VitalSignsRecord">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/118227000</skos:exactMatch>
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/85353-1"/>
+    <rdfs:comment xml:lang="en">Observation record containing patient vital sign measurements such as blood pressure, temperature, pulse,...</rdfs:comment>
+    <rdfs:label xml:lang="en">Vital signs record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ReferenceTerminology">
+    <rdfs:comment xml:lang="en">A standardized terminology or coding system used to represent 				clinical concepts in healthcare.</rdfs:comment>
+    <rdfs:label xml:lang="en">Reference Terminology</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance">
+    <rdfs:comment>A record of observed health conditions, symptoms, risk factors, health status indicators, or disease-related information collected for monitoring the health of an individual.</rdfs:comment>
+    <rdfs:label>Health Surveillance</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH013">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0013"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O26">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <rdfs:label xml:lang="en">Maternal care for other conditions predominantly related to pregnancy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0019">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-15</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0012"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-15</hasVisitDate>
+    <hasVisitId>V0019</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0012"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0012"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0012"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-15</hasDataProperty>
+    <hasDataProperty>V0019</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500012"/>
+    <hasIdentifier>V0019</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0012"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0012"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#PostNatal">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/394575008"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#DepartmentType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ICDCode">
+    <rdfs:comment xml:lang="en">Represents a code from the International Classification of Diseases (ICD).</rdfs:comment>
+    <rdfs:label xml:lang="en">ICD Code</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ComplaintExam">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/302199004</skos:closeMatch>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/185349003</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Clinical record containing presenting complaints, physical examination findings, and remarks.</rdfs:comment>
+    <rdfs:label xml:lang="en">Complaint Exam</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0010">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-22</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0005"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-22</hasVisitDate>
+    <hasVisitId>V0010</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0005"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0005"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0005"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-22</hasDataProperty>
+    <hasDataProperty>V0010</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500005"/>
+    <hasIdentifier>V0010</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0005"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0005"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Referral">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/3457005</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Healthcare event representing referral of a patient between providers, departments, or facilities.</rdfs:comment>
+    <rdfs:label xml:lang="en">Referral</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSurveillanceDiagnosis">
+    <rdfs:comment>Indicates a diagnosis recorded for an individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasIndividualID">
+    <rdfs:comment>Relates a client to their unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O24">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/11687002</skos:closeMatch>
+    <rdfs:label xml:lang="en">Diabetes mellitus in pregnancy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0006">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-27</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-27</hasVisitDate>
+    <hasVisitId>V0006</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0002"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0002"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-27</hasDataProperty>
+    <hasDataProperty>V0006</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500002"/>
+    <hasIdentifier>V0006</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client">
+    <rdfs:comment>An individual registered within a household and receiving, eligible for, or participating in community healthcare services.</rdfs:comment>
+    <rdfs:label>Client</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#LaboratoryResult">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/275924004</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation representing laboratory tests and their results.</rdfs:comment>
+    <rdfs:label xml:lang="en">Laboratory result</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#WorkingDiagnosis">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/5558000"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#DiagnosisType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH011">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0011"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O10">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/65402008</skos:closeMatch>
+    <rdfs:label xml:lang="en">Pre-existing hypertension complicating pregnancy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0001">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-10</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-10</hasVisitDate>
+    <hasVisitId>V0001</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0001"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0001"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-10</hasDataProperty>
+    <hasDataProperty>V0001</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500001"/>
+    <hasIdentifier>V0001</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#TBScreening">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/171126009</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Clinical record documenting tuberculosis screening findings and symptoms.</rdfs:comment>
+    <rdfs:label xml:lang="en">Tuberculosis Screening</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BloodGroupO">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/58460004</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#BloodGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#DiagnosisType">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/106229004</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents the category or type of a diagnosis.</rdfs:comment>
+    <rdfs:label xml:lang="en">Diagnosis Type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasDeliveryPlace">
+    <rdfs:comment>Indicates the planned or actual location of delivery.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0008">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-09</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0003"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-09</hasVisitDate>
+    <hasVisitId>V0008</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0003"/>
+    <hasReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0003"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0003"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0003"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0003"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-09</hasDataProperty>
+    <hasDataProperty>V0008</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500003"/>
+    <hasIdentifier>V0008</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0003"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MentalHealthAssessment">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/401061005</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation representing mental health evaluation, assessment notes, and treatment planning.</rdfs:comment>
+    <rdfs:label xml:lang="en">Mental health assessment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient_NP-500010">
+    <hasVisit rdf:resource="https://w3id.org/dhs/ontology#Visit_V0017"/>
+    <hasUPINumber>NP-500010</hasUPINumber>
+    <hasPhoneNumber>0720000009</hasPhoneNumber>
+    <hasFirstName>Beatrice</hasFirstName>
+    <hasMaritalStatus>MM</hasMaritalStatus>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Person"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Patient"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Person"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <hasPersonData>0720000009</hasPersonData>
+    <hasPersonData>Beatrice</hasPersonData>
+    <hasPersonData>MM</hasPersonData>
+    <hasPersonData>Otieno</hasPersonData>
+    <hasPersonData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-05-18</hasPersonData>
+    <hasANCNumber>2026-02-0010</hasANCNumber>
+    <hasLastName>Otieno</hasLastName>
+    <hasDataProperty>0720000009</hasDataProperty>
+    <hasDataProperty>Beatrice</hasDataProperty>
+    <hasDataProperty>MM</hasDataProperty>
+    <hasDataProperty>NP-500010</hasDataProperty>
+    <hasDataProperty>Otieno</hasDataProperty>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-05-18</hasDataProperty>
+    <hasIdentifier>NP-500010</hasIdentifier>
+    <hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-05-18</hasDateOfBirth>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF004">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ClinicalAssessment">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/386637004</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Assessment entity representing clinical observations and evaluations performed during healthcare delivery.</rdfs:comment>
+    <rdfs:label xml:lang="en">Clinical Assessment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Facility_13232">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#CommunityHealthUnit"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEntity"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Facility"/>
+    <hasServiceDeliveryPoint>ANC Clinic</hasServiceDeliveryPoint>
+    <hasCHUSubCounty>Kamukunji</hasCHUSubCounty>
+    <hasCHUCounty>Nairobi</hasCHUCounty>
+    <hasMFLCode>13232</hasMFLCode>
+    <hasFacilityName>Pumwani Maternity Hospital</hasFacilityName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Referral_2026-02-0004">
+    <hasReferralReason>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasReferralReason>
+    <hasReferralSource>Community Unit</hasReferralSource>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Referral"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasDataProperty>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasDataProperty>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0009"/>
+    <isReferralOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0009"/>
+    <hasReferralData>GBV survivor referred from community unit - comprehensive STI screening including syphilis performed</hasReferralData>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#SoyAllergen">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411696003"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Provider">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/223366009</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents a person providing healthcare services.</rdfs:comment>
+    <rdfs:label xml:lang="en">Healthcare provider</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH012">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0012"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BloodGroupAB">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/165743006</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#BloodGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BeeVenomAllergen">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411802009"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthcareEntity">
+    <rdfs:comment xml:lang="en">General entity representing organizational or structural healthcare resources.</rdfs:comment>
+    <rdfs:label xml:lang="en">Healthcare entity</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0017">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/ClinicalImpression"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Diagnosis"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Composition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalAssessment"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Condition"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ClinicalRecord"/>
+    <hasHIVCareData>Negative</hasHIVCareData>
+    <isClinicalAssessmentOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0024"/>
+    <hasVDRLResult>Negative</hasVDRLResult>
+    <hasDataProperty>Negative</hasDataProperty>
+    <isHIVCareRecordOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0024"/>
+    <isEncounterOf rdf:resource="https://w3id.org/dhs/ontology#Visit_V0024"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#RehabilitationAssessment">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/410081009</skos:exactMatch>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/52052004</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Observation related to rehabilitation services, assessments, and rehabilitation planning.</rdfs:comment>
+    <rdfs:label xml:lang="en">Rehabilitation assessments</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasRecordID">
+    <rdfs:comment>Relates a health surveillance record to its unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ManagementPlan">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/734163000</skos:exactMatch>
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/18776-5"/>
+    <rdfs:comment xml:lang="en">Clinical record describing planned investigations, medications, counselling, and follow-up care.</rdfs:comment>
+    <rdfs:label xml:lang="en">Management plan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasReferralID">
+    <rdfs:comment>Relates a referral record to its unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration">
+    <rdfs:comment>A record documenting the registration of a household within a Community Health Unit, including household location, membership, and administrative information.</rdfs:comment>
+    <rdfs:label>Household Registration</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#DepartmentType">
+    <rdfs:comment>Type of organizational unit within a healthcare facility responsible for providing specific healthcare services.</rdfs:comment>
+    <rdfs:label xml:lang="en">Department Type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL013">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500013"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH004">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL017">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500017"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVStatus">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/278977008</skos:exactMatch>
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/55277-8"/>
+    <rdfs:comment xml:lang="en">Observation record documenting HIV status assessment.</rdfs:comment>
+    <rdfs:label xml:lang="en">HIV Status</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit_V0018">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Visit"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEncounter"/>
+    <hasVisitData rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-12</hasVisitData>
+    <hasHIVCareRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0011"/>
+    <hasVisitDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-12</hasVisitDate>
+    <hasVisitId>V0018</hasVisitId>
+    <hasClinicalRecord rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0011"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0011"/>
+    <hasEncounter rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0011"/>
+    <hasDataProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-12</hasDataProperty>
+    <hasDataProperty>V0018</hasDataProperty>
+    <isVisitOf rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500011"/>
+    <hasIdentifier>V0018</hasIdentifier>
+    <hasMaternalProfile rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0011"/>
+    <hasClinicalAssessment rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0011"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Medication">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/182833002</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Entity representing medication prescribed or dispensed to a patient.</rdfs:comment>
+    <rdfs:label xml:lang="en">Medication</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUID">
+    <rdfs:comment>Relates a Community Health Unit to its unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#PenicillinAllergen">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411828007"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF002">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BloodGroupB">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/112149005</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#BloodGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth">
+    <rdfs:comment>A record containing information related to maternal and child health, including pregnancy status, antenatal care, delivery, postnatal care, child immunization, and growth monitoring.</rdfs:comment>
+    <rdfs:label>Maternal and Child Health</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BloodGroupA">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/112144000</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#BloodGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL008">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500008"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealthRecord">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/57073-9"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/406199001</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Observation record related to maternal and child healthcare services.</rdfs:comment>
+    <rdfs:label xml:lang="en">Maternal and child health record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral">
+    <rdfs:comment xml:lang="en">A documented request or transfer of an individual from a community healthcare provider to a healthcare facility or healthcare service for further assessment, diagnosis, treatment, or management.</rdfs:comment>
+    <rdfs:label xml:lang="en">CHU Referral</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasWasteDisposalMethod">
+    <rdfs:comment>Indicates the method used for household waste disposal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O14">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/398254007</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <rdfs:label xml:lang="en">Pre-eclampsia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Consultation">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/11429006</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Healthcare event representing an interaction between a patient and healthcare provider for clinical consultation.</rdfs:comment>
+    <rdfs:label xml:lang="en">Consultation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasBMI">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/39156-5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthcareEncounter">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/308335008</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Event occurring during healthcare delivery or patient care processes.</rdfs:comment>
+    <rdfs:label xml:lang="en">Healthcare encounter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasLinkedFacility">
+    <rdfs:comment>Relates a Community Health Unit to the healthcare facility with which it is associated.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+    <owl:backwardCompatibleWith></owl:backwardCompatibleWith>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasMUAC">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/56072-2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasNumberOfMembers">
+    <rdfs:comment>Indicates the number of individuals registered within a household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#requiresFollowUp">
+    <rdfs:comment>Indicates whether additional follow-up care or monitoring is required after a service delivery activity.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#AdministrativeWorkflow">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/14734007</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Administrative process related to patient management and healthcare operations</rdfs:comment>
+    <rdfs:label xml:lang="en">Administrative workflow</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasGrowthMonitoring">
+    <rdfs:comment>Indicates growth monitoring information recorded for a child.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasFacilityReferredTo">
+    <rdfs:comment>Indicates the healthcare facility to which an individual has been referred.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasPresentingComplaint">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/10154-3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#RhesusPositive">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/165747007"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#RhesusFactor"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL014">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500014"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Allergen">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/277054007</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents a substance that the immune system recognizes as foreign, triggering an IgE-mediated hypersensitivity reaction in sensitive individuals.</rdfs:comment>
+    <rdfs:label xml:lang="en">Allergen</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Male">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/248153007</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Gender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasGPSLocation">
+    <rdfs:comment>Relates a household registration record to the geographic coordinates or location reference of the household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Facility">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/257622000</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Healthcare institution where healthcare services are delivered.</rdfs:comment>
+    <rdfs:label xml:lang="en">Facility</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasDiastolicBloodPressure">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/8462-4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#PeanutAllergen">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411626009"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasServiceType">
+    <rdfs:comment>Indicates the type of healthcare service delivered, such as health education, screening, treatment, or follow-up.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasServiceID">
+    <rdfs:comment>Relates a service delivery record to its unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH001">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MedicationDispense">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/373784005</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Record representing the dispensing of medication to a patient.</rdfs:comment>
+    <rdfs:label xml:lang="en">Medication dispense</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Diagnosis">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/439401001</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents a working or a final diagnosis of a patient.</rdfs:comment>
+    <rdfs:label xml:lang="en">Diagnosis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH009">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0009"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O60">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/6383007</skos:closeMatch>
+    <rdfs:label xml:lang="en">Preterm labour</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/116154003</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents a person receiving healthcare services.</rdfs:comment>
+    <rdfs:label xml:lang="en">Patient</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#AnteNatal">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/394574007"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#DepartmentType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHouseholdPhoneNumber">
+    <rdfs:comment>Relates a household registration record to a contact telephone number.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Other">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/394743007</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Gender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O80">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/48782003</skos:closeMatch>
+    <rdfs:label xml:lang="en">Single spontaneous delivery</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasANCVisits">
+    <rdfs:comment>Indicates the number of antenatal care visits recorded for a pregnancy.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Department">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/309912009</skos:exactMatch>
+    <rdfs:comment>Organizational unit within a healthcare facility responsible for providing specific healthcare services.</rdfs:comment>
+    <rdfs:label xml:lang="en">Department</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF005">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0007"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasMCHID">
+    <rdfs:comment>Relates a maternal and child health record to its unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH003">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL002">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/302199004</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Healthcare event representing a patient's encounter with a healthcare facility.</rdfs:comment>
+    <rdfs:label xml:lang="en">Visit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH006">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0006"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasNationalID">
+    <rdfs:comment>Relates a client to a national identification number or alien card number.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasClientDateOfBirth">
+    <rdfs:comment>Indicates the date on which a client was born.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHandwashingFacility">
+    <rdfs:comment>Indicates whether a household has a handwashing facility.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#RhesusFactor">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/278155008</skos:exactMatch>
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/10331-7"/>
+    <rdfs:comment xml:lang="en">Observation record documenting Rhesus Factor assessment.</rdfs:comment>
+    <rdfs:label xml:lang="en">Rhesus Factor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH">
+    <rdfs:comment>A record describing environmental, water, sanitation, hygiene, and waste management conditions associated with a household and relevant to community health.</rdfs:comment>
+    <rdfs:label>Environmental and WASH Assessment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL001">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Admission">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/32485007</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Healthcare event representing an ANC patient admission into a healthcare facility.</rdfs:comment>
+    <rdfs:label xml:lang="en">Maternity admission</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Female">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/1086007</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Gender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CommunityHealthUnit">
+    <rdfs:comment>A geographically defined community-based health service unit responsible for coordinating and delivering primary healthcare services to households within a designated population.</rdfs:comment>
+    <rdfs:label>Community Health Unit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS003">
+    <hasCorrespondingSyphilisRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasMaternalChildHealth">
+    <rdfs:comment>Relates a client to a maternal and child health record containing pregnancy, antenatal, delivery, postnatal, immunization, or growth monitoring information.</rdfs:comment>
+    <rdfs:label>has maternal and child health record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF001">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#RhesusNegative">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/165746003"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#RhesusFactor"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVNegative">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/165815009"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHouseholdVillage">
+    <rdfs:comment>Relates a household registration record to the village in which the household is located.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL005">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500005"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH010">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0010"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#FinalDiagnosis">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/89100005"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#DiagnosisType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL004">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasLatrineAvailable">
+    <rdfs:comment>Indicates whether a household has access to a latrine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasPregnancyStatus">
+    <rdfs:comment>Indicates whether an individual is recorded as pregnant.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/24091000087107</skos:closeMatch>
+    <rdfs:comment xml:lang="en">Observation record related to HIV care, treatment status, and follow-up information.</rdfs:comment>
+    <rdfs:label xml:lang="en">HIV Care Record</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH008">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0008"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O48">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/90968009</skos:closeMatch>
+    <rdfs:label xml:lang="en">Prolonged pregnancy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasChronicCondition">
+    <rdfs:comment>Indicates a chronic health condition recorded for an individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS004">
+    <hasCorrespondingSyphilisRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery">
+    <rdfs:comment>A healthcare service or intervention delivered by a Community Health Practitioner to an individual within a community setting, including health education, screening, treatment, and follow-up activities.</rdfs:comment>
+    <rdfs:label>Service Delivery</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasPostnatalVisits">
+    <rdfs:comment>Indicates the number of postnatal care visits recorded after delivery.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasDangerSigns">
+    <rdfs:comment>Indicates warning signs or clinical indicators requiring additional assessment or intervention.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHeightCm">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/8302-2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Allergy">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/722446000</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents an allergy a person receiving healthcare services sufferes from.</rdfs:comment>
+    <rdfs:label xml:lang="en">Allergy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUCounty">
+    <rdfs:comment>Relates a Community Health Unit to the county in which it operates.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF006">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0008"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasEnvironmentalWASH">
+    <rdfs:comment>Relates a household registration record to an environmental, water, sanitation, hygiene, and waste management assessment.</rdfs:comment>
+    <rdfs:label>has environmental and WASH assessment</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSurveillanceNutritionStatus">
+    <rdfs:comment>Indicates the nutritional status recorded for an individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasClientDisabilityStatus">
+    <rdfs:comment>Indicates whether a client has a recorded disability status.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Gender">
+    <rdfs:label xml:lang="en">Gender</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUName">
+    <rdfs:comment>Relates a Community Health Unit to its official name.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHouseholdID">
+    <rdfs:comment>Relates a household registration record to its unique household identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasReferralType">
+    <rdfs:comment>Indicates the category or type of referral issued.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL016">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500016"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF007">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasProgramArea">
+    <rdfs:comment>Indicates the healthcare program area associated with the service delivery activity.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUWard">
+    <rdfs:comment>Relates a Community Health Unit to the administrative ward in which it is located.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasReasonForReferral">
+    <rdfs:comment>Indicates the clinical or administrative reason for issuing a referral.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasServiceDeliveryDate">
+    <rdfs:comment>Indicates the date on which a community healthcare service was delivered.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSanitationType">
+    <rdfs:comment>Indicates the sanitation facilities available to a household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL003">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSymptom">
+    <rdfs:comment>Indicates a symptom observed or reported for an individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasAge">
+    <rdfs:comment>Indicates the age of a client.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHeartRate">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/8867-4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasChildImmunizationStatus">
+    <rdfs:comment>Indicates the immunization status recorded for a child.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL015">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500015"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH007">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0007"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSystolicBloodPressure">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/8480-6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL011">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500011"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL012">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500012"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL007">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500007"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasWeightKg">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/29463-7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL009">
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500009"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH002">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH005">
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0005"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUReferralDate">
+    <rdfs:comment>Indicates the date on which a referral was issued.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasDateRegistered">
+    <rdfs:comment>Indicates the date on which the household was registered.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS002">
+    <hasCorrespondingSyphilisRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasTemperature">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/8310-5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasImmunizationStatus">
+    <rdfs:comment>Indicates the immunization status recorded for an individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUSubCounty">
+    <rdfs:comment>Relates a Community Health Unit to the sub-county in which it operates.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHouseholdRegistration">
+    <rdfs:comment>Relates a Community Health Unit to a household registration record within its area of responsibility.</rdfs:comment>
+    <rdfs:label>has household registration</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHouseholdHeadName">
+    <rdfs:comment>Relates a household registration record to the name of the household head.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasFullName">
+    <rdfs:comment>Relates a client to their full name.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

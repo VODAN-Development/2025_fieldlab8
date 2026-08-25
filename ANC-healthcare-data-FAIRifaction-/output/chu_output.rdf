@@ -1,0 +1,2001 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns="https://w3id.org/dhs/ontology#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH008">
+    <hasHouseholdVillage>Village 8</hasHouseholdVillage>
+    <hasGPSLocation>-1.2808,36.8308</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH008"/>
+    <hasHouseholdID>HH008</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-09</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL008"/>
+    <hasHouseholdPhoneNumber>0710000008</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 8</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CommunityHealthUnit_CHU001">
+    <hasCHUSubCounty>Kamukunji</hasCHUSubCounty>
+    <hasLinkedFacility>Pumwani Maternity Hospital</hasLinkedFacility>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Facility"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#CommunityHealthUnit"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthcareEntity"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <hasCHUName>KCEI - Majengo</hasCHUName>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH001"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH002"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH003"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH004"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH005"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH006"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH007"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH008"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH009"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH010"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH011"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH012"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH013"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH014"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH015"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH016"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH017"/>
+    <hasHouseholdRegistration rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration_HH018"/>
+    <hasCHUWard>Pumwani</hasCHUWard>
+    <hasCHUCounty>Nairobi</hasCHUCounty>
+    <hasCHUID>CHU001</hasCHUID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH013">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH010">
+    <hasHouseholdVillage>Village 10</hasHouseholdVillage>
+    <hasGPSLocation>-1.2810,36.8310</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH010"/>
+    <hasHouseholdID>HH010</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-11</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL010"/>
+    <hasHouseholdPhoneNumber>0710000010</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 10</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasServiceDelivery">
+    <rdfs:label>has service delivery</rdfs:label>
+    <rdfs:comment>Relates a client to a healthcare service or intervention delivered within the community.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH002">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL007">
+    <hasSex>F</hasSex>
+    <hasFullName>Agnes Nyambura</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH007"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV007"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500007"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-04-02</hasClientDateOfBirth>
+    <hasNationalID>310000006</hasNationalID>
+    <hasIndividualID>CL007</hasIndividualID>
+    <hasClientReferral rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral_REF005"/>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+    <hasHealthSurveillance rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance_HS009"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV015">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-29</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV015</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS001">
+    <hasSurveillanceDiagnosis>NA - referred, not diagnosed by CHW</hasSurveillanceDiagnosis>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasSurveillanceNutritionStatus>Normal</hasSurveillanceNutritionStatus>
+    <hasDangerSigns>Client disclosed recent sexual assault; referred for comprehensive medical care and STI screening</hasDangerSigns>
+    <hasCorrespondingSyphilisRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0001"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasImmunizationStatus>Up to date</hasImmunizationStatus>
+    <hasSymptom>None reported</hasSymptom>
+    <hasDateRecorded rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-09</hasDateRecorded>
+    <hasRecordID>HS001</hasRecordID>
+    <hasChronicCondition>None</hasChronicCondition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O15">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <rdfs:label xml:lang="en">Eclampsia</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/15938005</skos:exactMatch>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL010">
+    <hasSex>F</hasSex>
+    <hasFullName>Beatrice Otieno</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH010"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV010"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500010"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-05-18</hasClientDateOfBirth>
+    <hasNationalID>310000009</hasNationalID>
+    <hasIndividualID>CL010</hasIndividualID>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+    <hasHealthSurveillance rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance_HS005"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL006">
+    <hasSex>F</hasSex>
+    <hasFullName>Esther Adhiambo</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH006"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV006"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500006"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-11-16</hasClientDateOfBirth>
+    <hasNationalID>310000005</hasNationalID>
+    <hasIndividualID>CL006</hasIndividualID>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL009">
+    <hasSex>F</hasSex>
+    <hasFullName>Alice Muthoni</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH009"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV009"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500009"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-01-01</hasClientDateOfBirth>
+    <hasNationalID>310000008</hasNationalID>
+    <hasIndividualID>CL009</hasIndividualID>
+    <hasClientReferral rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral_REF007"/>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS007">
+    <hasSurveillanceDiagnosis>NA</hasSurveillanceDiagnosis>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasSurveillanceNutritionStatus>Normal</hasSurveillanceNutritionStatus>
+    <hasDangerSigns>None</hasDangerSigns>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasImmunizationStatus>Up to date</hasImmunizationStatus>
+    <hasSymptom>None reported</hasSymptom>
+    <hasDateRecorded rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-14</hasDateRecorded>
+    <hasRecordID>HS007</hasRecordID>
+    <hasChronicCondition>None</hasChronicCondition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH014">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH014">
+    <hasHouseholdVillage>Village 14</hasHouseholdVillage>
+    <hasGPSLocation>-1.2814,36.8314</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH014"/>
+    <hasHouseholdID>HH014</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-15</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL014"/>
+    <hasHouseholdPhoneNumber>0710000014</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 14</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH017">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-30</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH017</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#TriageAssessment">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/225390008</skos:closeMatch>
+    <rdfs:label xml:lang="en">Triage assessment</rdfs:label>
+    <rdfs:comment xml:lang="en">Observation representing initial patient assessment and vital sign measurements during triage.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF001">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCHUReferralDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-09</hasCHUReferralDate>
+    <hasReferralType>CHU to Facility</hasReferralType>
+    <hasFacilityReferredTo>Pumwani Maternity Hospital</hasFacilityReferredTo>
+    <hasReasonForReferral>Suspected sexual violence - referred for medical assessment and comprehensive care</hasReasonForReferral>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral"/>
+    <hasReferralID>REF001</hasReferralID>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS010">
+    <hasSurveillanceDiagnosis>NA</hasSurveillanceDiagnosis>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasSurveillanceNutritionStatus>Normal</hasSurveillanceNutritionStatus>
+    <hasDangerSigns>None</hasDangerSigns>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasImmunizationStatus>Up to date</hasImmunizationStatus>
+    <hasSymptom>Reported occasional headache</hasSymptom>
+    <hasDateRecorded rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-02</hasDateRecorded>
+    <hasRecordID>HS010</hasRecordID>
+    <hasChronicCondition>None</hasChronicCondition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH003">
+    <hasHouseholdVillage>Village 3</hasHouseholdVillage>
+    <hasGPSLocation>-1.2803,36.8303</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH003"/>
+    <hasHouseholdID>HH003</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-04</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL003"/>
+    <hasHouseholdPhoneNumber>0710000003</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 3</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL014">
+    <hasSex>F</hasSex>
+    <hasFullName>Florence Auma</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH014"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV014"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500014"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-11-17</hasClientDateOfBirth>
+    <hasNationalID>310000013</hasNationalID>
+    <hasIndividualID>CL014</hasIndividualID>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#NutritionAssessment">
+    <rdfs:label xml:lang="en">Nutrition assessment</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/1759002</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation related to nutritional status and malnutrition assessment.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasRelationshipToHead">
+    <rdfs:comment>Indicates the relationship of a client to the head of the household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHealthSurveillance">
+    <rdfs:label>has health surveillance</rdfs:label>
+    <rdfs:comment>Relates a client to a health surveillance record containing observed health conditions, symptoms, risk factors, or health status information.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH018">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-18</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH018</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH011">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS004">
+    <hasSurveillanceDiagnosis>NA - referred, not diagnosed by CHW</hasSurveillanceDiagnosis>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasSurveillanceNutritionStatus>Normal</hasSurveillanceNutritionStatus>
+    <hasDangerSigns>Client disclosed recent sexual assault; referred for comprehensive medical care and STI screening</hasDangerSigns>
+    <hasCorrespondingSyphilisRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0004"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasImmunizationStatus>Up to date</hasImmunizationStatus>
+    <hasSymptom>None reported</hasSymptom>
+    <hasDateRecorded rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-18</hasDateRecorded>
+    <hasRecordID>HS004</hasRecordID>
+    <hasChronicCondition>None</hasChronicCondition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH004">
+    <hasHouseholdVillage>Village 4</hasHouseholdVillage>
+    <hasGPSLocation>-1.2804,36.8304</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH004"/>
+    <hasHouseholdID>HH004</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-05</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL004"/>
+    <hasHouseholdPhoneNumber>0710000004</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 4</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL015">
+    <hasSex>F</hasSex>
+    <hasFullName>Gladys Wambui</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH015"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV015"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500015"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-04-02</hasClientDateOfBirth>
+    <hasNationalID>310000014</hasNationalID>
+    <hasIndividualID>CL015</hasIndividualID>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MilkAllergen">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411726001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH019">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-19</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH019</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV003">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-17</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV003</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL011">
+    <hasSex>F</hasSex>
+    <hasFullName>Caroline Wanjiru</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH011"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV011"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500011"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-10-02</hasClientDateOfBirth>
+    <hasNationalID>310000010</hasNationalID>
+    <hasIndividualID>CL011</hasIndividualID>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+    <hasHealthSurveillance rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance_HS006"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasServiceDeliveryOutcome">
+    <rdfs:comment>Indicates the recorded outcome of a healthcare service delivery activity.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV002">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-16</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV002</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV001">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-15</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV001</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL019">
+    <hasSex>F</hasSex>
+    <hasFullName>Lucy Muthoni</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH019"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV019"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-10-02</hasClientDateOfBirth>
+    <hasNationalID>310000018</hasNationalID>
+    <hasIndividualID>CL019</hasIndividualID>
+    <hasRelationshipToHead>Spouse</hasRelationshipToHead>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF005">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCHUReferralDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-27</hasCHUReferralDate>
+    <hasReferralType>CHU to Facility</hasReferralType>
+    <hasFacilityReferredTo>Pumwani Maternity Hospital</hasFacilityReferredTo>
+    <hasReasonForReferral>Severe headache - possible pre-eclampsia</hasReasonForReferral>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral"/>
+    <hasReferralID>REF005</hasReferralID>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0007"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH001">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0001"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-26</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH001</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Transfer">
+    <rdfs:label xml:lang="en">Transfer</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/107724000</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Healthcare event representing transfer of a patient between healthcare facilities or departments</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS005">
+    <hasSurveillanceDiagnosis>NA</hasSurveillanceDiagnosis>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasSurveillanceNutritionStatus>Normal</hasSurveillanceNutritionStatus>
+    <hasDangerSigns>None</hasDangerSigns>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasImmunizationStatus>Up to date</hasImmunizationStatus>
+    <hasSymptom>Mild swelling of feet</hasSymptom>
+    <hasDateRecorded rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-08</hasDateRecorded>
+    <hasRecordID>HS005</hasRecordID>
+    <hasChronicCondition>None</hasChronicCondition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL016">
+    <hasSex>F</hasSex>
+    <hasFullName>Hellen Adhiambo</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH016"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV016"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500016"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-08-17</hasClientDateOfBirth>
+    <hasNationalID>310000015</hasNationalID>
+    <hasIndividualID>CL016</hasIndividualID>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Person">
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+    <rdfs:comment xml:lang="en">Human individual</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV004">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-18</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV004</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV013">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-27</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV013</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH011">
+    <hasHouseholdVillage>Village 11</hasHouseholdVillage>
+    <hasGPSLocation>-1.2811,36.8311</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH011"/>
+    <hasHouseholdID>HH011</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-12</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL011"/>
+    <hasHouseholdPhoneNumber>0710000011</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 11</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV017">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-31</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV017</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV009">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-23</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV009</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF004">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCHUReferralDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-18</hasCHUReferralDate>
+    <hasReferralType>CHU to Facility</hasReferralType>
+    <hasFacilityReferredTo>Pumwani Maternity Hospital</hasFacilityReferredTo>
+    <hasReasonForReferral>Suspected sexual violence - referred for medical assessment and comprehensive care</hasReasonForReferral>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral"/>
+    <hasReferralID>REF004</hasReferralID>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BloodGroup">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/883-9"/>
+    <rdfs:label xml:lang="en">Blood group</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/365636006</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents a blood type - A/B/AB/O.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH008">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0008"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-09</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH008</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalProfile">
+    <skos:closeMatch xml:lang="en">https://profiles.ihe.net/PCC/mAPS/StructureDefinition-IHE.PregnancyHistory.html</skos:closeMatch>
+    <rdfs:label xml:lang="en">Maternal profile</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/246104002</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Clinical record containing maternal health and pregnancy-related information.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL018">
+    <hasSex>F</hasSex>
+    <hasFullName>Jane Akinyi</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH018"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV018"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-18</hasClientDateOfBirth>
+    <hasNationalID>310000017</hasNationalID>
+    <hasIndividualID>CL018</hasIndividualID>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH016">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-28</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH016</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL003">
+    <hasSex>F</hasSex>
+    <hasFullName>Faith Njeri</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH003"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV003"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500003"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-10-02</hasClientDateOfBirth>
+    <hasNationalID>310000002</hasNationalID>
+    <hasIndividualID>CL003</hasIndividualID>
+    <hasClientReferral rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral_REF003"/>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+    <hasHealthSurveillance rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance_HS003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH003">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0003"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-30</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH003</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV005">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-19</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV005</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O45">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/415105001</skos:closeMatch>
+    <rdfs:label xml:lang="en">Premature separation of placenta (placental abruption)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#PatientFlow">
+    <rdfs:label xml:lang="en">Patient flow</rdfs:label>
+    <rdfs:comment xml:lang="en">Administrative workflow following patient movement through healthcare services or departments.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV020">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-03</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV020</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH006">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH006">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0006"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-05</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH006</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH001">
+    <hasHouseholdVillage>Village 1</hasHouseholdVillage>
+    <hasGPSLocation>-1.2801,36.8301</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH001"/>
+    <hasHouseholdID>HH001</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-02</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL001"/>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL019"/>
+    <hasHouseholdPhoneNumber>0710000001</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 1</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH007">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH015">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0015"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-23</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH015</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O42">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <rdfs:label xml:lang="en">Premature rupture of membranes</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/44223004</skos:exactMatch>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH007">
+    <hasHouseholdVillage>Village 7</hasHouseholdVillage>
+    <hasGPSLocation>-1.2807,36.8307</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH007"/>
+    <hasHouseholdID>HH007</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-08</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL007"/>
+    <hasHouseholdPhoneNumber>0710000007</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 7</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH012">
+    <hasHouseholdVillage>Village 12</hasHouseholdVillage>
+    <hasGPSLocation>-1.2812,36.8312</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH012"/>
+    <hasHouseholdID>HH012</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-13</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL012"/>
+    <hasHouseholdPhoneNumber>0710000012</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 12</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH003">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV016">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-30</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV016</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH007">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0007"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-07</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH007</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH005">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0005"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-03</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH005</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH001">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH014">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0014"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-21</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH014</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#PollenAllergen">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+    <skos:exactMatch rdf:resource="http://snomed.info/id/710928009"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL020">
+    <hasSex>F</hasSex>
+    <hasFullName>Margaret Otieno</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH020"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV020"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-02-16</hasClientDateOfBirth>
+    <hasNationalID>310000019</hasNationalID>
+    <hasIndividualID>CL020</hasIndividualID>
+    <hasRelationshipToHead>Spouse</hasRelationshipToHead>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH005">
+    <hasHouseholdVillage>Village 5</hasHouseholdVillage>
+    <hasGPSLocation>-1.2805,36.8305</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH005"/>
+    <hasHouseholdID>HH005</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-06</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL005"/>
+    <hasHouseholdPhoneNumber>0710000005</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 5</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS008">
+    <hasSurveillanceDiagnosis>NA</hasSurveillanceDiagnosis>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasSurveillanceNutritionStatus>Normal</hasSurveillanceNutritionStatus>
+    <hasDangerSigns>None</hasDangerSigns>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasImmunizationStatus>Up to date</hasImmunizationStatus>
+    <hasSymptom>Reported fatigue</hasSymptom>
+    <hasDateRecorded rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-17</hasDateRecorded>
+    <hasRecordID>HS008</hasRecordID>
+    <hasChronicCondition>None</hasChronicCondition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF003">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCHUReferralDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-15</hasCHUReferralDate>
+    <hasReferralType>CHU to Facility</hasReferralType>
+    <hasFacilityReferredTo>Pumwani Maternity Hospital</hasFacilityReferredTo>
+    <hasReasonForReferral>Suspected sexual violence - referred for medical assessment and comprehensive care</hasReasonForReferral>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral"/>
+    <hasReferralID>REF003</hasReferralID>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH013">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0013"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-19</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH013</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasPhysicalExamFindings">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/29545-1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL001">
+    <hasSex>F</hasSex>
+    <hasFullName>Mary Wanjiru</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH001"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV001"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500001"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-01-01</hasClientDateOfBirth>
+    <hasNationalID>310000000</hasNationalID>
+    <hasIndividualID>CL001</hasIndividualID>
+    <hasClientReferral rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral_REF001"/>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+    <hasHealthSurveillance rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance_HS001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSex">
+    <rdfs:comment>Indicates the biological sex recorded for a client.</rdfs:comment>
+    <rdfs:comment>Permitted values may include Male, Female, or other values defined by the source system.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasClientReferral">
+    <rdfs:label xml:lang="en">has client referral</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a client to a CHU referral record documenting a transfer or recommendation for healthcare services at another facility or provider.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH017">
+    <hasHouseholdVillage>Village 17</hasHouseholdVillage>
+    <hasGPSLocation>-1.2817,36.8317</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH017"/>
+    <hasHouseholdID>HH017</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-18</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL017"/>
+    <hasHouseholdPhoneNumber>0710000017</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 17</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#GlutenAllergen">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411695004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL002">
+    <hasSex>F</hasSex>
+    <hasFullName>Grace Achieng</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH002"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV002"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500002"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-05-18</hasClientDateOfBirth>
+    <hasNationalID>310000001</hasNationalID>
+    <hasIndividualID>CL002</hasIndividualID>
+    <hasClientReferral rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral_REF002"/>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+    <hasHealthSurveillance rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance_HS002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasWaterSource">
+    <rdfs:comment>Indicates the primary source of water available to a household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasDateRecorded">
+    <rdfs:comment>Indicates the date on which a health surveillance record was created or recorded.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCorrespondingPatient">
+    <rdfs:label xml:lang="en">has corresponding patient</rdfs:label>
+    <rdfs:comment xml:lang="en">Relates a CHU client record to the corresponding hospital patient record, resolved via name and date-of-birth matching in the absence of a shared identifier (see thesis Chapter 8).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL012">
+    <hasSex>F</hasSex>
+    <hasFullName>Diana Achieng</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH012"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV012"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500012"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-02-16</hasClientDateOfBirth>
+    <hasNationalID>310000011</hasNationalID>
+    <hasIndividualID>CL012</hasIndividualID>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+    <hasHealthSurveillance rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance_HS007"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS006">
+    <hasSurveillanceDiagnosis>NA</hasSurveillanceDiagnosis>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasSurveillanceNutritionStatus>Normal</hasSurveillanceNutritionStatus>
+    <hasDangerSigns>None</hasDangerSigns>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasImmunizationStatus>Up to date</hasImmunizationStatus>
+    <hasSymptom>Reported occasional headache</hasSymptom>
+    <hasDateRecorded rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-11</hasDateRecorded>
+    <hasRecordID>HS006</hasRecordID>
+    <hasChronicCondition>None</hasChronicCondition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH012">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O13">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <rdfs:label xml:lang="en">Gestational hypertension without significant proteinuria</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/307632004</skos:exactMatch>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS002">
+    <hasSurveillanceDiagnosis>NA - referred, not diagnosed by CHW</hasSurveillanceDiagnosis>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasSurveillanceNutritionStatus>Normal</hasSurveillanceNutritionStatus>
+    <hasDangerSigns>Client disclosed recent sexual assault; referred for comprehensive medical care and STI screening</hasDangerSigns>
+    <hasCorrespondingSyphilisRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0002"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasImmunizationStatus>Up to date</hasImmunizationStatus>
+    <hasSymptom>None reported</hasSymptom>
+    <hasDateRecorded rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-12</hasDateRecorded>
+    <hasRecordID>HS002</hasRecordID>
+    <hasChronicCondition>None</hasChronicCondition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF002">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCHUReferralDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-12</hasCHUReferralDate>
+    <hasReferralType>CHU to Facility</hasReferralType>
+    <hasFacilityReferredTo>Pumwani Maternity Hospital</hasFacilityReferredTo>
+    <hasReasonForReferral>Suspected sexual violence - referred for medical assessment and comprehensive care</hasReasonForReferral>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral"/>
+    <hasReferralID>REF002</hasReferralID>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0002"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ClinicalRecord">
+    <rdfs:label xml:lang="en">Clinical record</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/371530004</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Clinical information entity containing medical findings, diagnoses, assessments, and care documentation</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH017">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH006">
+    <hasHouseholdVillage>Village 6</hasHouseholdVillage>
+    <hasGPSLocation>-1.2806,36.8306</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH006"/>
+    <hasHouseholdID>HH006</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-07</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL006"/>
+    <hasHouseholdPhoneNumber>0710000006</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 6</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV010">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-24</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV010</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O44">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/36813001</skos:closeMatch>
+    <rdfs:label xml:lang="en">Placenta praevia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL013">
+    <hasSex>F</hasSex>
+    <hasFullName>Eunice Njeri</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH013"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV013"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500013"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-03</hasClientDateOfBirth>
+    <hasNationalID>310000012</hasNationalID>
+    <hasIndividualID>CL013</hasIndividualID>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+    <hasHealthSurveillance rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance_HS008"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH013">
+    <hasHouseholdVillage>Village 13</hasHouseholdVillage>
+    <hasGPSLocation>-1.2813,36.8313</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH013"/>
+    <hasHouseholdID>HH013</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-14</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL013"/>
+    <hasHouseholdPhoneNumber>0710000013</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 13</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH002">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0002"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-28</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH002</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS003">
+    <hasSurveillanceDiagnosis>NA - referred, not diagnosed by CHW</hasSurveillanceDiagnosis>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasSurveillanceNutritionStatus>Normal</hasSurveillanceNutritionStatus>
+    <hasDangerSigns>Client disclosed recent sexual assault; referred for comprehensive medical care and STI screening</hasDangerSigns>
+    <hasCorrespondingSyphilisRecord rdf:resource="https://w3id.org/dhs/ontology#HIVCareRecord_2026-02-0003"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasImmunizationStatus>Up to date</hasImmunizationStatus>
+    <hasSymptom>None reported</hasSymptom>
+    <hasDateRecorded rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-15</hasDateRecorded>
+    <hasRecordID>HS003</hasRecordID>
+    <hasChronicCondition>None</hasChronicCondition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH011">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0011"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-15</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH011</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL005">
+    <hasSex>F</hasSex>
+    <hasFullName>Nancy Wambui</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH005"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV005"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500005"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-07-02</hasClientDateOfBirth>
+    <hasNationalID>310000004</hasNationalID>
+    <hasIndividualID>CL005</hasIndividualID>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH010">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasClient">
+    <rdfs:label>has client</rdfs:label>
+    <rdfs:comment>Relates a household registration record to an individual registered as a member of that household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH002">
+    <hasHouseholdVillage>Village 2</hasHouseholdVillage>
+    <hasGPSLocation>-1.2802,36.8302</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH002"/>
+    <hasHouseholdID>HH002</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-03</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL002"/>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL020"/>
+    <hasHouseholdPhoneNumber>0710000002</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 2</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ClinicalNote">
+    <rdfs:label xml:lang="en">Clinical note</rdfs:label>
+    <rdfs:comment xml:lang="en">Clinical documentation containing notes recorded during patient care.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH015">
+    <hasHouseholdVillage>Village 15</hasHouseholdVillage>
+    <hasGPSLocation>-1.2815,36.8315</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH015"/>
+    <hasHouseholdID>HH015</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-16</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL015"/>
+    <hasHouseholdPhoneNumber>0710000015</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 15</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH016">
+    <hasHouseholdVillage>Village 16</hasHouseholdVillage>
+    <hasGPSLocation>-1.2816,36.8316</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH016"/>
+    <hasHouseholdID>HH016</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-17</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL016"/>
+    <hasHouseholdPhoneNumber>0710000016</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 16</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVTestingRecord">
+    <rdfs:label xml:lang="en">HIV Testing Record</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/171121004</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation record documenting HIV testing procedures and results.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVPositive">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/165816005"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH009">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#VitalSignsRecord">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/85353-1"/>
+    <rdfs:label xml:lang="en">Vital signs record</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/118227000</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation record containing patient vital sign measurements such as blood pressure, temperature, pulse,...</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUExpectedDeliveryDate">
+    <rdfs:comment>Indicates the estimated date of delivery for a pregnancy.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH009">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0009"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-11</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH009</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ReferenceTerminology">
+    <rdfs:label xml:lang="en">Reference Terminology</rdfs:label>
+    <rdfs:comment xml:lang="en">A standardized terminology or coding system used to represent 				clinical concepts in healthcare.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV008">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-22</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV008</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance">
+    <rdfs:label>Health Surveillance</rdfs:label>
+    <rdfs:comment>A record of observed health conditions, symptoms, risk factors, health status indicators, or disease-related information collected for monitoring the health of an individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH018">
+    <hasHouseholdVillage>Village 18</hasHouseholdVillage>
+    <hasGPSLocation>-1.2818,36.8318</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH018"/>
+    <hasHouseholdID>HH018</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-19</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL018"/>
+    <hasHouseholdPhoneNumber>0710000018</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 18</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV014">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-28</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV014</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL017">
+    <hasSex>F</hasSex>
+    <hasFullName>Irene Nyambura</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH017"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV017"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500017"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-01-01</hasClientDateOfBirth>
+    <hasNationalID>310000016</hasNationalID>
+    <hasIndividualID>CL017</hasIndividualID>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O26">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <rdfs:label xml:lang="en">Maternal care for other conditions predominantly related to pregnancy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH005">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL008">
+    <hasSex>F</hasSex>
+    <hasFullName>Rose Akinyi</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH008"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV008"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500008"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-08-17</hasClientDateOfBirth>
+    <hasNationalID>310000007</hasNationalID>
+    <hasIndividualID>CL008</hasIndividualID>
+    <hasClientReferral rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral_REF006"/>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+    <hasHealthSurveillance rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance_HS010"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#PostNatal">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/394575008"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#DepartmentType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ICDCode">
+    <rdfs:label xml:lang="en">ICD Code</rdfs:label>
+    <rdfs:comment xml:lang="en">Represents a code from the International Classification of Diseases (ICD).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ComplaintExam">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/302199004</skos:closeMatch>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/185349003</skos:closeMatch>
+    <rdfs:label xml:lang="en">Complaint Exam</rdfs:label>
+    <rdfs:comment xml:lang="en">Clinical record containing presenting complaints, physical examination findings, and remarks.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client_CL004">
+    <hasSex>F</hasSex>
+    <hasFullName>Joyce Auma</hasFullName>
+    <hasMaternalChildHealth rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH004"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Client"/>
+    <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasAge>
+    <hasServiceDelivery rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery_SV004"/>
+    <hasCorrespondingPatient rdf:resource="https://w3id.org/dhs/ontology#Patient_NP-500004"/>
+    <hasClientDisabilityStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</hasClientDisabilityStatus>
+    <hasClientDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-02-16</hasClientDateOfBirth>
+    <hasNationalID>310000003</hasNationalID>
+    <hasIndividualID>CL004</hasIndividualID>
+    <hasClientReferral rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral_REF004"/>
+    <hasRelationshipToHead>Head</hasRelationshipToHead>
+    <hasHealthSurveillance rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance_HS004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Referral">
+    <rdfs:label xml:lang="en">Referral</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/3457005</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Healthcare event representing referral of a patient between providers, departments, or facilities.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH016">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSurveillanceDiagnosis">
+    <rdfs:comment>Indicates a diagnosis recorded for an individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasIndividualID">
+    <rdfs:comment>Relates a client to their unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O24">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/11687002</skos:closeMatch>
+    <rdfs:label xml:lang="en">Diabetes mellitus in pregnancy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF007">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCHUReferralDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-08</hasCHUReferralDate>
+    <hasReferralType>CHU to Facility</hasReferralType>
+    <hasFacilityReferredTo>Pumwani Maternity Hospital</hasFacilityReferredTo>
+    <hasReasonForReferral>Suspected malaria in pregnancy</hasReasonForReferral>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral"/>
+    <hasReferralID>REF007</hasReferralID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Client">
+    <rdfs:label>Client</rdfs:label>
+    <rdfs:comment>An individual registered within a household and receiving, eligible for, or participating in community healthcare services.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#LaboratoryResult">
+    <rdfs:label xml:lang="en">Laboratory result</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/275924004</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation representing laboratory tests and their results.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#WorkingDiagnosis">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/5558000"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#DiagnosisType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O10">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/65402008</skos:closeMatch>
+    <rdfs:label xml:lang="en">Pre-existing hypertension complicating pregnancy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration_HH009">
+    <hasHouseholdVillage>Village 9</hasHouseholdVillage>
+    <hasGPSLocation>-1.2809,36.8309</hasGPSLocation>
+    <hasNumberOfMembers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasNumberOfMembers>
+    <hasEnvironmentalWASH rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH009"/>
+    <hasHouseholdID>HH009</hasHouseholdID>
+    <hasDateRegistered rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-10</hasDateRegistered>
+    <hasClient rdf:resource="https://w3id.org/dhs/ontology#Client_CL009"/>
+    <hasHouseholdPhoneNumber>0710000009</hasHouseholdPhoneNumber>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HouseholdRegistration"/>
+    <hasHouseholdHeadName>Household Head 9</hasHouseholdHeadName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#TBScreening">
+    <rdfs:label xml:lang="en">Tuberculosis Screening</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/171126009</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Clinical record documenting tuberculosis screening findings and symptoms.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BloodGroupO">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/58460004</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#BloodGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH010">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0010"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-13</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH010</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#DiagnosisType">
+    <rdfs:label xml:lang="en">Diagnosis Type</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/106229004</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents the category or type of a diagnosis.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasDeliveryPlace">
+    <rdfs:comment>Indicates the planned or actual location of delivery.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MentalHealthAssessment">
+    <rdfs:label xml:lang="en">Mental health assessment</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/401061005</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation representing mental health evaluation, assessment notes, and treatment planning.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH004">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ClinicalAssessment">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/386637004</skos:closeMatch>
+    <rdfs:label xml:lang="en">Clinical Assessment</rdfs:label>
+    <rdfs:comment xml:lang="en">Assessment entity representing clinical observations and evaluations performed during healthcare delivery.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#SoyAllergen">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411696003"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV019">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-02</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV019</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Provider">
+    <rdfs:label xml:lang="en">Healthcare provider</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/223366009</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents a person providing healthcare services.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH015">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH012">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0012"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH012</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BloodGroupAB">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/165743006</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#BloodGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BeeVenomAllergen">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411802009"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthcareEntity">
+    <rdfs:label xml:lang="en">Healthcare entity</rdfs:label>
+    <rdfs:comment xml:lang="en">General entity representing organizational or structural healthcare resources.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV011">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-25</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV011</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV012">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-26</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV012</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#RehabilitationAssessment">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/52052004</skos:closeMatch>
+    <rdfs:label xml:lang="en">Rehabilitation assessments</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/410081009</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation related to rehabilitation services, assessments, and rehabilitation planning.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasRecordID">
+    <rdfs:comment>Relates a health surveillance record to its unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV007">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-21</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV007</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH004">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasCorrespondingPregnancy rdf:resource="https://w3id.org/dhs/ontology#MaternalProfile_2026-02-0004"/>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-01</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH004</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ManagementPlan">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/18776-5"/>
+    <rdfs:label xml:lang="en">Management plan</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/734163000</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Clinical record describing planned investigations, medications, counselling, and follow-up care.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasReferralID">
+    <rdfs:comment>Relates a referral record to its unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HouseholdRegistration">
+    <rdfs:label>Household Registration</rdfs:label>
+    <rdfs:comment>A record documenting the registration of a household within a Community Health Unit, including household location, membership, and administrative information.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH018">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#DepartmentType">
+    <rdfs:label xml:lang="en">Department Type</rdfs:label>
+    <rdfs:comment>Type of organizational unit within a healthcare facility responsible for providing specific healthcare services.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVStatus">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/55277-8"/>
+    <rdfs:label xml:lang="en">HIV Status</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/278977008</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation record documenting HIV status assessment.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Medication">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/182833002</skos:closeMatch>
+    <rdfs:label xml:lang="en">Medication</rdfs:label>
+    <rdfs:comment xml:lang="en">Entity representing medication prescribed or dispensed to a patient.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUID">
+    <rdfs:comment>Relates a Community Health Unit to its unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#PenicillinAllergen">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411828007"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BloodGroupB">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/112149005</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#BloodGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth">
+    <rdfs:label>Maternal and Child Health</rdfs:label>
+    <rdfs:comment>A record containing information related to maternal and child health, including pregnancy status, antenatal care, delivery, postnatal care, child immunization, and growth monitoring.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#BloodGroupA">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/112144000</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#BloodGroup"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealth_MCH020">
+    <hasPostnatalVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasPostnatalVisits>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasANCVisits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasANCVisits>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasCHUExpectedDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-20</hasCHUExpectedDeliveryDate>
+    <hasGrowthMonitoring>NA</hasGrowthMonitoring>
+    <hasDeliveryPlace>Pumwani Maternity Hospital</hasDeliveryPlace>
+    <hasChildImmunizationStatus>NA</hasChildImmunizationStatus>
+    <hasMCHID>MCH020</hasMCHID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MaternalChildHealthRecord">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/406199001</skos:closeMatch>
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/57073-9"/>
+    <rdfs:label xml:lang="en">Maternal and child health record</rdfs:label>
+    <rdfs:comment xml:lang="en">Observation record related to maternal and child healthcare services.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral">
+    <rdfs:label xml:lang="en">CHU Referral</rdfs:label>
+    <rdfs:comment xml:lang="en">A documented request or transfer of an individual from a community healthcare provider to a healthcare facility or healthcare service for further assessment, diagnosis, treatment, or management.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasWasteDisposalMethod">
+    <rdfs:comment>Indicates the method used for household waste disposal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O14">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <rdfs:label xml:lang="en">Pre-eclampsia</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/398254007</skos:exactMatch>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Consultation">
+    <rdfs:label xml:lang="en">Consultation</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/11429006</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Healthcare event representing an interaction between a patient and healthcare provider for clinical consultation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CHU_Referral_REF006">
+    <referredToFacility rdf:resource="https://w3id.org/dhs/ontology#Facility_13232"/>
+    <hasCHUReferralDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-02</hasCHUReferralDate>
+    <hasReferralType>CHU to Facility</hasReferralType>
+    <hasFacilityReferredTo>Pumwani Maternity Hospital</hasFacilityReferredTo>
+    <hasReasonForReferral>Prolonged labour signs</hasReasonForReferral>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#CHU_Referral"/>
+    <hasReferralID>REF006</hasReferralID>
+    <hasCorrespondingReferral rdf:resource="https://w3id.org/dhs/ontology#Referral_2026-02-0008"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasBMI">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/39156-5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthSurveillance_HS009">
+    <hasSurveillanceDiagnosis>NA</hasSurveillanceDiagnosis>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HealthSurveillance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#MaternalChildHealth"/>
+    <hasSurveillanceNutritionStatus>Normal</hasSurveillanceNutritionStatus>
+    <hasDangerSigns>None</hasDangerSigns>
+    <hasPregnancyStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasPregnancyStatus>
+    <hasImmunizationStatus>Up to date</hasImmunizationStatus>
+    <hasSymptom>Mild swelling of feet</hasSymptom>
+    <hasDateRecorded rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-27</hasDateRecorded>
+    <hasRecordID>HS009</hasRecordID>
+    <hasChronicCondition>None</hasChronicCondition>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HealthcareEncounter">
+    <rdfs:label xml:lang="en">Healthcare encounter</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/308335008</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Event occurring during healthcare delivery or patient care processes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasLinkedFacility">
+    <rdfs:comment>Relates a Community Health Unit to the healthcare facility with which it is associated.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+    <owl:backwardCompatibleWith></owl:backwardCompatibleWith>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasMUAC">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/56072-2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasNumberOfMembers">
+    <rdfs:comment>Indicates the number of individuals registered within a household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#requiresFollowUp">
+    <rdfs:comment>Indicates whether additional follow-up care or monitoring is required after a service delivery activity.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#AdministrativeWorkflow">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/14734007</skos:closeMatch>
+    <rdfs:label xml:lang="en">Administrative workflow</rdfs:label>
+    <rdfs:comment xml:lang="en">Administrative process related to patient management and healthcare operations</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasGrowthMonitoring">
+    <rdfs:comment>Indicates growth monitoring information recorded for a child.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasFacilityReferredTo">
+    <rdfs:comment>Indicates the healthcare facility to which an individual has been referred.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasPresentingComplaint">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/10154-3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV018">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-01</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV018</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#RhesusPositive">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/165747007"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#RhesusFactor"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Allergen">
+    <rdfs:label xml:lang="en">Allergen</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/277054007</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents a substance that the immune system recognizes as foreign, triggering an IgE-mediated hypersensitivity reaction in sensitive individuals.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Male">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/248153007</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Gender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasGPSLocation">
+    <rdfs:comment>Relates a household registration record to the geographic coordinates or location reference of the household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Facility">
+    <rdfs:label xml:lang="en">Facility</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/257622000</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Healthcare institution where healthcare services are delivered.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasDiastolicBloodPressure">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/8462-4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#PeanutAllergen">
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Allergen"/>
+    <skos:exactMatch rdf:resource="http://snomed.info/id/411626009"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasServiceType">
+    <rdfs:comment>Indicates the type of healthcare service delivered, such as health education, screening, treatment, or follow-up.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasServiceID">
+    <rdfs:comment>Relates a service delivery record to its unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#MedicationDispense">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/373784005</skos:closeMatch>
+    <rdfs:label xml:lang="en">Medication dispense</rdfs:label>
+    <rdfs:comment xml:lang="en">Record representing the dispensing of medication to a patient.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Diagnosis">
+    <rdfs:label xml:lang="en">Diagnosis</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/439401001</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents a working or a final diagnosis of a patient.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O60">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/6383007</skos:closeMatch>
+    <rdfs:label xml:lang="en">Preterm labour</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH_WASH008">
+    <hasHandwashingFacility rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasHandwashingFacility>
+    <hasSanitationType>Flush toilet</hasSanitationType>
+    <hasWasteDisposalMethod>Municipal collection</hasWasteDisposalMethod>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#EnvironmentalWASH"/>
+    <hasLatrineAvailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</hasLatrineAvailable>
+    <hasWaterSource>Piped water</hasWaterSource>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Patient">
+    <rdfs:label xml:lang="en">Patient</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/116154003</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents a person receiving healthcare services.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#AnteNatal">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/394574007"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#DepartmentType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHouseholdPhoneNumber">
+    <rdfs:comment>Relates a household registration record to a contact telephone number.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Other">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/394743007</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Gender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O80">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/48782003</skos:closeMatch>
+    <rdfs:label xml:lang="en">Single spontaneous delivery</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasANCVisits">
+    <rdfs:comment>Indicates the number of antenatal care visits recorded for a pregnancy.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Department">
+    <rdfs:label xml:lang="en">Department</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/309912009</skos:exactMatch>
+    <rdfs:comment>Organizational unit within a healthcare facility responsible for providing specific healthcare services.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasMCHID">
+    <rdfs:comment>Relates a maternal and child health record to its unique identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery_SV006">
+    <hasServiceDeliveryOutcome>Counselled on ANC attendance</hasServiceDeliveryOutcome>
+    <hasProgramArea>Maternal health</hasProgramArea>
+    <requiresFollowUp rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</requiresFollowUp>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ServiceDelivery"/>
+    <hasServiceDeliveryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-20</hasServiceDeliveryDate>
+    <hasServiceType>Health education</hasServiceType>
+    <hasServiceID>SV006</hasServiceID>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Visit">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/302199004</skos:closeMatch>
+    <rdfs:label xml:lang="en">Visit</rdfs:label>
+    <rdfs:comment xml:lang="en">Healthcare event representing a patient's encounter with a healthcare facility.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasNationalID">
+    <rdfs:comment>Relates a client to a national identification number or alien card number.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasClientDateOfBirth">
+    <rdfs:comment>Indicates the date on which a client was born.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHandwashingFacility">
+    <rdfs:comment>Indicates whether a household has a handwashing facility.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#RhesusFactor">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/10331-7"/>
+    <rdfs:label xml:lang="en">Rhesus Factor</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/278155008</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Observation record documenting Rhesus Factor assessment.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#EnvironmentalWASH">
+    <rdfs:label>Environmental and WASH Assessment</rdfs:label>
+    <rdfs:comment>A record describing environmental, water, sanitation, hygiene, and waste management conditions associated with a household and relevant to community health.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Admission">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/32485007</skos:closeMatch>
+    <rdfs:label xml:lang="en">Maternity admission</rdfs:label>
+    <rdfs:comment xml:lang="en">Healthcare event representing an ANC patient admission into a healthcare facility.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Female">
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/1086007</skos:exactMatch>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#Gender"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#CommunityHealthUnit">
+    <rdfs:label>Community Health Unit</rdfs:label>
+    <rdfs:comment>A geographically defined community-based health service unit responsible for coordinating and delivering primary healthcare services to households within a designated population.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasMaternalChildHealth">
+    <rdfs:label>has maternal and child health record</rdfs:label>
+    <rdfs:comment>Relates a client to a maternal and child health record containing pregnancy, antenatal, delivery, postnatal, immunization, or growth monitoring information.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#RhesusNegative">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/165746003"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#RhesusFactor"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVNegative">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/165815009"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ReferenceTerminology"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/Observation"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#HIVStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHouseholdVillage">
+    <rdfs:comment>Relates a household registration record to the village in which the household is located.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#FinalDiagnosis">
+    <skos:exactMatch rdf:resource="http://snomed.info/id/89100005"/>
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#DiagnosisType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasLatrineAvailable">
+    <rdfs:comment>Indicates whether a household has access to a latrine.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasPregnancyStatus">
+    <rdfs:comment>Indicates whether an individual is recorded as pregnant.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#HIVCareRecord">
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/24091000087107</skos:closeMatch>
+    <rdfs:label xml:lang="en">HIV Care Record</rdfs:label>
+    <rdfs:comment xml:lang="en">Observation record related to HIV care, treatment status, and follow-up information.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#O48">
+    <rdf:type rdf:resource="https://w3id.org/dhs/ontology#ICDCode"/>
+    <rdf:type rdf:resource="http://hl7.org/fhir/StructureDefinition/CodeableConcept"/>
+    <skos:closeMatch xml:lang="en">http://snomed.info/id/90968009</skos:closeMatch>
+    <rdfs:label xml:lang="en">Prolonged pregnancy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasChronicCondition">
+    <rdfs:comment>Indicates a chronic health condition recorded for an individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#ServiceDelivery">
+    <rdfs:label>Service Delivery</rdfs:label>
+    <rdfs:comment>A healthcare service or intervention delivered by a Community Health Practitioner to an individual within a community setting, including health education, screening, treatment, and follow-up activities.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasPostnatalVisits">
+    <rdfs:comment>Indicates the number of postnatal care visits recorded after delivery.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasDangerSigns">
+    <rdfs:comment>Indicates warning signs or clinical indicators requiring additional assessment or intervention.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHeightCm">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/8302-2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Allergy">
+    <rdfs:label xml:lang="en">Allergy</rdfs:label>
+    <skos:exactMatch xml:lang="en">http://snomed.info/id/722446000</skos:exactMatch>
+    <rdfs:comment xml:lang="en">Represents an allergy a person receiving healthcare services sufferes from.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUCounty">
+    <rdfs:comment>Relates a Community Health Unit to the county in which it operates.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasEnvironmentalWASH">
+    <rdfs:label>has environmental and WASH assessment</rdfs:label>
+    <rdfs:comment>Relates a household registration record to an environmental, water, sanitation, hygiene, and waste management assessment.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSurveillanceNutritionStatus">
+    <rdfs:comment>Indicates the nutritional status recorded for an individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasClientDisabilityStatus">
+    <rdfs:comment>Indicates whether a client has a recorded disability status.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#Gender">
+    <rdfs:label xml:lang="en">Gender</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUName">
+    <rdfs:comment>Relates a Community Health Unit to its official name.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHouseholdID">
+    <rdfs:comment>Relates a household registration record to its unique household identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasReferralType">
+    <rdfs:comment>Indicates the category or type of referral issued.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasProgramArea">
+    <rdfs:comment>Indicates the healthcare program area associated with the service delivery activity.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUWard">
+    <rdfs:comment>Relates a Community Health Unit to the administrative ward in which it is located.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasReasonForReferral">
+    <rdfs:comment>Indicates the clinical or administrative reason for issuing a referral.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasServiceDeliveryDate">
+    <rdfs:comment>Indicates the date on which a community healthcare service was delivered.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSanitationType">
+    <rdfs:comment>Indicates the sanitation facilities available to a household.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSymptom">
+    <rdfs:comment>Indicates a symptom observed or reported for an individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasAge">
+    <rdfs:comment>Indicates the age of a client.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHeartRate">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/8867-4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasChildImmunizationStatus">
+    <rdfs:comment>Indicates the immunization status recorded for a child.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasSystolicBloodPressure">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/8480-6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasWeightKg">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/29463-7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUReferralDate">
+    <rdfs:comment>Indicates the date on which a referral was issued.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasDateRegistered">
+    <rdfs:comment>Indicates the date on which the household was registered.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasTemperature">
+    <skos:closeMatch rdf:resource="http://loinc.org/rdf/8310-5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasImmunizationStatus">
+    <rdfs:comment>Indicates the immunization status recorded for an individual.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasCHUSubCounty">
+    <rdfs:comment>Relates a Community Health Unit to the sub-county in which it operates.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHouseholdRegistration">
+    <rdfs:label>has household registration</rdfs:label>
+    <rdfs:comment>Relates a Community Health Unit to a household registration record within its area of responsibility.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasHouseholdHeadName">
+    <rdfs:comment>Relates a household registration record to the name of the household head.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/dhs/ontology#hasFullName">
+    <rdfs:comment>Relates a client to their full name.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>
